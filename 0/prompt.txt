@@ -1,0 +1,22 @@
+# Context from my IDE setup:
+
+## Open tabs:
+- README.md: README.md
+
+## My request:
+i enabled the hooks succesfully now how to do this Then work with the agent, commit, and push normally. When a session checkpoint is available, you should see:
+```scss
+[entire] Pushing 1 checkpoint ref(s) to origin.... done
+```
+
+No commit or push was made yet.
+
+---
+
+# Context from my IDE setup:
+
+## Open tabs:
+- README.md: README.md
+
+## My request:
+improve readme ( just for testing the workflow)
