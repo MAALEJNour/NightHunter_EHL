@@ -31,7 +31,10 @@ review a new kit revision deliberately rather than pulling it during launch prep
 The announcement's `arena-sim serve --final-rehearsal` flag is not present in the kit revision pinned
 here, and this checkout has no `data/package` directory. That exact local command will fail against
 this snapshot. The separately announced `arena run --set final` command defaults to the kit's naive
-agent; it does not run NightHunter. Do not update the pinned vendor tree during the freeze window.
+agent; it does not run NightHunter. In this checkout, `arena` reads `ARENA_URL` from the root `.env`,
+which is configured for the hosted arena. Do not run `arena run` as a local rehearsal here: without an
+explicit loopback URL it can contact Tacto. Do not update the pinned vendor tree during the freeze
+window.
 
 ```bash
 uv sync --project vendor/negotiation-arena-kit/starter-kit --python 3.12 --frozen --all-extras
