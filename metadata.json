@@ -1,0 +1,35 @@
+{
+  "cli_version": "0.11.4",
+  "checkpoint_id": "01M4N5WTWQ1VKMBW8YQEHR498W",
+  "strategy": "manual-commit",
+  "branch": "main",
+  "checkpoints_count": 6,
+  "files_touched": [
+    "AGENTS.md",
+    "README.md",
+    "docs/HANDOFF_FOR_TEAMMATE.md",
+    "docs/LIVE_FINAL_RUNBOOK.md",
+    "docs/PLAN.md",
+    "nighthunter/live.py",
+    "scripts/final_preflight.py",
+    "scripts/final_runner.py",
+    "scripts/start_final.sh",
+    "tests/test_final_preflight.py"
+  ],
+  "sessions": [
+    {
+      "metadata": "/0/metadata.json",
+      "transcript": "/0/full.jsonl",
+      "compact_transcript": "/0/transcript.jsonl",
+      "content_hash": "/0/content_hash.txt",
+      "prompt": "/0/prompt.txt"
+    }
+  ],
+  "token_usage": {
+    "input_tokens": 223954,
+    "cache_creation_tokens": 0,
+    "cache_read_tokens": 15855999,
+    "output_tokens": 111032,
+    "api_call_count": 129
+  }
+}

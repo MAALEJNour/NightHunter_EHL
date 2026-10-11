@@ -1,0 +1,130 @@
+# Context from my IDE setup:
+
+## Active file: NightHunter_EHL/docs/LIVE_FINAL_RUNBOOK.md
+
+## Open tabs:
+- LIVE_FINAL_RUNBOOK.md: NightHunter_EHL/docs/LIVE_FINAL_RUNBOOK.md
+- live.py: NightHunter_EHL/nighthunter/live.py
+- HANDOFF_FOR_TEAMMATE.md: NightHunter_EHL/docs/HANDOFF_FOR_TEAMMATE.md
+- HANDOFF.md: NightHunter_EHL/docs/HANDOFF.md
+- HANDOFF_FOR_LLM.md: saved-negotiation-conversations-2026-10-10/HANDOFF_FOR_LLM.md
+
+## My request:
+now prepare a two minutes slides pls ust talking abvout the strategies used to beat these suppliers need to be audience oriented now heavy loaded technical info just some tweaks used
+
+---
+
+# Context from my IDE setup:
+
+## Active file: NightHunter_EHL/docs/LIVE_FINAL_RUNBOOK.md
+
+## Open tabs:
+- LIVE_FINAL_RUNBOOK.md: NightHunter_EHL/docs/LIVE_FINAL_RUNBOOK.md
+- live.py: NightHunter_EHL/nighthunter/live.py
+- HANDOFF_FOR_TEAMMATE.md: NightHunter_EHL/docs/HANDOFF_FOR_TEAMMATE.md
+- HANDOFF.md: NightHunter_EHL/docs/HANDOFF.md
+- HANDOFF_FOR_LLM.md: saved-negotiation-conversations-2026-10-10/HANDOFF_FOR_LLM.md
+
+## My request:
+is everything commited and pushed ??? and also add a commit push on entire for the slides afrer they are finished and could u make the slides already in pptx format
+
+---
+
+# Context from my IDE setup:
+
+## Active file: NightHunter_EHL/docs/slides/NightHunter_pitch.md
+
+## Open tabs:
+- NightHunter_pitch.md: NightHunter_EHL/docs/slides/NightHunter_pitch.md
+- LIVE_FINAL_RUNBOOK.md: NightHunter_EHL/docs/LIVE_FINAL_RUNBOOK.md
+- live.py: NightHunter_EHL/nighthunter/live.py
+- HANDOFF_FOR_TEAMMATE.md: NightHunter_EHL/docs/HANDOFF_FOR_TEAMMATE.md
+- HANDOFF.md: NightHunter_EHL/docs/HANDOFF.md
+
+## My request:
+did u do a new pptx file?? a oroblem occured with it
+
+---
+
+<send_user_message_question_reply>
+[{"questionItemId":"[\"request_user_input_async\",\"call_d9uLtkclSjzpYOTGes1WoIoz\",0]","question":"What problem are you seeing with the new PowerPoint file?","answer":"i just opened the older file in pptx while u did the new file"}]
+</send_user_message_question_reply>
+
+---
+
+# Context from my IDE setup:
+
+## Active file: NightHunter_EHL/docs/slides/NightHunter_pitch.md
+
+## Open tabs:
+- NightHunter_pitch.md: NightHunter_EHL/docs/slides/NightHunter_pitch.md
+- LIVE_FINAL_RUNBOOK.md: NightHunter_EHL/docs/LIVE_FINAL_RUNBOOK.md
+- live.py: NightHunter_EHL/nighthunter/live.py
+- HANDOFF_FOR_TEAMMATE.md: NightHunter_EHL/docs/HANDOFF_FOR_TEAMMATE.md
+- HANDOFF.md: NightHunter_EHL/docs/HANDOFF.md
+
+## My request:
+everythig pushed?
+
+---
+
+# Context from my IDE setup:
+
+## Active file: NightHunter_EHL/docs/slides/NightHunter_pitch.md
+
+## Open tabs:
+- NightHunter_pitch.md: NightHunter_EHL/docs/slides/NightHunter_pitch.md
+- LIVE_FINAL_RUNBOOK.md: NightHunter_EHL/docs/LIVE_FINAL_RUNBOOK.md
+- live.py: NightHunter_EHL/nighthunter/live.py
+- HANDOFF_FOR_TEAMMATE.md: NightHunter_EHL/docs/HANDOFF_FOR_TEAMMATE.md
+- HANDOFF.md: NightHunter_EHL/docs/HANDOFF.md
+
+## My request:
+my other coding agent prepared some script for starting the final, pls check it tell me how its looking i sont want any surprises we could loose the whole competition
+
+---
+
+# Context from my IDE setup:
+
+## Active file: NightHunter_EHL/docs/slides/NightHunter_pitch.md
+
+## Open tabs:
+- NightHunter_pitch.md: NightHunter_EHL/docs/slides/NightHunter_pitch.md
+- LIVE_FINAL_RUNBOOK.md: NightHunter_EHL/docs/LIVE_FINAL_RUNBOOK.md
+- live.py: NightHunter_EHL/nighthunter/live.py
+- HANDOFF_FOR_TEAMMATE.md: NightHunter_EHL/docs/HANDOFF_FOR_TEAMMATE.md
+- HANDOFF.md: NightHunter_EHL/docs/HANDOFF.md
+
+## My request:
+we have in total  15 dlllars left, we can eve increase the price for the final.
+But remember: **practice is not the ranking.** At 12:00 your agent meets 30 hidden cases with suppliers it has never met.    **Road to the Live Final**  **NEW: rehearse the final on your laptop.** `git pull` the kit, `uv sync` in `starter-kit/`, then `uv run arena-sim serve --final-rehearsal --data data/package` and run `arena run --set final --waves 2` against it. Two short waves with the real rules: the 403 wait, the wave start, one session per case, `seconds_left`, the cap.  **The 8 minutes are yours.** The kit stops countering 90 s before the cap and takes the best offer on the table: one constant, `CLOSE_BEFORE_CAP_S` in `arena_kit/play.py`. Tune it if you like, but a supplier's reply can take a minute.  **08:00** Sunday release: `uv run arena data` again. Some hidden cases cite it.  **09:00** Pre-flight on arena.tacto.ai: one practice case, then start your final runner for a minute. It must *wait* (403 until wave 1).  **11:55** Stop your practice loops. They count against your 10 open sessions.  **12:00** Code + slides freeze on ehl.gg. Runner already running, then hands off: 5 waves × 8 min. \
+
+does this cost simulation runs? could we do it locally to get an approx idea of the performance of our agent without pariticpating
+
+---
+
+# Context from my IDE setup:
+
+## Active file: NightHunter_EHL/docs/slides/NightHunter_pitch.md
+
+## Open tabs:
+- NightHunter_pitch.md: NightHunter_EHL/docs/slides/NightHunter_pitch.md
+- LIVE_FINAL_RUNBOOK.md: NightHunter_EHL/docs/LIVE_FINAL_RUNBOOK.md
+- live.py: NightHunter_EHL/nighthunter/live.py
+- HANDOFF_FOR_TEAMMATE.md: NightHunter_EHL/docs/HANDOFF_FOR_TEAMMATE.md
+- HANDOFF.md: NightHunter_EHL/docs/HANDOFF.md
+
+## My request:
+pls do everything u find  good that would make the pipeline more powerful and we have enough codex credits around 5 dollars so its enough for the final, now im just confused about the commands rto run and if they produce any type of errors and then tell me if everything is finished in it and then tell me how to start the script with one command (or if there are multipel)&#x20;
+
+
+
+I would **not launch with&#x20;****`start_final.sh`****&#x20;as written**. The core runner has useful safeguards, but the launcher can report “key OK” and still start after the key check fails.
+
+- **Budget is below the runbook’s launch reserve.** The ledger is at **$5.893528 of $7**, leaving **$1.106472**—about **$0.094 short** of the required $1.20 reserve. The runner’s $7 cap prevents it exceeding the total cap, but it could exhaust its budget during the final. The runbook says not to start until this is resolved. [Runbook (line 13)](/Users/nourmaalej/NightHunter_EHL/docs/LIVE_FINAL_RUNBOOK.md:13)
+- **The key check doesn’t stop startup.** If `arena me` fails on [line 9 (line 9)](/Users/nourmaalej/NightHunter_EHL/scripts/start_final.sh:9), the next line still launches the runner. It also prints a PID without checking that the process stayed up.
+- **The launcher doesn’t enforce the freeze or preflight checks.** It doesn’t check the submitted commit, a clean worktree, or lingering practice/final processes; its `uv run` commands also omit `--frozen`. The runbook expects those checks before launch.
+
+The runner itself has good recovery and timing logic, and the focused RFQ/live tests passed (**31 passed**). The Sunday release file is present. I did **not** start a final session or make paid calls; I also haven’t independently verified the live arena key.
+
+I recommend hardening the launcher to fail closed before anyone uses it. The budget reserve still needs to be resolved under the runbook’s approval rule.&#x20;

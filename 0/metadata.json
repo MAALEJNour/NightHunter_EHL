@@ -1,0 +1,61 @@
+{
+  "cli_version": "0.11.4",
+  "checkpoint_id": "01M4N5WTWQ1VKMBW8YQEHR498W",
+  "session_id": "01a129f2-e427-7340-a8f3-8823c85768ac",
+  "strategy": "manual-commit",
+  "created_at": "2026-10-11T09:49:54.307003Z",
+  "branch": "main",
+  "checkpoints_count": 6,
+  "files_touched": [
+    "AGENTS.md",
+    "README.md",
+    "docs/HANDOFF_FOR_TEAMMATE.md",
+    "docs/LIVE_FINAL_RUNBOOK.md",
+    "docs/PLAN.md",
+    "nighthunter/live.py",
+    "scripts/final_preflight.py",
+    "scripts/final_runner.py",
+    "scripts/start_final.sh",
+    "tests/test_final_preflight.py"
+  ],
+  "agent": "Codex",
+  "model": "gpt-6-luna",
+  "turn_id": "8befc479c5cc",
+  "checkpoint_transcript_start": 719,
+  "transcript_lines_at_start": 719,
+  "compact_transcript_start": 124,
+  "token_usage": {
+    "input_tokens": 223954,
+    "cache_creation_tokens": 0,
+    "cache_read_tokens": 15855999,
+    "output_tokens": 111032,
+    "api_call_count": 129
+  },
+  "session_metrics": {
+    "turn_count": 10
+  },
+  "initial_attribution": {
+    "calculated_at": "2026-10-11T09:49:54.224101Z",
+    "agent_lines": 642,
+    "agent_removed": 58,
+    "human_added": 0,
+    "human_modified": 0,
+    "human_removed": 0,
+    "total_committed": 642,
+    "total_lines_changed": 700,
+    "agent_percentage": 100,
+    "metric_version": 2
+  },
+  "prompt_attributions": [
+    {
+      "checkpoint_number": 1,
+      "user_lines_added": 10,
+      "user_lines_removed": 0,
+      "agent_lines_added": 0,
+      "agent_lines_removed": 0,
+      "user_added_per_file": {
+        ".claude/settings.local.json": 10
+      }
+    }
+  ]
+}
