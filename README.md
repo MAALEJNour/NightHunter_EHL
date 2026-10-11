@@ -58,8 +58,7 @@ sandbox rehearsals (D01 82.4 / D02 71.9 in parallel under the 8-minute cap). The
 - Start here: [teammate handoff](docs/HANDOFF_FOR_TEAMMATE.md), [milestones and results](docs/MILESTONES.md),
   [lessons with evidence](docs/LESSONS.md).
 - LLM ledger: $5.893528 accounted. Practice/live remains capped at $7; the owner approved a separate $15 cumulative cap for the final only, leaving $9.106472 under that cap. The final runner also has a $2 maximum per launch. These code limits are separate from the actual OpenAI API billing balance. Practice quota is shared with the teammate.
-- Pending before the final: commit and push the reviewed launcher changes, submit the exact commit and slides on ehl.gg, and run `./scripts/start_final.sh --check`. The Sunday release is present and the 10-case
-  final-runner rehearsal completed on 11 October (10/10 deals, zero errors/timeouts; slowest case 223 s).
+- Launch readiness: the reviewed launcher changes are committed and pushed; the read-only preflight verified the active NightHunter team, source, data and budget. Still submit the exact hash printed by `./scripts/start_final.sh --check` plus the slides on ehl.gg, and verify API billing for `LLM_API_KEY`. The Sunday release is present and the 10-case final-runner rehearsal completed on 11 October (10/10 deals, zero errors/timeouts; slowest case 223 s).
 
 For a no-session preflight, run `./scripts/start_final.sh --check`. To start the autonomous final runner after freeze, run `./scripts/start_final.sh`; it verifies the active NightHunter key, clean pushed source, data and budget before launching. Codex usage credits are not API credits for the runner's `LLM_API_KEY`; check the API billing balance separately.
 

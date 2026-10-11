@@ -18,14 +18,15 @@ marker before reporting success.
 check without starting a negotiation or model call. The general practice/live cumulative cap remains
 $7; the owner separately approved a $15 cumulative cap for the final only. The ledger remains intact
 at $5.893528 accounted, and each final launch is separately capped at $2.
-Codex usage credits do not establish API-key billing balance. This launcher patch is local and still
-needs review, commit/push and ehl.gg submission before it can pass its clean-pushed-source gate. No
-hosted identity check or paid call was made while developing it.
+Codex usage credits do not establish API-key billing balance. The launcher changes are now committed
+and pushed under Entire checkpoints. A read-only `./scripts/start_final.sh --check` passed at the
+current code commit, including the active NightHunter identity. The ehl.gg submission and API billing
+balance still need owner verification; no final session or model call was started.
 Local verification for the patch: **214 project tests passed**, touched-file Ruff passed, and the zsh
 launcher parsed. Direct offline preflight loaded the Sunday package and confirmed Python 3.12 plus
-$9.106472 of ledger headroom. The current checkout correctly fails the clean-source gate while the
-patch is uncommitted. The read-only identity check and launch gate remain to be run on the submitted,
-clean checkout; no hosted identity request or paid model call was made during this work.
+$9.106472 of headroom under the final-only cap. The subsequent online preflight confirmed the source
+is clean and pushed, data are present, and the team key is active. No model call or negotiation
+session was started.
 
 Original status: local naive baseline implemented and exercised, 10 October 2026. All advanced architecture and milestones below are proposed unless explicitly marked verified. Upstream commit: `1b5516bb95ef28e37f69aa446dc62168864bca53`.
 
