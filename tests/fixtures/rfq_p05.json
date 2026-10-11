@@ -1,0 +1,1217 @@
+{
+ "bidders": {
+  "sup:70210": {
+   "opening_offer": {
+    "term_sheet_id": "offer:70210-0",
+    "terms": {
+     "unit_price": 36.0
+    }
+   },
+   "standard_terms": {
+    "chargeback_eur_per_complaint": 0.0,
+    "lead_time_days": 28,
+    "payment_days": 30,
+    "ppm_commitment": 1200
+   }
+  },
+  "sup:70240": {
+   "opening_offer": {
+    "term_sheet_id": "offer:70240-0",
+    "terms": {
+     "lead_time_days": 52,
+     "unit_price": 31.5
+    }
+   },
+   "standard_terms": {
+    "chargeback_eur_per_complaint": 0.0,
+    "payment_days": 45,
+    "ppm_commitment": 1400
+   }
+  },
+  "sup:70250": {
+   "opening_offer": {
+    "term_sheet_id": "offer:70250-0",
+    "terms": {
+     "unit_price": 38.5
+    }
+   },
+   "standard_terms": {
+    "chargeback_eur_per_complaint": 0.0,
+    "lead_time_days": 28,
+    "payment_days": 30,
+    "ppm_commitment": 600
+   }
+  }
+ },
+ "case": {
+  "briefing": "You negotiate for Hollerau Pumpenwerke with Zerspanung Dralveck GmbH, Stroj\u00edrna Hrvelec s.r.o., Drehteile Fuchsreiter GmbH. RFQ: pump shaft for the new HX series. Need: 4200 pc a year. Category goal: leverage: competition and data should bring the price down. Score: the lowest total cost C as defined in the rules, valued with this case's rates (need lead time 35 days). There is no fallback supplier: without a deal the demand is bought at the fallback price. Must-haves: lead_time_days <= 42. Prepare from the data package.",
+  "buyer": {
+   "alternative": {
+    "kind": "none",
+    "ref": null,
+    "terms": {}
+   },
+   "category_goal": "leverage",
+   "cost_per_defect": 112,
+   "current_unit_price": 36.39,
+   "fallback_risk_pct": 3,
+   "fallback_unit_price": 36.39,
+   "freight_eur_per_unit": {
+    "DAP": 0.0,
+    "EXW": 0.31,
+    "FCA": 0.27
+   },
+   "horizon_years": 2.0,
+   "index_paths": {},
+   "index_risk_pct": 1,
+   "interest_rate": 0.08,
+   "late_cost_per_day": 200,
+   "must_haves": [
+    {
+     "field": "lead_time_days",
+     "op": "<=",
+     "value": 42
+    }
+   ],
+   "need_lead_time_days": 35,
+   "need_per_year": 4200,
+   "reference_payment_days": 60
+  },
+  "case_id": "case:P05",
+  "fixed_terms": {
+   "contract_months": 24,
+   "effective_date": "2027-01-01",
+   "incoterm": "DAP",
+   "index_clause": null,
+   "tooling_eur": 0,
+   "volume_per_year": 4200
+  },
+  "hosted": true,
+  "negotiable": [
+   "unit_price",
+   "payment_days",
+   "lead_time_days"
+  ],
+  "parts": [
+   "part:320070"
+  ],
+  "refs": [
+   "doc:20260923-70210-P05",
+   "sc:70210@2026Q3",
+   "sc:70240@2026Q3",
+   "sc:70250@2026Q3"
+  ],
+  "round_limit": 10,
+  "set": "practice",
+  "suppliers": [
+   "sup:70210",
+   "sup:70240",
+   "sup:70250"
+  ],
+  "term_options": {
+   "lead_time_days": [
+    28,
+    35,
+    42,
+    56
+   ],
+   "payment_days": [
+    14,
+    30,
+    45,
+    60,
+    90
+   ]
+  },
+  "title": "RFQ: pump shaft for the new HX series",
+  "trigger_doc": "doc:20260923-70210-P05",
+  "type": "rfq"
+ },
+ "evidence": [
+  {
+   "citable_fact": {
+    "days": 90,
+    "supplier": "sup:70250",
+    "valid_from": "2025-07-01",
+    "valid_to": "2027-06-30"
+   },
+   "document": "# Framework agreement 4600070250\n\nBetween Hollerau Pumpenwerke GmbH and Drehteile Fuchsreiter GmbH.\n\n**\u00a7 2.1** Subject: supply of Spacer sleeve.\n\n**\u00a7 3.1** Prices as per the price annex, fixed for each calendar year. Changes require written notice of at least 90 days before the end of the calendar year.\n\n**\u00a7 4.1** Payment: 30 days net.\n\n**\u00a7 5.1** Delivery EXW; standard lead time 28 days from order.\n\n**\u00a7 6.1** The quality agreement applies: on-time delivery target 95 %, flat fee of EUR 150 per supplier-caused complaint.\n\n**\u00a7 8.1** Valid from 2025-07-01 to 2027-06-30; extends by 12 months unless terminated with 90 days' notice.\n\nParts: part:320090\n",
+   "row": {
+    "file": "contracts/4600070250.md",
+    "id": "ctr:4600070250",
+    "incoterm": "EXW",
+    "notice_days": 90,
+    "payment_days": 30,
+    "price_basis": "fixed per year",
+    "supplier_id": "sup:70250",
+    "type": "framework agreement",
+    "valid_from": "2025-07-01",
+    "valid_to": "2027-06-30"
+   },
+   "source": "contracts:ctr:4600070250",
+   "table": "contracts"
+  },
+  {
+   "citable_fact": {
+    "days": 90,
+    "supplier": "sup:70240",
+    "valid_from": "2025-07-01",
+    "valid_to": "2027-06-30"
+   },
+   "document": "# Framework agreement 4600070240\n\nBetween Hollerau Pumpenwerke GmbH and Stroj\u00edrna Hrvelec s.r.o..\n\n**\u00a7 2.1** Subject: supply of Flange DN 100 PN 16, machined.\n\n**\u00a7 3.1** Prices as per the price annex, fixed for each calendar year. Changes require written notice of at least 90 days before the end of the calendar year.\n\n**\u00a7 4.1** Payment: 45 days net.\n\n**\u00a7 5.1** Delivery FCA; standard lead time 42 days from order.\n\n**\u00a7 6.1** The quality agreement applies: on-time delivery target 95 %, flat fee of EUR 150 per supplier-caused complaint.\n\n**\u00a7 8.1** Valid from 2025-07-01 to 2027-06-30; extends by 12 months unless terminated with 90 days' notice.\n\nParts: part:320031\n",
+   "row": {
+    "file": "contracts/4600070240.md",
+    "id": "ctr:4600070240",
+    "incoterm": "FCA",
+    "notice_days": 90,
+    "payment_days": 45,
+    "price_basis": "fixed per year",
+    "supplier_id": "sup:70240",
+    "type": "framework agreement",
+    "valid_from": "2025-07-01",
+    "valid_to": "2027-06-30"
+   },
+   "source": "contracts:ctr:4600070240",
+   "table": "contracts"
+  },
+  {
+   "citable_fact": {
+    "days": 90,
+    "supplier": "sup:70210",
+    "valid_from": "2025-07-01",
+    "valid_to": "2027-06-30"
+   },
+   "document": "# Framework agreement 4600070210\n\nBetween Hollerau Pumpenwerke GmbH and Zerspanung Dralveck GmbH.\n\n**\u00a7 2.1** Subject: supply of Pump shaft HN 24 mm, Lantern (motor stool) HN.\n\n**\u00a7 3.1** Prices as per the price annex, fixed for each calendar year. Changes require written notice of at least 90 days before the end of the calendar year.\n\n**\u00a7 4.1** Payment: 30 days net, 2 % discount within 10 days.\n\n**\u00a7 5.1** Delivery EXW; standard lead time 28 days from order.\n\n**\u00a7 6.1** The quality agreement applies: on-time delivery target 95 %, flat fee of EUR 150 per supplier-caused complaint.\n\n**\u00a7 8.1** Valid from 2025-07-01 to 2027-06-30; extends by 12 months unless terminated with 90 days' notice.\n\nParts: part:320010, part:320080\n",
+   "row": {
+    "file": "contracts/4600070210.md",
+    "id": "ctr:4600070210",
+    "incoterm": "EXW",
+    "notice_days": 90,
+    "payment_days": 30,
+    "price_basis": "fixed per year",
+    "supplier_id": "sup:70210",
+    "type": "framework agreement",
+    "valid_from": "2025-07-01",
+    "valid_to": "2027-06-30"
+   },
+   "source": "contracts:ctr:4600070210",
+   "table": "contracts"
+  },
+  {
+   "citable_fact": {
+    "days": 90,
+    "material_share": null,
+    "series": null,
+    "supplier": "sup:70250",
+    "type": "term"
+   },
+   "document": null,
+   "row": {
+    "clause": "8.1",
+    "contract_id": "ctr:4600070250",
+    "days": 90,
+    "deadband_pct": null,
+    "id": "ctr:4600070250#8.1",
+    "material_share": null,
+    "series": null,
+    "text": "Valid from 2025-07-01 to 2027-06-30; extends by 12 months unless terminated with 90 days' notice.",
+    "type": "term"
+   },
+   "source": "contract_clauses:ctr:4600070250#8.1",
+   "table": "contract_clauses"
+  },
+  {
+   "citable_fact": {
+    "days": 90,
+    "material_share": null,
+    "series": null,
+    "supplier": "sup:70240",
+    "type": "term"
+   },
+   "document": null,
+   "row": {
+    "clause": "8.1",
+    "contract_id": "ctr:4600070240",
+    "days": 90,
+    "deadband_pct": null,
+    "id": "ctr:4600070240#8.1",
+    "material_share": null,
+    "series": null,
+    "text": "Valid from 2025-07-01 to 2027-06-30; extends by 12 months unless terminated with 90 days' notice.",
+    "type": "term"
+   },
+   "source": "contract_clauses:ctr:4600070240#8.1",
+   "table": "contract_clauses"
+  },
+  {
+   "citable_fact": {
+    "days": 90,
+    "material_share": null,
+    "series": null,
+    "supplier": "sup:70210",
+    "type": "term"
+   },
+   "document": null,
+   "row": {
+    "clause": "8.1",
+    "contract_id": "ctr:4600070210",
+    "days": 90,
+    "deadband_pct": null,
+    "id": "ctr:4600070210#8.1",
+    "material_share": null,
+    "series": null,
+    "text": "Valid from 2025-07-01 to 2027-06-30; extends by 12 months unless terminated with 90 days' notice.",
+    "type": "term"
+   },
+   "source": "contract_clauses:ctr:4600070210#8.1",
+   "table": "contract_clauses"
+  },
+  {
+   "citable_fact": {
+    "days": null,
+    "material_share": null,
+    "series": null,
+    "supplier": "sup:70250",
+    "type": "quality"
+   },
+   "document": null,
+   "row": {
+    "clause": "6.1",
+    "contract_id": "ctr:4600070250",
+    "days": null,
+    "deadband_pct": null,
+    "id": "ctr:4600070250#6.1",
+    "material_share": null,
+    "series": null,
+    "text": "The quality agreement applies: on-time delivery target 95 %, flat fee of EUR 150 per supplier-caused complaint.",
+    "type": "quality"
+   },
+   "source": "contract_clauses:ctr:4600070250#6.1",
+   "table": "contract_clauses"
+  },
+  {
+   "citable_fact": {
+    "days": null,
+    "material_share": null,
+    "series": null,
+    "supplier": "sup:70240",
+    "type": "quality"
+   },
+   "document": null,
+   "row": {
+    "clause": "6.1",
+    "contract_id": "ctr:4600070240",
+    "days": null,
+    "deadband_pct": null,
+    "id": "ctr:4600070240#6.1",
+    "material_share": null,
+    "series": null,
+    "text": "The quality agreement applies: on-time delivery target 95 %, flat fee of EUR 150 per supplier-caused complaint.",
+    "type": "quality"
+   },
+   "source": "contract_clauses:ctr:4600070240#6.1",
+   "table": "contract_clauses"
+  },
+  {
+   "citable_fact": {
+    "days": null,
+    "material_share": null,
+    "series": null,
+    "supplier": "sup:70210",
+    "type": "quality"
+   },
+   "document": null,
+   "row": {
+    "clause": "6.1",
+    "contract_id": "ctr:4600070210",
+    "days": null,
+    "deadband_pct": null,
+    "id": "ctr:4600070210#6.1",
+    "material_share": null,
+    "series": null,
+    "text": "The quality agreement applies: on-time delivery target 95 %, flat fee of EUR 150 per supplier-caused complaint.",
+    "type": "quality"
+   },
+   "source": "contract_clauses:ctr:4600070210#6.1",
+   "table": "contract_clauses"
+  },
+  {
+   "citable_fact": {
+    "days": 28,
+    "material_share": null,
+    "series": null,
+    "supplier": "sup:70250",
+    "type": "delivery"
+   },
+   "document": null,
+   "row": {
+    "clause": "5.1",
+    "contract_id": "ctr:4600070250",
+    "days": 28,
+    "deadband_pct": null,
+    "id": "ctr:4600070250#5.1",
+    "material_share": null,
+    "series": null,
+    "text": "Delivery EXW; standard lead time 28 days from order.",
+    "type": "delivery"
+   },
+   "source": "contract_clauses:ctr:4600070250#5.1",
+   "table": "contract_clauses"
+  },
+  {
+   "citable_fact": {
+    "days": 42,
+    "material_share": null,
+    "series": null,
+    "supplier": "sup:70240",
+    "type": "delivery"
+   },
+   "document": null,
+   "row": {
+    "clause": "5.1",
+    "contract_id": "ctr:4600070240",
+    "days": 42,
+    "deadband_pct": null,
+    "id": "ctr:4600070240#5.1",
+    "material_share": null,
+    "series": null,
+    "text": "Delivery FCA; standard lead time 42 days from order.",
+    "type": "delivery"
+   },
+   "source": "contract_clauses:ctr:4600070240#5.1",
+   "table": "contract_clauses"
+  },
+  {
+   "citable_fact": {
+    "days": 28,
+    "material_share": null,
+    "series": null,
+    "supplier": "sup:70210",
+    "type": "delivery"
+   },
+   "document": null,
+   "row": {
+    "clause": "5.1",
+    "contract_id": "ctr:4600070210",
+    "days": 28,
+    "deadband_pct": null,
+    "id": "ctr:4600070210#5.1",
+    "material_share": null,
+    "series": null,
+    "text": "Delivery EXW; standard lead time 28 days from order.",
+    "type": "delivery"
+   },
+   "source": "contract_clauses:ctr:4600070210#5.1",
+   "table": "contract_clauses"
+  },
+  {
+   "citable_fact": {
+    "days": 30,
+    "material_share": null,
+    "series": null,
+    "supplier": "sup:70250",
+    "type": "payment"
+   },
+   "document": null,
+   "row": {
+    "clause": "4.1",
+    "contract_id": "ctr:4600070250",
+    "days": 30,
+    "deadband_pct": null,
+    "id": "ctr:4600070250#4.1",
+    "material_share": null,
+    "series": null,
+    "text": "Payment: 30 days net.",
+    "type": "payment"
+   },
+   "source": "contract_clauses:ctr:4600070250#4.1",
+   "table": "contract_clauses"
+  },
+  {
+   "citable_fact": {
+    "days": 45,
+    "material_share": null,
+    "series": null,
+    "supplier": "sup:70240",
+    "type": "payment"
+   },
+   "document": null,
+   "row": {
+    "clause": "4.1",
+    "contract_id": "ctr:4600070240",
+    "days": 45,
+    "deadband_pct": null,
+    "id": "ctr:4600070240#4.1",
+    "material_share": null,
+    "series": null,
+    "text": "Payment: 45 days net.",
+    "type": "payment"
+   },
+   "source": "contract_clauses:ctr:4600070240#4.1",
+   "table": "contract_clauses"
+  },
+  {
+   "citable_fact": {
+    "days": 30,
+    "material_share": null,
+    "series": null,
+    "supplier": "sup:70210",
+    "type": "payment"
+   },
+   "document": null,
+   "row": {
+    "clause": "4.1",
+    "contract_id": "ctr:4600070210",
+    "days": 30,
+    "deadband_pct": null,
+    "id": "ctr:4600070210#4.1",
+    "material_share": null,
+    "series": null,
+    "text": "Payment: 30 days net, 2 % discount within 10 days.",
+    "type": "payment"
+   },
+   "source": "contract_clauses:ctr:4600070210#4.1",
+   "table": "contract_clauses"
+  },
+  {
+   "citable_fact": {
+    "days": 90,
+    "material_share": null,
+    "series": null,
+    "supplier": "sup:70250",
+    "type": "price"
+   },
+   "document": null,
+   "row": {
+    "clause": "3.1",
+    "contract_id": "ctr:4600070250",
+    "days": 90,
+    "deadband_pct": null,
+    "id": "ctr:4600070250#3.1",
+    "material_share": null,
+    "series": null,
+    "text": "Prices as per the price annex, fixed for each calendar year. Changes require written notice of at least 90 days before the end of the calendar year.",
+    "type": "price"
+   },
+   "source": "contract_clauses:ctr:4600070250#3.1",
+   "table": "contract_clauses"
+  },
+  {
+   "citable_fact": {
+    "days": 90,
+    "material_share": null,
+    "series": null,
+    "supplier": "sup:70240",
+    "type": "price"
+   },
+   "document": null,
+   "row": {
+    "clause": "3.1",
+    "contract_id": "ctr:4600070240",
+    "days": 90,
+    "deadband_pct": null,
+    "id": "ctr:4600070240#3.1",
+    "material_share": null,
+    "series": null,
+    "text": "Prices as per the price annex, fixed for each calendar year. Changes require written notice of at least 90 days before the end of the calendar year.",
+    "type": "price"
+   },
+   "source": "contract_clauses:ctr:4600070240#3.1",
+   "table": "contract_clauses"
+  },
+  {
+   "citable_fact": {
+    "days": 90,
+    "material_share": null,
+    "series": null,
+    "supplier": "sup:70210",
+    "type": "price"
+   },
+   "document": null,
+   "row": {
+    "clause": "3.1",
+    "contract_id": "ctr:4600070210",
+    "days": 90,
+    "deadband_pct": null,
+    "id": "ctr:4600070210#3.1",
+    "material_share": null,
+    "series": null,
+    "text": "Prices as per the price annex, fixed for each calendar year. Changes require written notice of at least 90 days before the end of the calendar year.",
+    "type": "price"
+   },
+   "source": "contract_clauses:ctr:4600070210#3.1",
+   "table": "contract_clauses"
+  },
+  {
+   "citable_fact": {
+    "days": null,
+    "material_share": null,
+    "series": null,
+    "supplier": "sup:70250",
+    "type": "scope"
+   },
+   "document": null,
+   "row": {
+    "clause": "2.1",
+    "contract_id": "ctr:4600070250",
+    "days": null,
+    "deadband_pct": null,
+    "id": "ctr:4600070250#2.1",
+    "material_share": null,
+    "series": null,
+    "text": "Subject: supply of Spacer sleeve.",
+    "type": "scope"
+   },
+   "source": "contract_clauses:ctr:4600070250#2.1",
+   "table": "contract_clauses"
+  },
+  {
+   "citable_fact": {
+    "days": null,
+    "material_share": null,
+    "series": null,
+    "supplier": "sup:70240",
+    "type": "scope"
+   },
+   "document": null,
+   "row": {
+    "clause": "2.1",
+    "contract_id": "ctr:4600070240",
+    "days": null,
+    "deadband_pct": null,
+    "id": "ctr:4600070240#2.1",
+    "material_share": null,
+    "series": null,
+    "text": "Subject: supply of Flange DN 100 PN 16, machined.",
+    "type": "scope"
+   },
+   "source": "contract_clauses:ctr:4600070240#2.1",
+   "table": "contract_clauses"
+  },
+  {
+   "citable_fact": {
+    "days": null,
+    "material_share": null,
+    "series": null,
+    "supplier": "sup:70210",
+    "type": "scope"
+   },
+   "document": null,
+   "row": {
+    "clause": "2.1",
+    "contract_id": "ctr:4600070210",
+    "days": null,
+    "deadband_pct": null,
+    "id": "ctr:4600070210#2.1",
+    "material_share": null,
+    "series": null,
+    "text": "Subject: supply of Pump shaft HN 24 mm, Lantern (motor stool) HN.",
+    "type": "scope"
+   },
+   "source": "contract_clauses:ctr:4600070210#2.1",
+   "table": "contract_clauses"
+  },
+  {
+   "citable_fact": {
+    "asked_pct": null,
+    "asked_price": null,
+    "date": "2026-09-23",
+    "days": null,
+    "effective_date": null,
+    "supplier": "sup:70210",
+    "title": "Request for quotation: Pump shaft HX",
+    "type": "rfq"
+   },
+   "document": "# Request for quotation: Pump shaft HX\n\nrfq - 2026-09-23 - Hollerau Pumpenwerke, Purchasing\n\nRequest for quotation for Pump shaft HX (part:320070), series HX (start of production March 2027), drawing rev. B.\n\n- Annual volume: 4200 pc\n- Material: 1.4404, net weight 3.0 kg\n- Delivery DAP Hollerau; please state price, payment terms, lead time and any tooling.\n\nInvited: Zerspanung Dralveck GmbH, Stroj\u00edrna Hrvelec s.r.o., Drehteile Fuchsreiter GmbH\n",
+   "row": {
+    "asked_pct": null,
+    "asked_price": null,
+    "author": "Hollerau Pumpenwerke, Purchasing",
+    "date": "2026-09-23",
+    "effective_date": null,
+    "file": "correspondence/20260923-70210-P05.md",
+    "id": "doc:20260923-70210-P05",
+    "kind": "rfq",
+    "notice_days": null,
+    "part_ids": "part:320070",
+    "subject": "Request for quotation: Pump shaft HX",
+    "supplier_id": "sup:70210"
+   },
+   "source": "documents:doc:20260923-70210-P05",
+   "table": "documents"
+  },
+  {
+   "citable_fact": {
+    "colour": "amber",
+    "otd_confirmed_pct": 75.0,
+    "otd_pct": 62.5,
+    "ppm": 980,
+    "quarter": "2026Q3",
+    "supplier": "sup:70240"
+   },
+   "document": null,
+   "row": {
+    "class": "B",
+    "colour": "amber",
+    "complaint_qty": 3,
+    "gr_lines": 24,
+    "id": "sc:70240@2026Q3",
+    "open_8d_overdue": 0,
+    "otd_confirmed_pct": 75.0,
+    "otd_pct": 62.5,
+    "period_end": "2026-09-30",
+    "period_start": "2025-10-01",
+    "ppm": 980,
+    "qn_count": 3,
+    "quarter": "2026Q3",
+    "received_qty": 3061,
+    "score": 76.3,
+    "supplier_id": "sup:70240"
+   },
+   "source": "scorecards:sc:70240@2026Q3",
+   "table": "scorecards"
+  },
+  {
+   "citable_fact": {
+    "colour": "amber",
+    "otd_confirmed_pct": 84.6,
+    "otd_pct": 80.8,
+    "ppm": 1863,
+    "quarter": "2026Q3",
+    "supplier": "sup:70210"
+   },
+   "document": null,
+   "row": {
+    "class": "B",
+    "colour": "amber",
+    "complaint_qty": 17,
+    "gr_lines": 52,
+    "id": "sc:70210@2026Q3",
+    "open_8d_overdue": 0,
+    "otd_confirmed_pct": 84.6,
+    "otd_pct": 80.8,
+    "period_end": "2026-09-30",
+    "period_start": "2025-10-01",
+    "ppm": 1863,
+    "qn_count": 17,
+    "quarter": "2026Q3",
+    "received_qty": 9126,
+    "score": 81.1,
+    "supplier_id": "sup:70210"
+   },
+   "source": "scorecards:sc:70210@2026Q3",
+   "table": "scorecards"
+  },
+  {
+   "citable_fact": {
+    "colour": "green",
+    "otd_confirmed_pct": 92.0,
+    "otd_pct": 88.0,
+    "ppm": 318,
+    "quarter": "2026Q3",
+    "supplier": "sup:70250"
+   },
+   "document": null,
+   "row": {
+    "class": "A",
+    "colour": "green",
+    "complaint_qty": 4,
+    "gr_lines": 25,
+    "id": "sc:70250@2026Q3",
+    "open_8d_overdue": 0,
+    "otd_confirmed_pct": 92.0,
+    "otd_pct": 88.0,
+    "period_end": "2026-09-30",
+    "period_start": "2025-10-01",
+    "ppm": 318,
+    "qn_count": 4,
+    "quarter": "2026Q3",
+    "received_qty": 12572,
+    "score": 92.4,
+    "supplier_id": "sup:70250"
+   },
+   "source": "scorecards:sc:70250@2026Q3",
+   "table": "scorecards"
+  },
+  {
+   "citable_fact": {
+    "asked_pct": null,
+    "asked_price": null,
+    "date": "2026-09-24",
+    "days": null,
+    "effective_date": null,
+    "supplier": "sup:70240",
+    "title": "New volumes",
+    "type": "email"
+   },
+   "document": "# New volumes\n\nemail - 2026-09-24 - Stroj\u00edrna Hrvelec s.r.o.\n\nOrder intake is very strong. We can confirm additional volumes only against a binding 12-month commitment.\n",
+   "row": {
+    "asked_pct": null,
+    "asked_price": null,
+    "author": "Stroj\u00edrna Hrvelec s.r.o.",
+    "date": "2026-09-24",
+    "effective_date": null,
+    "file": "correspondence/20260924-70240-M1.md",
+    "id": "doc:20260924-70240-M1",
+    "kind": "email",
+    "notice_days": null,
+    "part_ids": "",
+    "subject": "New volumes",
+    "supplier_id": "sup:70240"
+   },
+   "source": "documents:doc:20260924-70240-M1",
+   "table": "documents"
+  },
+  {
+   "citable_fact": null,
+   "document": null,
+   "row": {
+    "certifications": "ISO 9001",
+    "credit_index": 249,
+    "credit_index_12m_ago": 249,
+    "equity_ratio_pct": 43.6,
+    "filed_fy": 2024,
+    "founded": 1991,
+    "group_parent": null,
+    "legal_form": "GmbH",
+    "owner_type": "founder",
+    "staff": 22,
+    "supplier_id": "sup:70210",
+    "turnover_band": "2-5 M EUR",
+    "turnover_eur": null,
+    "vda63_grade": "B"
+   },
+   "source": "supplier_intel:2024be9c14411c20",
+   "table": "supplier_intel"
+  },
+  {
+   "citable_fact": {
+    "confidence_pct": 10,
+    "part": "part:320070",
+    "price_unit": 1,
+    "unit_cost": 36.87
+   },
+   "document": null,
+   "row": {
+    "confidence_pct": 10,
+    "conversion_eur": 16.78,
+    "cost_base": "DE",
+    "estimate_date": "2026-07-15",
+    "id": "cost:320070",
+    "material_eur": 12.91,
+    "method": "bottom-up estimate, German cost base, no margin included",
+    "overhead_eur": 7.19,
+    "part_id": "part:320070",
+    "price_unit": 1,
+    "supplier_id": null,
+    "unit_cost": 36.87
+   },
+   "source": "should_cost:cost:320070",
+   "table": "should_cost"
+  },
+  {
+   "citable_fact": {
+    "colour": "amber",
+    "otd_confirmed_pct": 82.6,
+    "otd_pct": 73.9,
+    "ppm": 1343,
+    "quarter": "2026Q2",
+    "supplier": "sup:70240"
+   },
+   "document": null,
+   "row": {
+    "class": "B",
+    "colour": "amber",
+    "complaint_qty": 4,
+    "gr_lines": 23,
+    "id": "sc:70240@2026Q2",
+    "open_8d_overdue": 0,
+    "otd_confirmed_pct": 82.6,
+    "otd_pct": 73.9,
+    "period_end": "2026-06-30",
+    "period_start": "2025-07-01",
+    "ppm": 1343,
+    "qn_count": 4,
+    "quarter": "2026Q2",
+    "received_qty": 2979,
+    "score": 80.2,
+    "supplier_id": "sup:70240"
+   },
+   "source": "scorecards:sc:70240@2026Q2",
+   "table": "scorecards"
+  },
+  {
+   "citable_fact": {
+    "date": "2026-07-10",
+    "headline": "Stroj\u00edrna Hrvelec s.r.o. fully booked into next year",
+    "supplier": "sup:70240",
+    "topic": "full_order_book"
+   },
+   "document": null,
+   "row": {
+    "body": "Stroj\u00edrna Hrvelec s.r.o. reports an order backlog of more than six months and has stopped accepting new projects for now.",
+    "date": "2026-07-10",
+    "headline": "Stroj\u00edrna Hrvelec s.r.o. fully booked into next year",
+    "id": "news:20260710-18",
+    "source": "Zulieferer Report",
+    "supplier_id": "sup:70240",
+    "topic": "full_order_book"
+   },
+   "source": "news:news:20260710-18",
+   "table": "news"
+  },
+  {
+   "citable_fact": {
+    "asked_pct": null,
+    "asked_price": null,
+    "date": "2026-09-10",
+    "days": null,
+    "effective_date": null,
+    "supplier": "sup:70210",
+    "title": "Supplier day",
+    "type": "meeting_note"
+   },
+   "document": "# Supplier day\n\nmeeting note - 2026-09-10 - Hollerau Pumpenwerke, Purchasing\n\nAt our supplier day Zerspanung Dralveck GmbH said Hollerau is an important reference customer for them.\n",
+   "row": {
+    "asked_pct": null,
+    "asked_price": null,
+    "author": "Hollerau Pumpenwerke, Purchasing",
+    "date": "2026-09-10",
+    "effective_date": null,
+    "file": "correspondence/20260910-70210-M3.md",
+    "id": "doc:20260910-70210-M3",
+    "kind": "meeting_note",
+    "notice_days": null,
+    "part_ids": "",
+    "subject": "Supplier day",
+    "supplier_id": "sup:70210"
+   },
+   "source": "documents:doc:20260910-70210-M3",
+   "table": "documents"
+  },
+  {
+   "citable_fact": null,
+   "document": null,
+   "row": {
+    "certifications": "ISO 9001",
+    "credit_index": 246,
+    "credit_index_12m_ago": 246,
+    "equity_ratio_pct": 30.2,
+    "filed_fy": 2024,
+    "founded": 1999,
+    "group_parent": null,
+    "legal_form": "s.r.o.",
+    "owner_type": "founder",
+    "staff": 60,
+    "supplier_id": "sup:70240",
+    "turnover_band": "2-5 M EUR",
+    "turnover_eur": 2810000,
+    "vda63_grade": "B"
+   },
+   "source": "supplier_intel:fcb5d407bbb1e7c0",
+   "table": "supplier_intel"
+  },
+  {
+   "citable_fact": {
+    "colour": "amber",
+    "otd_confirmed_pct": 84.6,
+    "otd_pct": 82.7,
+    "ppm": 1997,
+    "quarter": "2026Q2",
+    "supplier": "sup:70210"
+   },
+   "document": null,
+   "row": {
+    "class": "B",
+    "colour": "amber",
+    "complaint_qty": 18,
+    "gr_lines": 52,
+    "id": "sc:70210@2026Q2",
+    "open_8d_overdue": 2,
+    "otd_confirmed_pct": 84.6,
+    "otd_pct": 82.7,
+    "period_end": "2026-06-30",
+    "period_start": "2025-07-01",
+    "ppm": 1997,
+    "qn_count": 18,
+    "quarter": "2026Q2",
+    "received_qty": 9015,
+    "score": 71.4,
+    "supplier_id": "sup:70210"
+   },
+   "source": "scorecards:sc:70210@2026Q2",
+   "table": "scorecards"
+  },
+  {
+   "citable_fact": {
+    "date": "2026-03-09",
+    "headline": "Drehteile Fuchsreiter GmbH looks for new customers",
+    "supplier": "sup:70250",
+    "topic": "free_capacity"
+   },
+   "document": null,
+   "row": {
+    "body": "Drehteile Fuchsreiter GmbH is advertising free machine capacity and has paused hiring, the company said at a regional supplier day.",
+    "date": "2026-03-09",
+    "headline": "Drehteile Fuchsreiter GmbH looks for new customers",
+    "id": "news:20260309-03",
+    "source": "Metall-Kurier",
+    "supplier_id": "sup:70250",
+    "topic": "free_capacity"
+   },
+   "source": "news:news:20260309-03",
+   "table": "news"
+  },
+  {
+   "citable_fact": {
+    "asked_pct": null,
+    "asked_price": null,
+    "date": "2026-09-08",
+    "days": null,
+    "effective_date": null,
+    "supplier": "sup:70210",
+    "title": "Visit by the owner",
+    "type": "meeting_note"
+   },
+   "document": "# Visit by the owner\n\nmeeting note - 2026-09-08 - Hollerau Pumpenwerke, Purchasing\n\nThe owner of Zerspanung Dralveck GmbH admitted he had not followed his material and energy prices closely since the 2022 peak; his office manager does the costing.\n",
+   "row": {
+    "asked_pct": null,
+    "asked_price": null,
+    "author": "Hollerau Pumpenwerke, Purchasing",
+    "date": "2026-09-08",
+    "effective_date": null,
+    "file": "correspondence/20260908-70210-M1.md",
+    "id": "doc:20260908-70210-M1",
+    "kind": "meeting_note",
+    "notice_days": null,
+    "part_ids": "",
+    "subject": "Visit by the owner",
+    "supplier_id": "sup:70210"
+   },
+   "source": "documents:doc:20260908-70210-M1",
+   "table": "documents"
+  },
+  {
+   "citable_fact": null,
+   "document": null,
+   "row": {
+    "certifications": "ISO 9001",
+    "credit_index": 228,
+    "credit_index_12m_ago": 228,
+    "equity_ratio_pct": 19.6,
+    "filed_fy": 2024,
+    "founded": 1996,
+    "group_parent": null,
+    "legal_form": "GmbH",
+    "owner_type": "founder",
+    "staff": 18,
+    "supplier_id": "sup:70250",
+    "turnover_band": "0-2 M EUR",
+    "turnover_eur": null,
+    "vda63_grade": "A"
+   },
+   "source": "supplier_intel:cb57fece3821e8a1",
+   "table": "supplier_intel"
+  },
+  {
+   "citable_fact": {
+    "colour": "green",
+    "otd_confirmed_pct": 96.2,
+    "otd_pct": 92.3,
+    "ppm": 374,
+    "quarter": "2026Q2",
+    "supplier": "sup:70250"
+   },
+   "document": null,
+   "row": {
+    "class": "A",
+    "colour": "green",
+    "complaint_qty": 5,
+    "gr_lines": 26,
+    "id": "sc:70250@2026Q2",
+    "open_8d_overdue": 0,
+    "otd_confirmed_pct": 96.2,
+    "otd_pct": 92.3,
+    "period_end": "2026-06-30",
+    "period_start": "2025-07-01",
+    "ppm": 374,
+    "qn_count": 5,
+    "quarter": "2026Q2",
+    "received_qty": 13357,
+    "score": 94.3,
+    "supplier_id": "sup:70250"
+   },
+   "source": "scorecards:sc:70250@2026Q2",
+   "table": "scorecards"
+  },
+  {
+   "citable_fact": {
+    "date": "2024-05-14",
+    "headline": "Zerspanung Dralveck becomes a GmbH",
+    "supplier": "sup:70210",
+    "topic": "renamed"
+   },
+   "document": null,
+   "row": {
+    "body": "The sole trader Zerspanung Dralveck e.K. continues as Zerspanung Dralveck GmbH; customers receive a new supplier number.",
+    "date": "2024-05-14",
+    "headline": "Zerspanung Dralveck becomes a GmbH",
+    "id": "news:20240514-00",
+    "source": "Zulieferer Report",
+    "supplier_id": "sup:70210",
+    "topic": "renamed"
+   },
+   "source": "news:news:20240514-00",
+   "table": "news"
+  },
+  {
+   "citable_fact": {
+    "asked_pct": null,
+    "asked_price": null,
+    "date": "2026-09-04",
+    "days": null,
+    "effective_date": null,
+    "supplier": "sup:70250",
+    "title": "Payment of invoices",
+    "type": "email"
+   },
+   "document": "# Payment of invoices\n\nemail - 2026-09-04 - Drehteile Fuchsreiter GmbH\n\nCould you pay our invoices within 10 days? In return we would grant a cash discount.\n",
+   "row": {
+    "asked_pct": null,
+    "asked_price": null,
+    "author": "Drehteile Fuchsreiter GmbH",
+    "date": "2026-09-04",
+    "effective_date": null,
+    "file": "correspondence/20260904-70250-M4.md",
+    "id": "doc:20260904-70250-M4",
+    "kind": "email",
+    "notice_days": null,
+    "part_ids": "",
+    "subject": "Payment of invoices",
+    "supplier_id": "sup:70250"
+   },
+   "source": "documents:doc:20260904-70250-M4",
+   "table": "documents"
+  },
+  {
+   "citable_fact": {
+    "colour": "amber",
+    "otd_confirmed_pct": 91.7,
+    "otd_pct": 83.3,
+    "ppm": 1930,
+    "quarter": "2026Q1",
+    "supplier": "sup:70240"
+   },
+   "document": null,
+   "row": {
+    "class": "B",
+    "colour": "amber",
+    "complaint_qty": 6,
+    "gr_lines": 24,
+    "id": "sc:70240@2026Q1",
+    "open_8d_overdue": 0,
+    "otd_confirmed_pct": 91.7,
+    "otd_pct": 83.3,
+    "period_end": "2026-03-31",
+    "period_start": "2025-04-01",
+    "ppm": 1930,
+    "qn_count": 6,
+    "quarter": "2026Q1",
+    "received_qty": 3109,
+    "score": 82.0,
+    "supplier_id": "sup:70240"
+   },
+   "source": "scorecards:sc:70240@2026Q1",
+   "table": "scorecards"
+  },
+  {
+   "citable_fact": {
+    "asked_pct": null,
+    "asked_price": null,
+    "date": "2026-08-18",
+    "days": null,
+    "effective_date": null,
+    "supplier": "sup:70250",
+    "title": "Overdue invoices",
+    "type": "email"
+   },
+   "document": "# Overdue invoices\n\nemail - 2026-08-18 - Drehteile Fuchsreiter GmbH\n\nSeveral of our invoices are overdue again. We ask you to keep to the agreed payment terms; otherwise we will have to review our conditions.\n",
+   "row": {
+    "asked_pct": null,
+    "asked_price": null,
+    "author": "Drehteile Fuchsreiter GmbH",
+    "date": "2026-08-18",
+    "effective_date": null,
+    "file": "correspondence/20260818-70250-P.md",
+    "id": "doc:20260818-70250-P",
+    "kind": "email",
+    "notice_days": null,
+    "part_ids": "",
+    "subject": "Overdue invoices",
+    "supplier_id": "sup:70250"
+   },
+   "source": "documents:doc:20260818-70250-P",
+   "table": "documents"
+  },
+  {
+   "citable_fact": {
+    "colour": "amber",
+    "otd_confirmed_pct": 86.5,
+    "otd_pct": 82.7,
+    "ppm": 1313,
+    "quarter": "2026Q1",
+    "supplier": "sup:70210"
+   },
+   "document": null,
+   "row": {
+    "class": "B",
+    "colour": "amber",
+    "complaint_qty": 12,
+    "gr_lines": 52,
+    "id": "sc:70210@2026Q1",
+    "open_8d_overdue": 1,
+    "otd_confirmed_pct": 86.5,
+    "otd_pct": 82.7,
+    "period_end": "2026-03-31",
+    "period_start": "2025-04-01",
+    "ppm": 1313,
+    "qn_count": 12,
+    "quarter": "2026Q1",
+    "received_qty": 9138,
+    "score": 79.8,
+    "supplier_id": "sup:70210"
+   },
+   "source": "scorecards:sc:70210@2026Q1",
+   "table": "scorecards"
+  },
+  {
+   "citable_fact": {
+    "asked_pct": null,
+    "asked_price": null,
+    "date": "2026-08-11",
+    "days": null,
+    "effective_date": null,
+    "supplier": "sup:70250",
+    "title": "Supplier day",
+    "type": "meeting_note"
+   },
+   "document": "# Supplier day\n\nmeeting note - 2026-08-11 - Hollerau Pumpenwerke, Purchasing\n\nAt our supplier day Drehteile Fuchsreiter GmbH said Hollerau is an important reference customer for them.\n",
+   "row": {
+    "asked_pct": null,
+    "asked_price": null,
+    "author": "Hollerau Pumpenwerke, Purchasing",
+    "date": "2026-08-11",
+    "effective_date": null,
+    "file": "correspondence/20260811-70250-M2.md",
+    "id": "doc:20260811-70250-M2",
+    "kind": "meeting_note",
+    "notice_days": null,
+    "part_ids": "",
+    "subject": "Supplier day",
+    "supplier_id": "sup:70250"
+   },
+   "source": "documents:doc:20260811-70250-M2",
+   "table": "documents"
+  }
+ ]
+}

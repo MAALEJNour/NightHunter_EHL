@@ -1,6 +1,89 @@
 # Discovery and implementation plan
 
-Status: planning plus authorized source import/environment template, 10 October 2026. All architecture and milestones below are proposed unless explicitly marked verified. Upstream commit: `1b5516bb95ef28e37f69aa446dc62168864bca53`.
+**Latest status (10 October 2026, late):** milestones, measured results and next steps now live in
+[MILESTONES.md](MILESTONES.md) (S1–S6, M3 RFQ, M4 final runner) and [LESSONS.md](LESSONS.md); the
+full current picture for a new teammate is in [HANDOFF_FOR_TEAMMATE.md](HANDOFF_FOR_TEAMMATE.md).
+Best measured configuration: `--policy packages --adaptation expert_prose`, `gpt-5.6-luna`, S5 mean
+75.1 on nine single-supplier cases; RFQ P05 92.4 / 79.2. The sections below are the original
+discovery plan and the Batch A3 record.
+
+Original status: local naive baseline implemented and exercised, 10 October 2026. All advanced architecture and milestones below are proposed unless explicitly marked verified. Upstream commit: `1b5516bb95ef28e37f69aa446dc62168864bca53`.
+
+Batch A3 measured update (10 October 2026): Codex reviewed Claude's A2 planner changes,
+then fixed the close path so only the latest supplier reply's **primary** ID is accepted.
+When a non-primary sheet is the best acceptable package and a buyer message remains,
+the adapter sends its complete terms as one validated package and accepts a valid
+primary on the next reply. At zero rounds, it accepts only a primary that beats the
+buyer alternative. Approval intent now requires a source-linked profile threshold.
+P11's A2 fallback came from an empty late-round plan without an accept recommendation;
+the adapter now records deterministic `planner_exhausted` closure. Minimal P02/P18 422
+regressions, **125 full-suite tests**, Ruff, syntax and offline real-dossier preflight
+for all nine cases passed before A3.
+
+A3 planned 27 sequential conditions (one current and two packages per supported
+single-supplier case) with frozen dossiers/code and a $0.60 batch ceiling. It
+**stopped after 5 runs** because `nighthunter/rfq.py` appeared in the shared worktree,
+changing the code fingerprint before run 6. P01 current scored 55.66; packages
+73.89 and 73.89, both 10.23 points below A2 packages. P02 current scored 50.03;
+its first packages repeat scored 42.95, 7.08 below current. All five were valid deals,
+zero fallbacks, no HTTP 422. The other 22 conditions were not attempted, so this is
+not a complete policy comparison. Spend $0.08272970; lifetime ledger $0.75661670/$5;
+observed practice quota 422→417. See [partial A3 results](BATCH_A3_RESULTS.md) and
+[handoff](HANDOFF.md). The next hosted comparison requires a newly frozen batch and
+shared-worktree coordination. Defaults remain `--policy current`, `--input-version current`,
+`--adaptation current`. RFQ still lacks a validated hosted runner; Claude's pure RFQ
+analysis module is not a completed integration.
+
+Batch A2 measured update (10 October 2026): the later frozen code, including the P03
+null-notice fix and Claude's internal should-cost planner estimate, was tested on all nine
+supported single-supplier practice cases. Before hosted work, **91 local tests**, Ruff,
+syntax checks and real-dossier/claim-card/round-0-plan checks for all nine passed.
+Eighteen conditions ran sequentially with one frozen dossier per pair, alternating order,
+`adaptive/current` versus `adaptive/packages`, unchanged model/settings and a $0.75 batch cap.
+Fifteen ended in must-have-compliant deals; P02 packages and both P18 attempts failed with
+`HTTP 422: not a standing offer in this session` when accepting a non-primary alternative ID.
+P11 packages had one model fallback. The final two P18 errors triggered the stop rule.
+On the seven fully completed pairs, current mean/worst was **58.75/22.61**, packages
+**67.64/48.76**; the three failures are excluded there. A zero-filled nine-case view gives
+50.35 versus 52.61 mean, worst zero for both; the zeros are not official arena scores.
+Batch model spend was **$0.23153115**; lifetime ledger **$0.67388700/$5**. The observed
+practice quota changed 468→432 while 18 sessions opened; the excess change is unexplained.
+See [full A2 results](BATCH_A2_RESULTS.md), [handoff](HANDOFF.md), and ignored conversations.
+One run per condition is diagnostic, not grounds for promoting packages. First repair and
+locally test hosted standing-offer selection before any further paid experiment. Defaults
+remain `--policy current`, `--input-version current`, `--adaptation current`; P05 RFQ
+and parallel multi-supplier scheduling are still unsupported.
+
+Batch A measured update (10 October 2026): the nine-case, 18-session sequential comparison
+stopped after **four completed sessions and two P03 pre-session errors**, per the two-consecutive-
+errors rule. One matched run on P01 scored current 62.80 versus packages 67.77; P02 scored current
+34.57 versus packages 22.47. All four deals met must-haves with zero fallbacks. P02 packages'
+lower price and longer payment were offset by €122,281.15 of evaluated supplier-health cost,
+compared with €13,368.23 for current. Quota used: four sessions; model spend $0.05022210 of the
+$0.75 batch cap (lifetime $0.44235585/$5). The P03 crash came from null notice days in a
+Codex-owned claim-card check; fixed and locally validated **after** the stopped batch, with no
+further hosted run within Batch A. That batch's final local suite had **89 passing tests**; touched-file Ruff
+passes. See [Batch A results](BATCH_A_RESULTS.md), [handoff](HANDOFF.md) and ignored transcripts.
+No policy promotion follows from one run per condition and an incomplete case set. Defaults stay
+`--policy current`, `--input-version current`, `--adaptation current`; P05 RFQ remains unsupported.
+
+10 October 2026 local-only update: `--policy packages` is wired as a separate, opt-in experiment. At startup it builds one source-linked supplier profile per supplier; at each decision it validates the current primary offer, computes the deterministic package plan, and sends the plan's exact validated terms. The model can select only rendered tone, intent and available checked claims. Model failure uses neutral rendering with the same planned packages; a final offer, last buyer round or planner acceptance recommendation invokes the existing safe close over all valid current sheets. Plans/profiles are logged in decisions and comparison manifests. Eight focused fake-model tests and the 79-test full local suite passed; touched-file Ruff (`E4,E7,E9,F`) and syntax checks passed. No hosted score exists. Defaults remain `--policy current`, `--input-version current`, `--adaptation current`. The planner's target is a request, not a supplier acceptance forecast; its first-sheet movement analysis, quote-default completion and approximate equal-cost menus need improvement or controlled hosted validation. See [the review and proposed matched batch](HANDOFF.md). RFQ and parallel wave support remain design only.
+
+Latest local-only implementation: the live agent now evaluates all valid sheets in each active supplier's **latest** reply, prices completed terms using quote defaults and the published cost helper, enforces must-haves, and chooses the exact ID of the lowest central-estimated-cost current offer only when it beats the alternative. Older offer IDs are not reused. Claim cards now classify buyer leverage, seller support and uncertainty; should-cost stays internal. `unused_claims` and `buyer_history` are separately selectable inputs, while `reply_aware` is an independent optional adaptation mode driven only by current-thread supplier feedback. The existing defaults remain `--policy current`, `--input-version current`, `--adaptation current`; `economics` and `offer_history` remain experimental. Focused tests and the full local project suite passed (**49 tests**); S01–S03 naive simulator checks closed valid scripted deals with zero LLM calls. No OpenAI or Tacto calls, hosted sessions or new score measurements were made for this implementation. See [saved 28-run audit](SAVED_RUN_REVIEW.md), [local tests](LOCAL_TESTING.md) and [input comparison](INPUT_MEMORY_RESULTS.md). Multi-supplier RFQ scheduling, exact hosted acceptance of alternative IDs, deadlines/recovery and broader case coverage remain open.
+
+Latest cross-case milestone: an optional offer-history input filtered previously used evidence and included prior buyer packages. Ten frozen hosted tests across P01, P03 and the first P02 pair all closed valid autonomous deals with no fallbacks. It eliminated duplicate-card drops but reduced P01 mean from 71.38 to 56.81 and P02's single score from 24.87 to 6.57; P03 rose slightly from 84.03 to 85.08. Keep the original input default. The low P02 scores and 14-day payment trade reveal a generalization gap. New spend USD 0.18941835; cumulative USD 0.39213375 / 5. See [INPUT_MEMORY_RESULTS.md](INPUT_MEMORY_RESULTS.md). The older budget totals below are historical checkpoints.
+
+Latest performance milestone: implemented opt-in package search and within-session concession memory (`--policy economics`), with 34 passing local tests. Six frozen live tests: P01 economics mean 71.90 versus current 49.05 (two each); P03 economics 88.27 versus current 73.07 (one each). All valid autonomous deals, zero fallbacks, all 11 checked claims verified. Experiment USD 0.07994095; current cumulative ledger USD 0.2027154 of USD 5. See [ECONOMIC_POLICY_RESULTS.md](ECONOMIC_POLICY_RESULTS.md) and [IMPROVEMENT_PLAN.md](IMPROVEMENT_PLAN.md). Small-sample evidence only; default policy unchanged. Next: equivalent-value package menus, evidence-window retrieval, supplier-cost calibration and held-out case testing. No automatic cross-run training or model weight updates are implemented.
+
+Latest cross-case check: unchanged adaptive completed one P03 renewal autonomously at 0.8515216195 (85.15/100), with a valid deal, zero fallbacks and one arena-verified forecast claim. Two buyer decisions, 67.170 seconds, conservative model cost USD 0.00809605. Current cumulative ledger: USD 0.12277445 of USD 5. See [ADAPTIVE_P03_RESULT.md](ADAPTIVE_P03_RESULT.md) for agreed terms, discussion, replay and limitations. P03 has not yet had a matched prompt comparison; this single run does not establish superiority. Earlier updates below retain their historical results and budget totals.
+
+Completed milestones: autonomous P01 deal closure, structured evidence/term validation (27 local tests), and eight matched live prompt runs. All eight comparison runs closed valid deals without intervention/fallback; adaptive had the highest observed mean, 61.78/100, across two repeats. All 18 arena-evaluated claims were verified. See PROMPT_COMPARISON.md for all results, failures from preceding diagnostic runs, limitations and replay links. Initial USD 5 allowance has USD 0.1146784 conservatively accounted across all runs so far. Next: pre-score proposed packages and validate candidates across different case types; do not claim a general best prompt from P01 alone.
+
+Live pilot update: nighthunter.live now connects dossier context and prompt variants to real OpenAI/Tacto practice calls, with a persistent conservative budget ledger and saved discussion/replay. First P01 score 0.684485, assisted recovery after a closing-cost default error, accounted USD 0.008149. The error is fixed and regression-tested; autonomous completion after the fix is not yet demonstrated on a second paid run. See FIRST_LIVE_RESULT.md. Full numerical claim validation, RFQ scheduling and paired prompt evaluation remain pending.
+
+Context milestone: nighthunter/context.py now produces bounded dossiers with exact essentials, citable facts, contract/correspondence text, supplier alias handling and explicit coverage. Ten tests cover budget pressure, missing refs/identities, case fact precedence, units and supplemental evidence. Four prompt variants share common rules and identical context, with hashes for reproducibility. This is offline preparation, not measured LLM negotiation improvement. See EXPERIMENTS.md for commands, limitations, staged timeline and evaluation design. User approved USD 5 total initial LLM spend, with model confirmation before paid calls.
+
+Baseline update: installed uv 0.13.0 and CPython 3.12.15; synced all 47 packages with --frozen --all-extras. scripts/test_naive.py runs the original NaiveAgent against a temporary localhost simulator and does not read .env. All three cases closed valid deals: S01 0.520602, S02 0.513154, S03 0.677574. These are scripted-simulator scores, not hosted performance. See LOCAL_TESTING.md for reproducible commands and verification. No changes to upstream files were needed.
 
 Setup update: all 323 upstream tracked files are now in vendor/negotiation-arena-kit, with licenses retained and no upstream modifications. The root .env has blank credential fields and is ignored; the user confirms they have the team key and can enter it there. .env.example is safe to share. See docs/UPSTREAM.md and the root README for commands. Importing the source does not install dependencies or implement our agent.
 
@@ -84,17 +167,17 @@ Verified source limitations to address or test:
 
 | Tool | Purpose / status |
 |---|---|
-| Python 3.12 + uv | Required by kit (>=3.12,<3.13). Current default python3 is 3.14.0; uv was not found on PATH. Install a compatible environment during implementation. |
+| Python 3.12 + uv | Installed uv 0.13.0 and managed Python 3.12.15. The separate kit .venv meets >=3.12,<3.13 without changing default Python. |
 | arena-kit pinned to inspected revision | Full snapshot now vendored under vendor/negotiation-arena-kit; includes its uv.lock. API contract, baseline, simulation, document and cost utilities. |
 | SQLite + standard Python | Structured data, deterministic arithmetic and retrieval. |
 | httpx, pypdf, openpyxl | Already declared by upstream for HTTP and supplier documents. |
-| pytest + Ruff | Contract/decision tests and lint. No tests run yet; only source and data inspection. |
-| LLM access | Provider/model and budget pending; benchmark latency and structured output before choosing. No paid calls made. |
-| Arena team key | User confirms possession; enter it privately in root .env. Authentication has not yet been tested. |
+| pytest + Ruff | Installed; local baseline and upstream checks exercised. Results recorded in LOCAL_TESTING.md. |
+| LLM access | gpt-5.6-luna and the USD 5 cumulative ledger were used through partial Batch A3; latest accounted total is USD 0.75661670. See A3 above for the measured partial batch. |
+| Arena team key | Authenticated practice runs covered the nine supported single-supplier cases in Batch A2. The private key stays in ignored `.env`. |
 | Optional data MCP | Six read-only tools: list_tables, query, lookup, list_ids, read_document, get_case. Useful for exploration; direct Python is simpler for runtime. Hosted cases still come from API. |
 | Git + Entire | Development provenance; separate from competition scoring. Previously verified commit/checkpoint upload. |
 
-Baseline commands below belong in upstream starter-kit after environment/key setup; they have not been executed for this planning task:
+These are upstream starter-kit commands for a separately authorized run; only the local checks in LOCAL_TESTING.md were executed for the latest changes:
 
 ```bash
 uv sync --all-extras
@@ -105,7 +188,7 @@ uv run pytest
 uv run ruff check .
 ```
 
-Verify CLI help before executing commands. Point ARENA_DATA at the actual extracted package. Upstream's `arena play case:P01` opens a quota-consuming session; do not run casually during discovery. Model selection remains open; the example environment's model name is not a recommendation or verified available model.
+Verify CLI help before executing commands. Point ARENA_DATA at the actual extracted package. Upstream's `arena play case:P01` opens a quota-consuming session. The previously configured model is not evidence that the latest code performs better; test changes in a future matched batch.
 
 ## 7. Milestones and acceptance gates
 
@@ -123,11 +206,17 @@ Published event schedule: Sunday 08:00 supplemental data, 09:00 preflight, 12:00
 
 Open items:
 
-- Team key authentication, chosen LLM access, credits/rate limits and intended final machine/network.
-- Actual hosted case files, live service behavior and quota: not queried without team configuration.
+- Intended final machine/network, remaining hosted practice quota and provider credits at freeze time.
+- The hosted API rejected non-primary alternative IDs in P02/P18 with HTTP 422 despite those IDs appearing in the latest supplier message. Determine its standing-offer rule locally and correct closing before further hosted sessions. Multi-supplier RFQ scheduling remains open.
 - Official clarification of presentation's price-only/single-supplier claims if intended as a rule change.
 - Jury weighting remains a placeholder in upstream; ask the organizers when relevant.
 - Per-thread timing during other suppliers' in-flight replies needs contract testing and possibly organizer clarification.
 - Final upstream/data changes: review diffs deliberately; pin the implementation used at freeze.
 
-Next step after the user's instruction to implement: establish Python 3.12/uv using the vendored kit and lockfile, and build the local simulator baseline plus evidence layer. No negotiated outcome or model performance is claimed yet.
+Next step: coordinate a stable shared worktree, review the new RFQ module separately,
+and decide whether to approve a fresh 27-condition single-supplier batch for the 22 A3
+conditions left unattempted. Do not merge those later measurements into A3's frozen
+five-run fingerprint. Future input experiments should isolate `unused_claims` from
+`buyer_history` on identical dossiers and model settings, recording complete cost,
+failures and fallbacks. Multi-supplier RFQs still need a hosted runner, scheduler,
+deadline handling and recovery; the current live runner rejects them.

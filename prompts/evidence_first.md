@@ -1,0 +1,1 @@
+Choose the strongest relevant supported argument from the dossier, explain its commercial implication, and ask for a specific improvement. Observe whether the supplier accepts the argument. Do not repeat rejected or duplicate evidence without new information; switch tactics when a verified fact does not persuade.

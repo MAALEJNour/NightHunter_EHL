@@ -1,0 +1,6713 @@
+{
+ "case:P01": {
+  "case": {
+   "briefing": "You negotiate for Hollerau Pumpenwerke with Gie\u00dferei Brandlhuber GmbH & Co. KG. Brandlhuber announces +9.5 % on HN volute casings. Need: 8150 pc a year. Category goal: stabilise a strategic supply: a healthy supplier and stable prices count, not only the lowest price. Score: the lowest total cost C as defined in the rules, valued with this case's rates (need lead time 45 days). Fallback if you walk away: the second-source quote quote:7200001. Must-haves: none. Prepare from the data package.",
+   "buyer": {
+    "alternative": {
+     "kind": "quote",
+     "ref": "quote:7200001",
+     "terms": {
+      "contract_months": 12,
+      "effective_date": "2027-01-01",
+      "incoterm": "FCA",
+      "index_clause": null,
+      "lead_time_days": 70,
+      "payment_days": 60,
+      "ppm_commitment": 2376,
+      "tooling_eur": 1500,
+      "unit_price": 143.22,
+      "volume_per_year": 8150
+     }
+    },
+    "category_goal": "stabilise",
+    "cost_per_defect": 216,
+    "current_unit_price": 126.53,
+    "fallback_risk_pct": 10,
+    "fallback_unit_price": 136.65,
+    "freight_eur_per_unit": {
+     "DAP": 0.0,
+     "EXW": 2.19,
+     "FCA": 1.9
+    },
+    "horizon_years": 1.0,
+    "index_paths": {},
+    "index_risk_pct": 4,
+    "interest_rate": 0.08,
+    "late_cost_per_day": 420,
+    "must_haves": [],
+    "need_lead_time_days": 45,
+    "need_per_year": 8150,
+    "reference_payment_days": 60,
+    "relationship_eur_per_point": 15470,
+    "sustainable_margin_pct": 3
+   },
+   "case_id": "case:P01",
+   "fixed_terms": {
+    "contract_months": 12,
+    "incoterm": "FCA",
+    "index_clause": null,
+    "lead_time_days": 42,
+    "tooling_eur": 0,
+    "volume_per_year": 8150
+   },
+   "hosted": true,
+   "negotiable": [
+    "unit_price",
+    "effective_date",
+    "payment_days"
+   ],
+   "parts": [
+    "part:310010"
+   ],
+   "refs": [
+    "doc:20260911-70110-P01",
+    "ctr:4600070110",
+    "sc:70110@2026Q3",
+    "quote:7200001"
+   ],
+   "round_limit": 10,
+   "set": "practice",
+   "suppliers": [
+    "sup:70110"
+   ],
+   "term_options": {
+    "effective_date": [
+     "2026-11-01",
+     "2027-01-01",
+     "2027-04-01"
+    ],
+    "payment_days": [
+     14,
+     30,
+     45,
+     60,
+     90
+    ]
+   },
+   "title": "Brandlhuber announces +9.5 % on HN volute casings",
+   "trigger_doc": "doc:20260911-70110-P01",
+   "type": "price_increase"
+  },
+  "evidence": [
+   {
+    "citable_fact": {
+     "days": 90,
+     "supplier": "sup:70110",
+     "valid_from": "2024-01-01",
+     "valid_to": "2026-12-31"
+    },
+    "document": "# Framework agreement 4600070110\n\nBetween Hollerau Pumpenwerke GmbH and Gie\u00dferei Brandlhuber GmbH & Co. KG.\n\n**\u00a7 2.1** Subject: supply of Volute casing HN 50-200, Volute casing HN 100-315.\n\n**\u00a7 3.1** Prices as per the price annex, fixed for each calendar year. Changes require written notice of at least 90 days before the end of the calendar year.\n\n**\u00a7 4.1** Payment: 30 days net.\n\n**\u00a7 5.1** Delivery FCA; standard lead time 42 days from order.\n\n**\u00a7 6.1** The quality agreement applies: on-time delivery target 95 %, flat fee of EUR 150 per supplier-caused complaint.\n\n**\u00a7 8.1** Valid from 2024-01-01 to 2026-12-31; extends by 12 months unless terminated with 90 days' notice.\n\nParts: part:310010, part:310012\n",
+    "row": {
+     "file": "contracts/4600070110.md",
+     "id": "ctr:4600070110",
+     "incoterm": "FCA",
+     "notice_days": 90,
+     "payment_days": 30,
+     "price_basis": "fixed per year",
+     "supplier_id": "sup:70110",
+     "type": "framework agreement",
+     "valid_from": "2024-01-01",
+     "valid_to": "2026-12-31"
+    },
+    "source": "contracts:ctr:4600070110",
+    "table": "contracts"
+   },
+   {
+    "citable_fact": {
+     "days": 90,
+     "material_share": null,
+     "series": null,
+     "supplier": "sup:70110",
+     "type": "term"
+    },
+    "document": null,
+    "row": {
+     "clause": "8.1",
+     "contract_id": "ctr:4600070110",
+     "days": 90,
+     "deadband_pct": null,
+     "id": "ctr:4600070110#8.1",
+     "material_share": null,
+     "series": null,
+     "text": "Valid from 2024-01-01 to 2026-12-31; extends by 12 months unless terminated with 90 days' notice.",
+     "type": "term"
+    },
+    "source": "contract_clauses:ctr:4600070110#8.1",
+    "table": "contract_clauses"
+   },
+   {
+    "citable_fact": {
+     "days": null,
+     "material_share": null,
+     "series": null,
+     "supplier": "sup:70110",
+     "type": "quality"
+    },
+    "document": null,
+    "row": {
+     "clause": "6.1",
+     "contract_id": "ctr:4600070110",
+     "days": null,
+     "deadband_pct": null,
+     "id": "ctr:4600070110#6.1",
+     "material_share": null,
+     "series": null,
+     "text": "The quality agreement applies: on-time delivery target 95 %, flat fee of EUR 150 per supplier-caused complaint.",
+     "type": "quality"
+    },
+    "source": "contract_clauses:ctr:4600070110#6.1",
+    "table": "contract_clauses"
+   },
+   {
+    "citable_fact": {
+     "days": 42,
+     "material_share": null,
+     "series": null,
+     "supplier": "sup:70110",
+     "type": "delivery"
+    },
+    "document": null,
+    "row": {
+     "clause": "5.1",
+     "contract_id": "ctr:4600070110",
+     "days": 42,
+     "deadband_pct": null,
+     "id": "ctr:4600070110#5.1",
+     "material_share": null,
+     "series": null,
+     "text": "Delivery FCA; standard lead time 42 days from order.",
+     "type": "delivery"
+    },
+    "source": "contract_clauses:ctr:4600070110#5.1",
+    "table": "contract_clauses"
+   },
+   {
+    "citable_fact": {
+     "days": 30,
+     "material_share": null,
+     "series": null,
+     "supplier": "sup:70110",
+     "type": "payment"
+    },
+    "document": null,
+    "row": {
+     "clause": "4.1",
+     "contract_id": "ctr:4600070110",
+     "days": 30,
+     "deadband_pct": null,
+     "id": "ctr:4600070110#4.1",
+     "material_share": null,
+     "series": null,
+     "text": "Payment: 30 days net.",
+     "type": "payment"
+    },
+    "source": "contract_clauses:ctr:4600070110#4.1",
+    "table": "contract_clauses"
+   },
+   {
+    "citable_fact": {
+     "days": 90,
+     "material_share": null,
+     "series": null,
+     "supplier": "sup:70110",
+     "type": "price"
+    },
+    "document": null,
+    "row": {
+     "clause": "3.1",
+     "contract_id": "ctr:4600070110",
+     "days": 90,
+     "deadband_pct": null,
+     "id": "ctr:4600070110#3.1",
+     "material_share": null,
+     "series": null,
+     "text": "Prices as per the price annex, fixed for each calendar year. Changes require written notice of at least 90 days before the end of the calendar year.",
+     "type": "price"
+    },
+    "source": "contract_clauses:ctr:4600070110#3.1",
+    "table": "contract_clauses"
+   },
+   {
+    "citable_fact": {
+     "days": null,
+     "material_share": null,
+     "series": null,
+     "supplier": "sup:70110",
+     "type": "scope"
+    },
+    "document": null,
+    "row": {
+     "clause": "2.1",
+     "contract_id": "ctr:4600070110",
+     "days": null,
+     "deadband_pct": null,
+     "id": "ctr:4600070110#2.1",
+     "material_share": null,
+     "series": null,
+     "text": "Subject: supply of Volute casing HN 50-200, Volute casing HN 100-315.",
+     "type": "scope"
+    },
+    "source": "contract_clauses:ctr:4600070110#2.1",
+    "table": "contract_clauses"
+   },
+   {
+    "citable_fact": {
+     "asked_pct": 9.5,
+     "asked_price": 138.55,
+     "date": "2026-09-11",
+     "days": 51,
+     "effective_date": "2026-11-01",
+     "supplier": "sup:70110",
+     "title": "Price adjustment from 01 November 2026",
+     "type": "letter"
+    },
+    "document": "# Price adjustment from 01 November 2026\n\nletter - 2026-09-11 - Gie\u00dferei Brandlhuber GmbH & Co. KG\n\nDear Sir or Madam,\n\nwe have supplied Hollerau Pumpenwerke reliably for many years. Owing to sustained increases in energy, raw material and wage costs, we are forced to adjust our prices for Volute casing HN 50-200 (part:310010) by **9.5 %** with effect from **01 November 2026**: from EUR 126.53 to EUR 138.55 per  pc.\n\nWe regret this step and ask for your understanding.\n\nYours faithfully,\nGie\u00dferei Brandlhuber GmbH & Co. KG\n",
+    "row": {
+     "asked_pct": 9.5,
+     "asked_price": 138.55,
+     "author": "Gie\u00dferei Brandlhuber GmbH & Co. KG",
+     "date": "2026-09-11",
+     "effective_date": "2026-11-01",
+     "file": "correspondence/20260911-70110-P01.md",
+     "id": "doc:20260911-70110-P01",
+     "kind": "letter",
+     "notice_days": 51,
+     "part_ids": "part:310010",
+     "subject": "Price adjustment from 01 November 2026",
+     "supplier_id": "sup:70110"
+    },
+    "source": "documents:doc:20260911-70110-P01",
+    "table": "documents"
+   },
+   {
+    "citable_fact": {
+     "asked_pct": null,
+     "asked_price": null,
+     "date": "2026-09-17",
+     "days": null,
+     "effective_date": null,
+     "supplier": "sup:70110",
+     "title": "Visit by the owner",
+     "type": "meeting_note"
+    },
+    "document": "# Visit by the owner\n\nmeeting note - 2026-09-17 - Hollerau Pumpenwerke, Purchasing\n\nVisit by the owner of Gie\u00dferei Brandlhuber GmbH & Co. KG. He reminded us that in 2022 they kept supplying at the old price for a quarter and said he expects partnership in return.\n",
+    "row": {
+     "asked_pct": null,
+     "asked_price": null,
+     "author": "Hollerau Pumpenwerke, Purchasing",
+     "date": "2026-09-17",
+     "effective_date": null,
+     "file": "correspondence/20260917-70110-M3.md",
+     "id": "doc:20260917-70110-M3",
+     "kind": "meeting_note",
+     "notice_days": null,
+     "part_ids": "",
+     "subject": "Visit by the owner",
+     "supplier_id": "sup:70110"
+    },
+    "source": "documents:doc:20260917-70110-M3",
+    "table": "documents"
+   },
+   {
+    "citable_fact": null,
+    "document": null,
+    "row": {
+     "certifications": "ISO 9001; ISO 14001; ISO 50001",
+     "credit_index": 222,
+     "credit_index_12m_ago": 222,
+     "equity_ratio_pct": 24.7,
+     "filed_fy": 2024,
+     "founded": 1921,
+     "group_parent": null,
+     "legal_form": "GmbH & Co. KG",
+     "owner_type": "family",
+     "staff": 185,
+     "supplier_id": "sup:70110",
+     "turnover_band": "25-50 M EUR",
+     "turnover_eur": 25800000,
+     "vda63_grade": "B"
+    },
+    "source": "supplier_intel:6c4a61254e7034ef",
+    "table": "supplier_intel"
+   },
+   {
+    "citable_fact": {
+     "confidence_pct": 5,
+     "part": "part:310010",
+     "price_unit": 1,
+     "unit_cost": 132.64
+    },
+    "document": null,
+    "row": {
+     "confidence_pct": 5,
+     "conversion_eur": 62.21,
+     "cost_base": "DE",
+     "estimate_date": "2026-07-15",
+     "id": "cost:310010",
+     "material_eur": 43.77,
+     "method": "bottom-up estimate of this supplier's plant, no margin included",
+     "overhead_eur": 26.66,
+     "part_id": "part:310010",
+     "price_unit": 1,
+     "supplier_id": "sup:70110",
+     "unit_cost": 132.64
+    },
+    "source": "should_cost:cost:310010",
+    "table": "should_cost"
+   },
+   {
+    "citable_fact": null,
+    "document": null,
+    "row": {
+     "asked_pct": 2.1,
+     "date": "2025-12-03",
+     "event_id": "EV-2026-70110-310010",
+     "note": "accepted below full cost to keep the volume",
+     "part_id": "part:310010",
+     "settled_pct": -1.4,
+     "supplier_id": "sup:70110",
+     "type": "annual renewal"
+    },
+    "source": "negotiation_history:9abe890ba4801f96",
+    "table": "negotiation_history"
+   },
+   {
+    "citable_fact": {
+     "asked_pct": null,
+     "asked_price": null,
+     "date": "2026-09-09",
+     "days": null,
+     "effective_date": null,
+     "supplier": "sup:70110",
+     "title": "Visit by the owner",
+     "type": "meeting_note"
+    },
+    "document": "# Visit by the owner\n\nmeeting note - 2026-09-09 - Hollerau Pumpenwerke, Purchasing\n\nThe owner of Gie\u00dferei Brandlhuber GmbH & Co. KG admitted he had not followed his material and energy prices closely since the 2022 peak; his office manager does the costing.\n",
+    "row": {
+     "asked_pct": null,
+     "asked_price": null,
+     "author": "Hollerau Pumpenwerke, Purchasing",
+     "date": "2026-09-09",
+     "effective_date": null,
+     "file": "correspondence/20260909-70110-M4.md",
+     "id": "doc:20260909-70110-M4",
+     "kind": "meeting_note",
+     "notice_days": null,
+     "part_ids": "",
+     "subject": "Visit by the owner",
+     "supplier_id": "sup:70110"
+    },
+    "source": "documents:doc:20260909-70110-M4",
+    "table": "documents"
+   },
+   {
+    "citable_fact": null,
+    "document": null,
+    "row": {
+     "asked_pct": 1.9,
+     "date": "2024-11-17",
+     "event_id": "EV-2025-70110-310010",
+     "note": "accepted below full cost to keep the volume",
+     "part_id": "part:310010",
+     "settled_pct": -0.1,
+     "supplier_id": "sup:70110",
+     "type": "annual renewal"
+    },
+    "source": "negotiation_history:4a4b1b4e8754561a",
+    "table": "negotiation_history"
+   },
+   {
+    "citable_fact": {
+     "asked_pct": null,
+     "asked_price": null,
+     "date": "2026-09-02",
+     "days": null,
+     "effective_date": null,
+     "supplier": "sup:70110",
+     "title": "Payment of invoices",
+     "type": "email"
+    },
+    "document": "# Payment of invoices\n\nemail - 2026-09-02 - Gie\u00dferei Brandlhuber GmbH & Co. KG\n\nCould you pay our invoices within 10 days? In return we would grant a cash discount.\n",
+    "row": {
+     "asked_pct": null,
+     "asked_price": null,
+     "author": "Gie\u00dferei Brandlhuber GmbH & Co. KG",
+     "date": "2026-09-02",
+     "effective_date": null,
+     "file": "correspondence/20260902-70110-M2.md",
+     "id": "doc:20260902-70110-M2",
+     "kind": "email",
+     "notice_days": null,
+     "part_ids": "",
+     "subject": "Payment of invoices",
+     "supplier_id": "sup:70110"
+    },
+    "source": "documents:doc:20260902-70110-M2",
+    "table": "documents"
+   },
+   {
+    "citable_fact": null,
+    "document": null,
+    "row": {
+     "asked_pct": -2.2,
+     "date": "2023-11-16",
+     "event_id": "EV-2024-70110-310010",
+     "note": "accepted below full cost to keep the volume",
+     "part_id": "part:310010",
+     "settled_pct": -5.6,
+     "supplier_id": "sup:70110",
+     "type": "annual renewal"
+    },
+    "source": "negotiation_history:d2925886ab73ddd5",
+    "table": "negotiation_history"
+   },
+   {
+    "citable_fact": {
+     "asked_pct": null,
+     "asked_price": null,
+     "date": "2026-08-24",
+     "days": null,
+     "effective_date": null,
+     "supplier": "sup:70110",
+     "title": "Price discussion",
+     "type": "call_note"
+    },
+    "document": "# Price discussion\n\ncall note - 2026-08-24 - Hollerau Pumpenwerke, Purchasing\n\nCall with the owner of Gie\u00dferei Brandlhuber GmbH & Co. KG: he asked where we get our index figures from - he works from his own spreadsheet, last updated two years ago.\n",
+    "row": {
+     "asked_pct": null,
+     "asked_price": null,
+     "author": "Hollerau Pumpenwerke, Purchasing",
+     "date": "2026-08-24",
+     "effective_date": null,
+     "file": "correspondence/20260824-70110-M1.md",
+     "id": "doc:20260824-70110-M1",
+     "kind": "call_note",
+     "notice_days": null,
+     "part_ids": "",
+     "subject": "Price discussion",
+     "supplier_id": "sup:70110"
+    },
+    "source": "documents:doc:20260824-70110-M1",
+    "table": "documents"
+   },
+   {
+    "citable_fact": null,
+    "document": null,
+    "row": {
+     "asked_pct": null,
+     "date": "2022-12-05",
+     "event_id": "EV-2023-70110-310010",
+     "note": "accepted below full cost to keep the volume",
+     "part_id": "part:310010",
+     "settled_pct": null,
+     "supplier_id": "sup:70110",
+     "type": "initial price"
+    },
+    "source": "negotiation_history:c198a8d70b0f1a1a",
+    "table": "negotiation_history"
+   },
+   {
+    "citable_fact": {
+     "asked_pct": null,
+     "asked_price": null,
+     "date": "2026-07-15",
+     "days": null,
+     "effective_date": null,
+     "supplier": "sup:70110",
+     "title": "Visit by the owner",
+     "type": "meeting_note"
+    },
+    "document": "# Visit by the owner\n\nmeeting note - 2026-07-15 - Hollerau Pumpenwerke, Purchasing\n\nVisit by the owner of Gie\u00dferei Brandlhuber GmbH & Co. KG. He reminded us that in 2022 they kept supplying at the old price for a quarter and said he expects partnership in return.\n",
+    "row": {
+     "asked_pct": null,
+     "asked_price": null,
+     "author": "Hollerau Pumpenwerke, Purchasing",
+     "date": "2026-07-15",
+     "effective_date": null,
+     "file": "correspondence/20260715-70110-M5.md",
+     "id": "doc:20260715-70110-M5",
+     "kind": "meeting_note",
+     "notice_days": null,
+     "part_ids": "",
+     "subject": "Visit by the owner",
+     "supplier_id": "sup:70110"
+    },
+    "source": "documents:doc:20260715-70110-M5",
+    "table": "documents"
+   },
+   {
+    "citable_fact": {
+     "asked_pct": null,
+     "asked_price": null,
+     "date": "2025-12-17",
+     "days": null,
+     "effective_date": null,
+     "supplier": "sup:70110",
+     "title": "Holiday shutdown",
+     "type": "email"
+    },
+    "document": "# Holiday shutdown\n\nemail - 2025-12-17 - Gie\u00dferei Brandlhuber GmbH & Co. KG\n\nOur plant is closed from 23 December to 6 January. Please place call-offs for January by 10 December.\n",
+    "row": {
+     "asked_pct": null,
+     "asked_price": null,
+     "author": "Gie\u00dferei Brandlhuber GmbH & Co. KG",
+     "date": "2025-12-17",
+     "effective_date": null,
+     "file": "correspondence/20251217-70110-N.md",
+     "id": "doc:20251217-70110-N",
+     "kind": "email",
+     "notice_days": null,
+     "part_ids": "",
+     "subject": "Holiday shutdown",
+     "supplier_id": "sup:70110"
+    },
+    "source": "documents:doc:20251217-70110-N",
+    "table": "documents"
+   },
+   {
+    "citable_fact": {
+     "colour": "amber",
+     "otd_confirmed_pct": 88.9,
+     "otd_pct": 85.2,
+     "ppm": 712,
+     "quarter": "2026Q3",
+     "supplier": "sup:70110"
+    },
+    "document": null,
+    "row": {
+     "class": "B",
+     "colour": "amber",
+     "complaint_qty": 6,
+     "gr_lines": 54,
+     "id": "sc:70110@2026Q3",
+     "open_8d_overdue": 1,
+     "otd_confirmed_pct": 88.9,
+     "otd_pct": 85.2,
+     "period_end": "2026-09-30",
+     "period_start": "2025-10-01",
+     "ppm": 712,
+     "qn_count": 6,
+     "quarter": "2026Q3",
+     "received_qty": 8432,
+     "score": 84.0,
+     "supplier_id": "sup:70110"
+    },
+    "source": "scorecards:sc:70110@2026Q3",
+    "table": "scorecards"
+   },
+   {
+    "citable_fact": {
+     "colour": "green",
+     "otd_confirmed_pct": 87.0,
+     "otd_pct": 83.3,
+     "ppm": 626,
+     "quarter": "2026Q2",
+     "supplier": "sup:70110"
+    },
+    "document": null,
+    "row": {
+     "class": "A",
+     "colour": "green",
+     "complaint_qty": 5,
+     "gr_lines": 54,
+     "id": "sc:70110@2026Q2",
+     "open_8d_overdue": 0,
+     "otd_confirmed_pct": 87.0,
+     "otd_pct": 83.3,
+     "period_end": "2026-06-30",
+     "period_start": "2025-07-01",
+     "ppm": 626,
+     "qn_count": 5,
+     "quarter": "2026Q2",
+     "received_qty": 7982,
+     "score": 88.5,
+     "supplier_id": "sup:70110"
+    },
+    "source": "scorecards:sc:70110@2026Q2",
+    "table": "scorecards"
+   },
+   {
+    "citable_fact": {
+     "colour": "green",
+     "otd_confirmed_pct": 85.2,
+     "otd_pct": 81.5,
+     "ppm": 522,
+     "quarter": "2026Q1",
+     "supplier": "sup:70110"
+    },
+    "document": null,
+    "row": {
+     "class": "A",
+     "colour": "green",
+     "complaint_qty": 4,
+     "gr_lines": 54,
+     "id": "sc:70110@2026Q1",
+     "open_8d_overdue": 0,
+     "otd_confirmed_pct": 85.2,
+     "otd_pct": 81.5,
+     "period_end": "2026-03-31",
+     "period_start": "2025-04-01",
+     "ppm": 522,
+     "qn_count": 4,
+     "quarter": "2026Q1",
+     "received_qty": 7668,
+     "score": 88.1,
+     "supplier_id": "sup:70110"
+    },
+    "source": "scorecards:sc:70110@2026Q1",
+    "table": "scorecards"
+   },
+   {
+    "citable_fact": {
+     "colour": "green",
+     "otd_confirmed_pct": 88.7,
+     "otd_pct": 84.9,
+     "ppm": 625,
+     "quarter": "2025Q4",
+     "supplier": "sup:70110"
+    },
+    "document": null,
+    "row": {
+     "class": "A",
+     "colour": "green",
+     "complaint_qty": 5,
+     "gr_lines": 53,
+     "id": "sc:70110@2025Q4",
+     "open_8d_overdue": 0,
+     "otd_confirmed_pct": 88.7,
+     "otd_pct": 84.9,
+     "period_end": "2025-12-31",
+     "period_start": "2025-01-01",
+     "ppm": 625,
+     "qn_count": 5,
+     "quarter": "2025Q4",
+     "received_qty": 7995,
+     "score": 89.3,
+     "supplier_id": "sup:70110"
+    },
+    "source": "scorecards:sc:70110@2025Q4",
+    "table": "scorecards"
+   },
+   {
+    "citable_fact": {
+     "colour": "green",
+     "otd_confirmed_pct": 90.2,
+     "otd_pct": 88.2,
+     "ppm": 785,
+     "quarter": "2025Q3",
+     "supplier": "sup:70110"
+    },
+    "document": null,
+    "row": {
+     "class": "A",
+     "colour": "green",
+     "complaint_qty": 6,
+     "gr_lines": 51,
+     "id": "sc:70110@2025Q3",
+     "open_8d_overdue": 0,
+     "otd_confirmed_pct": 90.2,
+     "otd_pct": 88.2,
+     "period_end": "2025-09-30",
+     "period_start": "2024-10-01",
+     "ppm": 785,
+     "qn_count": 6,
+     "quarter": "2025Q3",
+     "received_qty": 7639,
+     "score": 90.2,
+     "supplier_id": "sup:70110"
+    },
+    "source": "scorecards:sc:70110@2025Q3",
+    "table": "scorecards"
+   },
+   {
+    "citable_fact": {
+     "colour": "green",
+     "otd_confirmed_pct": 92.3,
+     "otd_pct": 88.5,
+     "ppm": 720,
+     "quarter": "2025Q2",
+     "supplier": "sup:70110"
+    },
+    "document": null,
+    "row": {
+     "class": "A",
+     "colour": "green",
+     "complaint_qty": 6,
+     "gr_lines": 52,
+     "id": "sc:70110@2025Q2",
+     "open_8d_overdue": 0,
+     "otd_confirmed_pct": 92.3,
+     "otd_pct": 88.5,
+     "period_end": "2025-06-30",
+     "period_start": "2024-07-01",
+     "ppm": 720,
+     "qn_count": 6,
+     "quarter": "2025Q2",
+     "received_qty": 8335,
+     "score": 90.6,
+     "supplier_id": "sup:70110"
+    },
+    "source": "scorecards:sc:70110@2025Q2",
+    "table": "scorecards"
+   },
+   {
+    "citable_fact": {
+     "colour": "green",
+     "otd_confirmed_pct": 98.0,
+     "otd_pct": 94.0,
+     "ppm": 605,
+     "quarter": "2025Q1",
+     "supplier": "sup:70110"
+    },
+    "document": null,
+    "row": {
+     "class": "A",
+     "colour": "green",
+     "complaint_qty": 5,
+     "gr_lines": 50,
+     "id": "sc:70110@2025Q1",
+     "open_8d_overdue": 0,
+     "otd_confirmed_pct": 98.0,
+     "otd_pct": 94.0,
+     "period_end": "2025-03-31",
+     "period_start": "2024-04-01",
+     "ppm": 605,
+     "qn_count": 5,
+     "quarter": "2025Q1",
+     "received_qty": 8268,
+     "score": 94.0,
+     "supplier_id": "sup:70110"
+    },
+    "source": "scorecards:sc:70110@2025Q1",
+    "table": "scorecards"
+   }
+  ],
+  "opening_offer": {
+   "term_sheet_id": "offer:70110-0",
+   "terms": {
+    "effective_date": "2026-11-01",
+    "unit_price": 138.55
+   }
+  },
+  "standard_terms": {
+   "chargeback_eur_per_complaint": 0.0,
+   "payment_days": 30,
+   "ppm_commitment": 900
+  }
+ },
+ "case:P02": {
+  "case": {
+   "briefing": "You negotiate for Hollerau Pumpenwerke with Antriebstechnik Nordmark AG. Nordmark passes on copper for the 7.5 kW motor. Need: 6110 pc a year. Category goal: stabilise a strategic supply: a healthy supplier and stable prices count, not only the lowest price. Score: the lowest total cost C as defined in the rules, valued with this case's rates (need lead time 36 days). Fallback if you walk away: the second-source quote quote:7200002. Must-haves: none. Prepare from the data package.",
+   "buyer": {
+    "alternative": {
+     "kind": "quote",
+     "ref": "quote:7200002",
+     "terms": {
+      "contract_months": 12,
+      "effective_date": "2027-01-01",
+      "incoterm": "DAP",
+      "index_clause": null,
+      "lead_time_days": 56,
+      "payment_days": 30,
+      "ppm_commitment": 0,
+      "tooling_eur": 0,
+      "unit_price": 421.06,
+      "volume_per_year": 6110
+     }
+    },
+    "category_goal": "stabilise",
+    "cost_per_defect": 780,
+    "current_unit_price": 348.32,
+    "fallback_risk_pct": 10,
+    "fallback_unit_price": 376.19,
+    "freight_eur_per_unit": {
+     "DAP": 0.0,
+     "EXW": 2.99,
+     "FCA": 2.6
+    },
+    "horizon_years": 1.0,
+    "index_paths": {
+     "CU-NOTATION": 0.05
+    },
+    "index_risk_pct": 4,
+    "interest_rate": 0.08,
+    "late_cost_per_day": 720,
+    "must_haves": [],
+    "need_lead_time_days": 36,
+    "need_per_year": 6110,
+    "reference_payment_days": 60,
+    "relationship_eur_per_point": 31920,
+    "sustainable_margin_pct": 0.5
+   },
+   "case_id": "case:P02",
+   "fixed_terms": {
+    "contract_months": 12,
+    "effective_date": "2027-01-01",
+    "incoterm": "DAP",
+    "lead_time_days": 35,
+    "tooling_eur": 0,
+    "volume_per_year": 6110
+   },
+   "hosted": true,
+   "negotiable": [
+    "unit_price",
+    "payment_days",
+    "index_clause"
+   ],
+   "parts": [
+    "part:350011"
+   ],
+   "refs": [
+    "doc:20260914-70510-P02",
+    "ctr:4600070510",
+    "sc:70510@2026Q3",
+    "quote:7200002"
+   ],
+   "round_limit": 10,
+   "set": "practice",
+   "suppliers": [
+    "sup:70510"
+   ],
+   "term_options": {
+    "index_clause": [
+     null,
+     {
+      "base_month": "2026-08",
+      "deadband_pct": 0,
+      "material_share": 0.2,
+      "series": "CU-NOTATION"
+     },
+     {
+      "base_month": "2026-08",
+      "deadband_pct": 3,
+      "material_share": 0.2,
+      "series": "CU-NOTATION"
+     },
+     {
+      "base_month": "2026-08",
+      "deadband_pct": 5,
+      "material_share": 0.2,
+      "series": "CU-NOTATION"
+     }
+    ],
+    "payment_days": [
+     14,
+     30,
+     45,
+     60,
+     90
+    ]
+   },
+   "title": "Nordmark passes on copper for the 7.5 kW motor",
+   "trigger_doc": "doc:20260914-70510-P02",
+   "type": "price_increase"
+  },
+  "evidence": [
+   {
+    "citable_fact": {
+     "days": 90,
+     "supplier": "sup:70510",
+     "valid_from": "2024-01-01",
+     "valid_to": "2026-12-31"
+    },
+    "document": "# Framework agreement 4600070510\n\nBetween Hollerau Pumpenwerke GmbH and Antriebstechnik Nordmark AG.\n\n**\u00a7 2.1** Subject: supply of Motor IE3 4 kW, 4-pole, Motor IE3 7.5 kW, 4-pole.\n\n**\u00a7 3.1** Prices as per the price annex, fixed for each calendar year. Changes require written notice of at least 90 days before the end of the calendar year.\n\n**\u00a7 4.1** Payment: 30 days net.\n\n**\u00a7 5.1** Delivery DAP; standard lead time 35 days from order.\n\n**\u00a7 6.1** The quality agreement applies: on-time delivery target 95 %, flat fee of EUR 150 per supplier-caused complaint.\n\n**\u00a7 8.1** Valid from 2024-01-01 to 2026-12-31; extends by 12 months unless terminated with 90 days' notice.\n\nParts: part:350010, part:350011\n",
+    "row": {
+     "file": "contracts/4600070510.md",
+     "id": "ctr:4600070510",
+     "incoterm": "DAP",
+     "notice_days": 90,
+     "payment_days": 30,
+     "price_basis": "fixed per year",
+     "supplier_id": "sup:70510",
+     "type": "framework agreement",
+     "valid_from": "2024-01-01",
+     "valid_to": "2026-12-31"
+    },
+    "source": "contracts:ctr:4600070510",
+    "table": "contracts"
+   },
+   {
+    "citable_fact": {
+     "days": 90,
+     "material_share": null,
+     "series": null,
+     "supplier": "sup:70510",
+     "type": "term"
+    },
+    "document": null,
+    "row": {
+     "clause": "8.1",
+     "contract_id": "ctr:4600070510",
+     "days": 90,
+     "deadband_pct": null,
+     "id": "ctr:4600070510#8.1",
+     "material_share": null,
+     "series": null,
+     "text": "Valid from 2024-01-01 to 2026-12-31; extends by 12 months unless terminated with 90 days' notice.",
+     "type": "term"
+    },
+    "source": "contract_clauses:ctr:4600070510#8.1",
+    "table": "contract_clauses"
+   },
+   {
+    "citable_fact": {
+     "days": null,
+     "material_share": null,
+     "series": null,
+     "supplier": "sup:70510",
+     "type": "quality"
+    },
+    "document": null,
+    "row": {
+     "clause": "6.1",
+     "contract_id": "ctr:4600070510",
+     "days": null,
+     "deadband_pct": null,
+     "id": "ctr:4600070510#6.1",
+     "material_share": null,
+     "series": null,
+     "text": "The quality agreement applies: on-time delivery target 95 %, flat fee of EUR 150 per supplier-caused complaint.",
+     "type": "quality"
+    },
+    "source": "contract_clauses:ctr:4600070510#6.1",
+    "table": "contract_clauses"
+   },
+   {
+    "citable_fact": {
+     "days": 35,
+     "material_share": null,
+     "series": null,
+     "supplier": "sup:70510",
+     "type": "delivery"
+    },
+    "document": null,
+    "row": {
+     "clause": "5.1",
+     "contract_id": "ctr:4600070510",
+     "days": 35,
+     "deadband_pct": null,
+     "id": "ctr:4600070510#5.1",
+     "material_share": null,
+     "series": null,
+     "text": "Delivery DAP; standard lead time 35 days from order.",
+     "type": "delivery"
+    },
+    "source": "contract_clauses:ctr:4600070510#5.1",
+    "table": "contract_clauses"
+   },
+   {
+    "citable_fact": {
+     "days": 30,
+     "material_share": null,
+     "series": null,
+     "supplier": "sup:70510",
+     "type": "payment"
+    },
+    "document": null,
+    "row": {
+     "clause": "4.1",
+     "contract_id": "ctr:4600070510",
+     "days": 30,
+     "deadband_pct": null,
+     "id": "ctr:4600070510#4.1",
+     "material_share": null,
+     "series": null,
+     "text": "Payment: 30 days net.",
+     "type": "payment"
+    },
+    "source": "contract_clauses:ctr:4600070510#4.1",
+    "table": "contract_clauses"
+   },
+   {
+    "citable_fact": {
+     "days": 90,
+     "material_share": null,
+     "series": null,
+     "supplier": "sup:70510",
+     "type": "price"
+    },
+    "document": null,
+    "row": {
+     "clause": "3.1",
+     "contract_id": "ctr:4600070510",
+     "days": 90,
+     "deadband_pct": null,
+     "id": "ctr:4600070510#3.1",
+     "material_share": null,
+     "series": null,
+     "text": "Prices as per the price annex, fixed for each calendar year. Changes require written notice of at least 90 days before the end of the calendar year.",
+     "type": "price"
+    },
+    "source": "contract_clauses:ctr:4600070510#3.1",
+    "table": "contract_clauses"
+   },
+   {
+    "citable_fact": {
+     "days": null,
+     "material_share": null,
+     "series": null,
+     "supplier": "sup:70510",
+     "type": "scope"
+    },
+    "document": null,
+    "row": {
+     "clause": "2.1",
+     "contract_id": "ctr:4600070510",
+     "days": null,
+     "deadband_pct": null,
+     "id": "ctr:4600070510#2.1",
+     "material_share": null,
+     "series": null,
+     "text": "Subject: supply of Motor IE3 4 kW, 4-pole, Motor IE3 7.5 kW, 4-pole.",
+     "type": "scope"
+    },
+    "source": "contract_clauses:ctr:4600070510#2.1",
+    "table": "contract_clauses"
+   },
+   {
+    "citable_fact": {
+     "asked_pct": 6.5,
+     "asked_price": 370.96,
+     "date": "2026-09-14",
+     "days": 109,
+     "effective_date": "2027-01-01",
+     "supplier": "sup:70510",
+     "title": "Price adjustment from 01 January 2027",
+     "type": "letter"
+    },
+    "document": "# Price adjustment from 01 January 2027\n\nletter - 2026-09-14 - Antriebstechnik Nordmark AG\n\nDear Sir or Madam,\n\nwe have supplied Hollerau Pumpenwerke reliably for many years. Owing to the strong rise in copper and electronic component prices, we are forced to adjust our prices for Motor IE3 7.5 kW, 4-pole (part:350011) by **6.5 %** with effect from **01 January 2027**: from EUR 348.32 to EUR 370.96 per  pc.\n\nWe regret this step and ask for your understanding.\n\nYours faithfully,\nAntriebstechnik Nordmark AG\n",
+    "row": {
+     "asked_pct": 6.5,
+     "asked_price": 370.96,
+     "author": "Antriebstechnik Nordmark AG",
+     "date": "2026-09-14",
+     "effective_date": "2027-01-01",
+     "file": "correspondence/20260914-70510-P02.md",
+     "id": "doc:20260914-70510-P02",
+     "kind": "letter",
+     "notice_days": 109,
+     "part_ids": "part:350011",
+     "subject": "Price adjustment from 01 January 2027",
+     "supplier_id": "sup:70510"
+    },
+    "source": "documents:doc:20260914-70510-P02",
+    "table": "documents"
+   },
+   {
+    "citable_fact": {
+     "asked_pct": null,
+     "asked_price": null,
+     "date": "2026-04-10",
+     "days": null,
+     "effective_date": null,
+     "supplier": "sup:70510",
+     "title": "Annual review",
+     "type": "meeting_note"
+    },
+    "document": "# Annual review\n\nmeeting note - 2026-04-10 - Hollerau Pumpenwerke, Purchasing\n\nAnnual review with Antriebstechnik Nordmark AG. Their key account manager explained that price changes above 2 % need the approval of their pricing committee, which meets every two weeks.\n",
+    "row": {
+     "asked_pct": null,
+     "asked_price": null,
+     "author": "Hollerau Pumpenwerke, Purchasing",
+     "date": "2026-04-10",
+     "effective_date": null,
+     "file": "correspondence/20260410-70510-M1.md",
+     "id": "doc:20260410-70510-M1",
+     "kind": "meeting_note",
+     "notice_days": null,
+     "part_ids": "",
+     "subject": "Annual review",
+     "supplier_id": "sup:70510"
+    },
+    "source": "documents:doc:20260410-70510-M1",
+    "table": "documents"
+   },
+   {
+    "citable_fact": null,
+    "document": null,
+    "row": {
+     "certifications": "ISO 9001; ISO 14001",
+     "credit_index": 147,
+     "credit_index_12m_ago": 147,
+     "equity_ratio_pct": 29.1,
+     "filed_fy": 2025,
+     "founded": 1911,
+     "group_parent": "Nordmark Gruppe",
+     "legal_form": "AG",
+     "owner_type": "group",
+     "staff": 4800,
+     "supplier_id": "sup:70510",
+     "turnover_band": ">1000 M EUR",
+     "turnover_eur": 1380000000,
+     "vda63_grade": "A"
+    },
+    "source": "supplier_intel:e868ed2e8c40592b",
+    "table": "supplier_intel"
+   },
+   {
+    "citable_fact": {
+     "confidence_pct": 5,
+     "part": "part:350011",
+     "price_unit": 1,
+     "unit_cost": 374.95
+    },
+    "document": null,
+    "row": {
+     "confidence_pct": 5,
+     "conversion_eur": 173.23,
+     "cost_base": "DE",
+     "estimate_date": "2026-07-15",
+     "id": "cost:350011",
+     "material_eur": 127.48,
+     "method": "bottom-up estimate of this supplier's plant, no margin included",
+     "overhead_eur": 74.24,
+     "part_id": "part:350011",
+     "price_unit": 1,
+     "supplier_id": "sup:70510",
+     "unit_cost": 374.95
+    },
+    "source": "should_cost:cost:350011",
+    "table": "should_cost"
+   },
+   {
+    "citable_fact": null,
+    "document": null,
+    "row": {
+     "asked_pct": 4.7,
+     "date": "2025-11-12",
+     "event_id": "EV-2026-70510-350011",
+     "note": "",
+     "part_id": "part:350011",
+     "settled_pct": 1.2,
+     "supplier_id": "sup:70510",
+     "type": "annual renewal"
+    },
+    "source": "negotiation_history:7eb24c337bc38a95",
+    "table": "negotiation_history"
+   },
+   {
+    "citable_fact": {
+     "asked_pct": null,
+     "asked_price": null,
+     "date": "2026-02-27",
+     "days": null,
+     "effective_date": null,
+     "supplier": "sup:70510",
+     "title": "Annual review",
+     "type": "meeting_note"
+    },
+    "document": "# Annual review\n\nmeeting note - 2026-02-27 - Hollerau Pumpenwerke, Purchasing\n\nAnnual review with Antriebstechnik Nordmark AG. Their key account manager explained that price changes above 2 % need the approval of their pricing committee, which meets every two weeks.\n",
+    "row": {
+     "asked_pct": null,
+     "asked_price": null,
+     "author": "Hollerau Pumpenwerke, Purchasing",
+     "date": "2026-02-27",
+     "effective_date": null,
+     "file": "correspondence/20260227-70510-M2.md",
+     "id": "doc:20260227-70510-M2",
+     "kind": "meeting_note",
+     "notice_days": null,
+     "part_ids": "",
+     "subject": "Annual review",
+     "supplier_id": "sup:70510"
+    },
+    "source": "documents:doc:20260227-70510-M2",
+    "table": "documents"
+   },
+   {
+    "citable_fact": null,
+    "document": null,
+    "row": {
+     "asked_pct": 3.5,
+     "date": "2024-11-29",
+     "event_id": "EV-2025-70510-350011",
+     "note": "",
+     "part_id": "part:350011",
+     "settled_pct": 1.4,
+     "supplier_id": "sup:70510",
+     "type": "annual renewal"
+    },
+    "source": "negotiation_history:c912bd2e1ce0f4cb",
+    "table": "negotiation_history"
+   },
+   {
+    "citable_fact": {
+     "asked_pct": null,
+     "asked_price": null,
+     "date": "2025-10-19",
+     "days": null,
+     "effective_date": null,
+     "supplier": "sup:70510",
+     "title": "Holiday shutdown",
+     "type": "email"
+    },
+    "document": "# Holiday shutdown\n\nemail - 2025-10-19 - Antriebstechnik Nordmark AG\n\nOur plant is closed from 23 December to 6 January. Please place call-offs for January by 10 December.\n",
+    "row": {
+     "asked_pct": null,
+     "asked_price": null,
+     "author": "Antriebstechnik Nordmark AG",
+     "date": "2025-10-19",
+     "effective_date": null,
+     "file": "correspondence/20251019-70510-N.md",
+     "id": "doc:20251019-70510-N",
+     "kind": "email",
+     "notice_days": null,
+     "part_ids": "",
+     "subject": "Holiday shutdown",
+     "supplier_id": "sup:70510"
+    },
+    "source": "documents:doc:20251019-70510-N",
+    "table": "documents"
+   },
+   {
+    "citable_fact": null,
+    "document": null,
+    "row": {
+     "asked_pct": -0.4,
+     "date": "2023-12-09",
+     "event_id": "EV-2024-70510-350011",
+     "note": "",
+     "part_id": "part:350011",
+     "settled_pct": -2.6,
+     "supplier_id": "sup:70510",
+     "type": "annual renewal"
+    },
+    "source": "negotiation_history:b75d5a5fc07522d3",
+    "table": "negotiation_history"
+   },
+   {
+    "citable_fact": null,
+    "document": null,
+    "row": {
+     "asked_pct": null,
+     "date": "2022-11-27",
+     "event_id": "EV-2023-70510-350011",
+     "note": "",
+     "part_id": "part:350011",
+     "settled_pct": null,
+     "supplier_id": "sup:70510",
+     "type": "initial price"
+    },
+    "source": "negotiation_history:989060702196e6e1",
+    "table": "negotiation_history"
+   },
+   {
+    "citable_fact": {
+     "colour": "green",
+     "otd_confirmed_pct": 90.4,
+     "otd_pct": 90.4,
+     "ppm": 273,
+     "quarter": "2026Q3",
+     "supplier": "sup:70510"
+    },
+    "document": null,
+    "row": {
+     "class": "A",
+     "colour": "green",
+     "complaint_qty": 3,
+     "gr_lines": 52,
+     "id": "sc:70510@2026Q3",
+     "open_8d_overdue": 0,
+     "otd_confirmed_pct": 90.4,
+     "otd_pct": 90.4,
+     "period_end": "2026-09-30",
+     "period_start": "2025-10-01",
+     "ppm": 273,
+     "qn_count": 3,
+     "quarter": "2026Q3",
+     "received_qty": 11006,
+     "score": 93.8,
+     "supplier_id": "sup:70510"
+    },
+    "source": "scorecards:sc:70510@2026Q3",
+    "table": "scorecards"
+   },
+   {
+    "citable_fact": {
+     "colour": "green",
+     "otd_confirmed_pct": 94.1,
+     "otd_pct": 94.1,
+     "ppm": 270,
+     "quarter": "2026Q2",
+     "supplier": "sup:70510"
+    },
+    "document": null,
+    "row": {
+     "class": "A",
+     "colour": "green",
+     "complaint_qty": 3,
+     "gr_lines": 51,
+     "id": "sc:70510@2026Q2",
+     "open_8d_overdue": 0,
+     "otd_confirmed_pct": 94.1,
+     "otd_pct": 94.1,
+     "period_end": "2026-06-30",
+     "period_start": "2025-07-01",
+     "ppm": 270,
+     "qn_count": 3,
+     "quarter": "2026Q2",
+     "received_qty": 11106,
+     "score": 95.7,
+     "supplier_id": "sup:70510"
+    },
+    "source": "scorecards:sc:70510@2026Q2",
+    "table": "scorecards"
+   },
+   {
+    "citable_fact": {
+     "colour": "green",
+     "otd_confirmed_pct": 91.8,
+     "otd_pct": 89.8,
+     "ppm": 185,
+     "quarter": "2026Q1",
+     "supplier": "sup:70510"
+    },
+    "document": null,
+    "row": {
+     "class": "A",
+     "colour": "green",
+     "complaint_qty": 2,
+     "gr_lines": 49,
+     "id": "sc:70510@2026Q1",
+     "open_8d_overdue": 0,
+     "otd_confirmed_pct": 91.8,
+     "otd_pct": 89.8,
+     "period_end": "2026-03-31",
+     "period_start": "2025-04-01",
+     "ppm": 185,
+     "qn_count": 2,
+     "quarter": "2026Q1",
+     "received_qty": 10793,
+     "score": 94.0,
+     "supplier_id": "sup:70510"
+    },
+    "source": "scorecards:sc:70510@2026Q1",
+    "table": "scorecards"
+   },
+   {
+    "citable_fact": {
+     "colour": "green",
+     "otd_confirmed_pct": 84.6,
+     "otd_pct": 82.7,
+     "ppm": 181,
+     "quarter": "2025Q4",
+     "supplier": "sup:70510"
+    },
+    "document": null,
+    "row": {
+     "class": "A",
+     "colour": "green",
+     "complaint_qty": 2,
+     "gr_lines": 52,
+     "id": "sc:70510@2025Q4",
+     "open_8d_overdue": 0,
+     "otd_confirmed_pct": 84.6,
+     "otd_pct": 82.7,
+     "period_end": "2025-12-31",
+     "period_start": "2025-01-01",
+     "ppm": 181,
+     "qn_count": 2,
+     "quarter": "2025Q4",
+     "received_qty": 11067,
+     "score": 90.4,
+     "supplier_id": "sup:70510"
+    },
+    "source": "scorecards:sc:70510@2025Q4",
+    "table": "scorecards"
+   },
+   {
+    "citable_fact": {
+     "colour": "green",
+     "otd_confirmed_pct": 86.0,
+     "otd_pct": 84.0,
+     "ppm": 185,
+     "quarter": "2025Q3",
+     "supplier": "sup:70510"
+    },
+    "document": null,
+    "row": {
+     "class": "A",
+     "colour": "green",
+     "complaint_qty": 2,
+     "gr_lines": 50,
+     "id": "sc:70510@2025Q3",
+     "open_8d_overdue": 0,
+     "otd_confirmed_pct": 86.0,
+     "otd_pct": 84.0,
+     "period_end": "2025-09-30",
+     "period_start": "2024-10-01",
+     "ppm": 185,
+     "qn_count": 2,
+     "quarter": "2025Q3",
+     "received_qty": 10807,
+     "score": 91.1,
+     "supplier_id": "sup:70510"
+    },
+    "source": "scorecards:sc:70510@2025Q3",
+    "table": "scorecards"
+   },
+   {
+    "citable_fact": {
+     "colour": "green",
+     "otd_confirmed_pct": 82.7,
+     "otd_pct": 80.8,
+     "ppm": 273,
+     "quarter": "2025Q2",
+     "supplier": "sup:70510"
+    },
+    "document": null,
+    "row": {
+     "class": "A",
+     "colour": "green",
+     "complaint_qty": 3,
+     "gr_lines": 52,
+     "id": "sc:70510@2025Q2",
+     "open_8d_overdue": 0,
+     "otd_confirmed_pct": 82.7,
+     "otd_pct": 80.8,
+     "period_end": "2025-06-30",
+     "period_start": "2024-07-01",
+     "ppm": 273,
+     "qn_count": 3,
+     "quarter": "2025Q2",
+     "received_qty": 11007,
+     "score": 89.0,
+     "supplier_id": "sup:70510"
+    },
+    "source": "scorecards:sc:70510@2025Q2",
+    "table": "scorecards"
+   },
+   {
+    "citable_fact": {
+     "colour": "green",
+     "otd_confirmed_pct": 82.1,
+     "otd_pct": 82.1,
+     "ppm": 265,
+     "quarter": "2025Q1",
+     "supplier": "sup:70510"
+    },
+    "document": null,
+    "row": {
+     "class": "A",
+     "colour": "green",
+     "complaint_qty": 3,
+     "gr_lines": 56,
+     "id": "sc:70510@2025Q1",
+     "open_8d_overdue": 0,
+     "otd_confirmed_pct": 82.1,
+     "otd_pct": 82.1,
+     "period_end": "2025-03-31",
+     "period_start": "2024-04-01",
+     "ppm": 265,
+     "qn_count": 3,
+     "quarter": "2025Q1",
+     "received_qty": 11300,
+     "score": 89.7,
+     "supplier_id": "sup:70510"
+    },
+    "source": "scorecards:sc:70510@2025Q1",
+    "table": "scorecards"
+   },
+   {
+    "citable_fact": {
+     "colour": "green",
+     "otd_confirmed_pct": 88.5,
+     "otd_pct": 88.5,
+     "ppm": 184,
+     "quarter": "2024Q4",
+     "supplier": "sup:70510"
+    },
+    "document": null,
+    "row": {
+     "class": "A",
+     "colour": "green",
+     "complaint_qty": 2,
+     "gr_lines": 52,
+     "id": "sc:70510@2024Q4",
+     "open_8d_overdue": 0,
+     "otd_confirmed_pct": 88.5,
+     "otd_pct": 88.5,
+     "period_end": "2024-12-31",
+     "period_start": "2024-01-01",
+     "ppm": 184,
+     "qn_count": 2,
+     "quarter": "2024Q4",
+     "received_qty": 10887,
+     "score": 93.3,
+     "supplier_id": "sup:70510"
+    },
+    "source": "scorecards:sc:70510@2024Q4",
+    "table": "scorecards"
+   }
+  ],
+  "opening_offer": {
+   "term_sheet_id": "offer:70510-0",
+   "terms": {
+    "index_clause": null,
+    "payment_days": 30,
+    "unit_price": 370.96
+   }
+  },
+  "standard_terms": {
+   "chargeback_eur_per_complaint": 0.0,
+   "ppm_commitment": 250
+  }
+ },
+ "case:P03": {
+  "case": {
+   "briefing": "You negotiate for Hollerau Pumpenwerke with Selvbrunn Drive Systems GmbH. Frame agreement renewal for the 7.5 kW frequency converter. Need: 4580 pc a year. Category goal: stabilise a strategic supply: a healthy supplier and stable prices count, not only the lowest price. Score: the lowest total cost C as defined in the rules, valued with this case's rates (need lead time 54 days). Fallback if you walk away: the second-source quote quote:7200003. Must-haves: none. Prepare from the data package.",
+   "buyer": {
+    "alternative": {
+     "kind": "quote",
+     "ref": "quote:7200003",
+     "terms": {
+      "contract_months": 24,
+      "effective_date": "2027-01-01",
+      "incoterm": "DAP",
+      "index_clause": null,
+      "lead_time_days": 98,
+      "payment_days": 30,
+      "ppm_commitment": 0,
+      "tooling_eur": 0,
+      "unit_price": 466.99,
+      "volume_per_year": 4580
+     }
+    },
+    "category_goal": "stabilise",
+    "cost_per_defect": 624,
+    "current_unit_price": 412.74,
+    "fallback_risk_pct": 10,
+    "fallback_unit_price": 441.63,
+    "freight_eur_per_unit": {
+     "DAP": 0.0,
+     "EXW": 0.35,
+     "FCA": 0.3
+    },
+    "horizon_years": 2,
+    "index_paths": {},
+    "index_risk_pct": 4,
+    "interest_rate": 0.08,
+    "late_cost_per_day": 600,
+    "must_haves": [],
+    "need_lead_time_days": 54,
+    "need_per_year": 4580,
+    "reference_payment_days": 60,
+    "relationship_eur_per_point": 28360,
+    "sustainable_margin_pct": 8
+   },
+   "case_id": "case:P03",
+   "fixed_terms": {
+    "effective_date": "2027-01-01",
+    "incoterm": "DAP",
+    "index_clause": null,
+    "lead_time_days": 49,
+    "tooling_eur": 0
+   },
+   "hosted": true,
+   "negotiable": [
+    "unit_price",
+    "payment_days",
+    "contract_months",
+    "volume_per_year"
+   ],
+   "parts": [
+    "part:350020"
+   ],
+   "refs": [
+    "doc:20260917-70530-P03",
+    "ctr:4600070530",
+    "sc:70530@2026Q3",
+    "quote:7200003",
+    "fc:350020@2026-09"
+   ],
+   "round_limit": 10,
+   "set": "practice",
+   "suppliers": [
+    "sup:70530"
+   ],
+   "term_options": {
+    "contract_months": [
+     12,
+     24,
+     36
+    ],
+    "payment_days": [
+     14,
+     30,
+     45,
+     60,
+     90
+    ],
+    "volume_per_year": [
+     3664,
+     4580,
+     5496
+    ]
+   },
+   "title": "Frame agreement renewal for the 7.5 kW frequency converter",
+   "trigger_doc": "doc:20260917-70530-P03",
+   "type": "renewal"
+  },
+  "evidence": [
+   {
+    "citable_fact": {
+     "days": 90,
+     "supplier": "sup:70530",
+     "valid_from": "2024-01-01",
+     "valid_to": "2026-12-31"
+    },
+    "document": "# Framework agreement 4600070530\n\nBetween Hollerau Pumpenwerke GmbH and Selvbrunn Drive Systems GmbH.\n\n**\u00a7 2.1** Subject: supply of Frequency converter 7.5 kW, IP55.\n\n**\u00a7 3.1** Prices as per the price annex, fixed for each calendar year. Changes require written notice of at least 90 days before the end of the calendar year.\n\n**\u00a7 4.1** Payment: 30 days net.\n\n**\u00a7 5.1** Delivery DAP; standard lead time 49 days from order.\n\n**\u00a7 6.1** The quality agreement applies: on-time delivery target 95 %, flat fee of EUR 150 per supplier-caused complaint.\n\n**\u00a7 8.1** Valid from 2024-01-01 to 2026-12-31; extends by 12 months unless terminated with 90 days' notice.\n\nParts: part:350020\n",
+    "row": {
+     "file": "contracts/4600070530.md",
+     "id": "ctr:4600070530",
+     "incoterm": "DAP",
+     "notice_days": 90,
+     "payment_days": 30,
+     "price_basis": "fixed per year",
+     "supplier_id": "sup:70530",
+     "type": "framework agreement",
+     "valid_from": "2024-01-01",
+     "valid_to": "2026-12-31"
+    },
+    "source": "contracts:ctr:4600070530",
+    "table": "contracts"
+   },
+   {
+    "citable_fact": {
+     "days": 90,
+     "material_share": null,
+     "series": null,
+     "supplier": "sup:70530",
+     "type": "term"
+    },
+    "document": null,
+    "row": {
+     "clause": "8.1",
+     "contract_id": "ctr:4600070530",
+     "days": 90,
+     "deadband_pct": null,
+     "id": "ctr:4600070530#8.1",
+     "material_share": null,
+     "series": null,
+     "text": "Valid from 2024-01-01 to 2026-12-31; extends by 12 months unless terminated with 90 days' notice.",
+     "type": "term"
+    },
+    "source": "contract_clauses:ctr:4600070530#8.1",
+    "table": "contract_clauses"
+   },
+   {
+    "citable_fact": {
+     "days": null,
+     "material_share": null,
+     "series": null,
+     "supplier": "sup:70530",
+     "type": "quality"
+    },
+    "document": null,
+    "row": {
+     "clause": "6.1",
+     "contract_id": "ctr:4600070530",
+     "days": null,
+     "deadband_pct": null,
+     "id": "ctr:4600070530#6.1",
+     "material_share": null,
+     "series": null,
+     "text": "The quality agreement applies: on-time delivery target 95 %, flat fee of EUR 150 per supplier-caused complaint.",
+     "type": "quality"
+    },
+    "source": "contract_clauses:ctr:4600070530#6.1",
+    "table": "contract_clauses"
+   },
+   {
+    "citable_fact": {
+     "days": 49,
+     "material_share": null,
+     "series": null,
+     "supplier": "sup:70530",
+     "type": "delivery"
+    },
+    "document": null,
+    "row": {
+     "clause": "5.1",
+     "contract_id": "ctr:4600070530",
+     "days": 49,
+     "deadband_pct": null,
+     "id": "ctr:4600070530#5.1",
+     "material_share": null,
+     "series": null,
+     "text": "Delivery DAP; standard lead time 49 days from order.",
+     "type": "delivery"
+    },
+    "source": "contract_clauses:ctr:4600070530#5.1",
+    "table": "contract_clauses"
+   },
+   {
+    "citable_fact": {
+     "days": 30,
+     "material_share": null,
+     "series": null,
+     "supplier": "sup:70530",
+     "type": "payment"
+    },
+    "document": null,
+    "row": {
+     "clause": "4.1",
+     "contract_id": "ctr:4600070530",
+     "days": 30,
+     "deadband_pct": null,
+     "id": "ctr:4600070530#4.1",
+     "material_share": null,
+     "series": null,
+     "text": "Payment: 30 days net.",
+     "type": "payment"
+    },
+    "source": "contract_clauses:ctr:4600070530#4.1",
+    "table": "contract_clauses"
+   },
+   {
+    "citable_fact": {
+     "days": 90,
+     "material_share": null,
+     "series": null,
+     "supplier": "sup:70530",
+     "type": "price"
+    },
+    "document": null,
+    "row": {
+     "clause": "3.1",
+     "contract_id": "ctr:4600070530",
+     "days": 90,
+     "deadband_pct": null,
+     "id": "ctr:4600070530#3.1",
+     "material_share": null,
+     "series": null,
+     "text": "Prices as per the price annex, fixed for each calendar year. Changes require written notice of at least 90 days before the end of the calendar year.",
+     "type": "price"
+    },
+    "source": "contract_clauses:ctr:4600070530#3.1",
+    "table": "contract_clauses"
+   },
+   {
+    "citable_fact": {
+     "days": null,
+     "material_share": null,
+     "series": null,
+     "supplier": "sup:70530",
+     "type": "scope"
+    },
+    "document": null,
+    "row": {
+     "clause": "2.1",
+     "contract_id": "ctr:4600070530",
+     "days": null,
+     "deadband_pct": null,
+     "id": "ctr:4600070530#2.1",
+     "material_share": null,
+     "series": null,
+     "text": "Subject: supply of Frequency converter 7.5 kW, IP55.",
+     "type": "scope"
+    },
+    "source": "contract_clauses:ctr:4600070530#2.1",
+    "table": "contract_clauses"
+   },
+   {
+    "citable_fact": {
+     "asked_pct": null,
+     "asked_price": null,
+     "date": "2026-09-17",
+     "days": null,
+     "effective_date": null,
+     "supplier": "sup:70530",
+     "title": "Renewal of framework agreement 4600070530",
+     "type": "email"
+    },
+    "document": "# Renewal of framework agreement 4600070530\n\nemail - 2026-09-17 - Selvbrunn Drive Systems GmbH\n\nHello,\n\nour framework agreement ctr:4600070530 for Frequency converter 7.5 kW, IP55 (part:350020) expires on 31 December 2026. We would like to agree the terms for the coming period and will send our offer when we meet. Please let us know your expected volumes.\n\nBest regards,\nSelvbrunn Drive Systems GmbH\n",
+    "row": {
+     "asked_pct": null,
+     "asked_price": null,
+     "author": "Selvbrunn Drive Systems GmbH",
+     "date": "2026-09-17",
+     "effective_date": null,
+     "file": "correspondence/20260917-70530-P03.md",
+     "id": "doc:20260917-70530-P03",
+     "kind": "email",
+     "notice_days": null,
+     "part_ids": "part:350020",
+     "subject": "Renewal of framework agreement 4600070530",
+     "supplier_id": "sup:70530"
+    },
+    "source": "documents:doc:20260917-70530-P03",
+    "table": "documents"
+   },
+   {
+    "citable_fact": {
+     "asked_pct": null,
+     "asked_price": null,
+     "date": "2026-09-09",
+     "days": null,
+     "effective_date": null,
+     "supplier": "sup:70530",
+     "title": "Annual review",
+     "type": "meeting_note"
+    },
+    "document": "# Annual review\n\nmeeting note - 2026-09-09 - Hollerau Pumpenwerke, Purchasing\n\nAnnual review with Selvbrunn Drive Systems GmbH. Their key account manager explained that price changes above 2 % need the approval of their pricing committee, which meets every two weeks.\n",
+    "row": {
+     "asked_pct": null,
+     "asked_price": null,
+     "author": "Hollerau Pumpenwerke, Purchasing",
+     "date": "2026-09-09",
+     "effective_date": null,
+     "file": "correspondence/20260909-70530-M2.md",
+     "id": "doc:20260909-70530-M2",
+     "kind": "meeting_note",
+     "notice_days": null,
+     "part_ids": "",
+     "subject": "Annual review",
+     "supplier_id": "sup:70530"
+    },
+    "source": "documents:doc:20260909-70530-M2",
+    "table": "documents"
+   },
+   {
+    "citable_fact": null,
+    "document": null,
+    "row": {
+     "certifications": "ISO 9001; ISO 14001",
+     "credit_index": 157,
+     "credit_index_12m_ago": 157,
+     "equity_ratio_pct": 31.7,
+     "filed_fy": 2025,
+     "founded": 1983,
+     "group_parent": null,
+     "legal_form": "GmbH",
+     "owner_type": "group",
+     "staff": 2200,
+     "supplier_id": "sup:70530",
+     "turnover_band": "250-1000 M EUR",
+     "turnover_eur": 602000000,
+     "vda63_grade": "A"
+    },
+    "source": "supplier_intel:1348f1c7f1d8d72f",
+    "table": "supplier_intel"
+   },
+   {
+    "citable_fact": {
+     "confidence_pct": 5,
+     "part": "part:350020",
+     "price_unit": 1,
+     "unit_cost": 403.21
+    },
+    "document": null,
+    "row": {
+     "confidence_pct": 5,
+     "conversion_eur": 149.59,
+     "cost_base": "DE",
+     "estimate_date": "2026-07-15",
+     "id": "cost:350020",
+     "material_eur": 189.51,
+     "method": "bottom-up estimate of this supplier's plant, no margin included",
+     "overhead_eur": 64.11,
+     "part_id": "part:350020",
+     "price_unit": 1,
+     "supplier_id": "sup:70530",
+     "unit_cost": 403.21
+    },
+    "source": "should_cost:cost:350020",
+    "table": "should_cost"
+   },
+   {
+    "citable_fact": null,
+    "document": null,
+    "row": {
+     "asked_pct": 5.5,
+     "date": "2025-11-21",
+     "event_id": "EV-2026-70530-350020",
+     "note": "",
+     "part_id": "part:350020",
+     "settled_pct": 3.1,
+     "supplier_id": "sup:70530",
+     "type": "annual renewal"
+    },
+    "source": "negotiation_history:a1efd642022fc142",
+    "table": "negotiation_history"
+   },
+   {
+    "citable_fact": {
+     "asked_pct": null,
+     "asked_price": null,
+     "date": "2026-08-26",
+     "days": null,
+     "effective_date": null,
+     "supplier": "sup:70530",
+     "title": "Annual review",
+     "type": "meeting_note"
+    },
+    "document": "# Annual review\n\nmeeting note - 2026-08-26 - Hollerau Pumpenwerke, Purchasing\n\nAnnual review with Selvbrunn Drive Systems GmbH. Their sales director said there is no room on price this year: head office has frozen all price reductions until December 2027. He was open on payment terms and call-off flexibility.\n",
+    "row": {
+     "asked_pct": null,
+     "asked_price": null,
+     "author": "Hollerau Pumpenwerke, Purchasing",
+     "date": "2026-08-26",
+     "effective_date": null,
+     "file": "correspondence/20260826-70530-M1.md",
+     "id": "doc:20260826-70530-M1",
+     "kind": "meeting_note",
+     "notice_days": null,
+     "part_ids": "",
+     "subject": "Annual review",
+     "supplier_id": "sup:70530"
+    },
+    "source": "documents:doc:20260826-70530-M1",
+    "table": "documents"
+   },
+   {
+    "citable_fact": null,
+    "document": null,
+    "row": {
+     "asked_pct": -0.6,
+     "date": "2024-12-08",
+     "event_id": "EV-2025-70530-350020",
+     "note": "",
+     "part_id": "part:350020",
+     "settled_pct": -3.5,
+     "supplier_id": "sup:70530",
+     "type": "annual renewal"
+    },
+    "source": "negotiation_history:dd0a6331fbda7878",
+    "table": "negotiation_history"
+   },
+   {
+    "citable_fact": {
+     "asked_pct": null,
+     "asked_price": null,
+     "date": "2025-12-01",
+     "days": null,
+     "effective_date": null,
+     "supplier": "sup:70530",
+     "title": "Holiday shutdown",
+     "type": "email"
+    },
+    "document": "# Holiday shutdown\n\nemail - 2025-12-01 - Selvbrunn Drive Systems GmbH\n\nOur plant is closed from 23 December to 6 January. Please place call-offs for January by 10 December.\n",
+    "row": {
+     "asked_pct": null,
+     "asked_price": null,
+     "author": "Selvbrunn Drive Systems GmbH",
+     "date": "2025-12-01",
+     "effective_date": null,
+     "file": "correspondence/20251201-70530-N.md",
+     "id": "doc:20251201-70530-N",
+     "kind": "email",
+     "notice_days": null,
+     "part_ids": "",
+     "subject": "Holiday shutdown",
+     "supplier_id": "sup:70530"
+    },
+    "source": "documents:doc:20251201-70530-N",
+    "table": "documents"
+   },
+   {
+    "citable_fact": null,
+    "document": null,
+    "row": {
+     "asked_pct": 1.4,
+     "date": "2023-11-13",
+     "event_id": "EV-2024-70530-350020",
+     "note": "",
+     "part_id": "part:350020",
+     "settled_pct": 0.0,
+     "supplier_id": "sup:70530",
+     "type": "annual renewal"
+    },
+    "source": "negotiation_history:831be1f0040511e2",
+    "table": "negotiation_history"
+   },
+   {
+    "citable_fact": null,
+    "document": null,
+    "row": {
+     "asked_pct": null,
+     "date": "2022-12-02",
+     "event_id": "EV-2023-70530-350020",
+     "note": "",
+     "part_id": "part:350020",
+     "settled_pct": null,
+     "supplier_id": "sup:70530",
+     "type": "initial price"
+    },
+    "source": "negotiation_history:c3b83b6ef5da8bba",
+    "table": "negotiation_history"
+   },
+   {
+    "citable_fact": {
+     "colour": "green",
+     "otd_confirmed_pct": 84.6,
+     "otd_pct": 84.6,
+     "ppm": 0,
+     "quarter": "2026Q3",
+     "supplier": "sup:70530"
+    },
+    "document": null,
+    "row": {
+     "class": "A",
+     "colour": "green",
+     "complaint_qty": 0,
+     "gr_lines": 26,
+     "id": "sc:70530@2026Q3",
+     "open_8d_overdue": 0,
+     "otd_confirmed_pct": 84.6,
+     "otd_pct": 84.6,
+     "period_end": "2026-09-30",
+     "period_start": "2025-10-01",
+     "ppm": 0,
+     "qn_count": 0,
+     "quarter": "2026Q3",
+     "received_qty": 4154,
+     "score": 92.3,
+     "supplier_id": "sup:70530"
+    },
+    "source": "scorecards:sc:70530@2026Q3",
+    "table": "scorecards"
+   },
+   {
+    "citable_fact": {
+     "colour": "green",
+     "otd_confirmed_pct": 88.9,
+     "otd_pct": 88.9,
+     "ppm": 0,
+     "quarter": "2026Q2",
+     "supplier": "sup:70530"
+    },
+    "document": null,
+    "row": {
+     "class": "A",
+     "colour": "green",
+     "complaint_qty": 0,
+     "gr_lines": 27,
+     "id": "sc:70530@2026Q2",
+     "open_8d_overdue": 0,
+     "otd_confirmed_pct": 88.9,
+     "otd_pct": 88.9,
+     "period_end": "2026-06-30",
+     "period_start": "2025-07-01",
+     "ppm": 0,
+     "qn_count": 0,
+     "quarter": "2026Q2",
+     "received_qty": 4330,
+     "score": 94.4,
+     "supplier_id": "sup:70530"
+    },
+    "source": "scorecards:sc:70530@2026Q2",
+    "table": "scorecards"
+   },
+   {
+    "citable_fact": {
+     "colour": "green",
+     "otd_confirmed_pct": 88.0,
+     "otd_pct": 88.0,
+     "ppm": 0,
+     "quarter": "2026Q1",
+     "supplier": "sup:70530"
+    },
+    "document": null,
+    "row": {
+     "class": "A",
+     "colour": "green",
+     "complaint_qty": 0,
+     "gr_lines": 25,
+     "id": "sc:70530@2026Q1",
+     "open_8d_overdue": 0,
+     "otd_confirmed_pct": 88.0,
+     "otd_pct": 88.0,
+     "period_end": "2026-03-31",
+     "period_start": "2025-04-01",
+     "ppm": 0,
+     "qn_count": 0,
+     "quarter": "2026Q1",
+     "received_qty": 4085,
+     "score": 94.0,
+     "supplier_id": "sup:70530"
+    },
+    "source": "scorecards:sc:70530@2026Q1",
+    "table": "scorecards"
+   },
+   {
+    "citable_fact": {
+     "colour": "green",
+     "otd_confirmed_pct": 91.7,
+     "otd_pct": 91.7,
+     "ppm": 0,
+     "quarter": "2025Q4",
+     "supplier": "sup:70530"
+    },
+    "document": null,
+    "row": {
+     "class": "A",
+     "colour": "green",
+     "complaint_qty": 0,
+     "gr_lines": 24,
+     "id": "sc:70530@2025Q4",
+     "open_8d_overdue": 0,
+     "otd_confirmed_pct": 91.7,
+     "otd_pct": 91.7,
+     "period_end": "2025-12-31",
+     "period_start": "2025-01-01",
+     "ppm": 0,
+     "qn_count": 0,
+     "quarter": "2025Q4",
+     "received_qty": 4085,
+     "score": 95.8,
+     "supplier_id": "sup:70530"
+    },
+    "source": "scorecards:sc:70530@2025Q4",
+    "table": "scorecards"
+   },
+   {
+    "citable_fact": {
+     "colour": "green",
+     "otd_confirmed_pct": 88.0,
+     "otd_pct": 88.0,
+     "ppm": 240,
+     "quarter": "2025Q3",
+     "supplier": "sup:70530"
+    },
+    "document": null,
+    "row": {
+     "class": "A",
+     "colour": "green",
+     "complaint_qty": 1,
+     "gr_lines": 25,
+     "id": "sc:70530@2025Q3",
+     "open_8d_overdue": 0,
+     "otd_confirmed_pct": 88.0,
+     "otd_pct": 88.0,
+     "period_end": "2025-09-30",
+     "period_start": "2024-10-01",
+     "ppm": 240,
+     "qn_count": 1,
+     "quarter": "2025Q3",
+     "received_qty": 4171,
+     "score": 92.8,
+     "supplier_id": "sup:70530"
+    },
+    "source": "scorecards:sc:70530@2025Q3",
+    "table": "scorecards"
+   },
+   {
+    "citable_fact": {
+     "colour": "green",
+     "otd_confirmed_pct": 92.3,
+     "otd_pct": 88.5,
+     "ppm": 468,
+     "quarter": "2025Q2",
+     "supplier": "sup:70530"
+    },
+    "document": null,
+    "row": {
+     "class": "A",
+     "colour": "green",
+     "complaint_qty": 2,
+     "gr_lines": 26,
+     "id": "sc:70530@2025Q2",
+     "open_8d_overdue": 0,
+     "otd_confirmed_pct": 92.3,
+     "otd_pct": 88.5,
+     "period_end": "2025-06-30",
+     "period_start": "2024-07-01",
+     "ppm": 468,
+     "qn_count": 2,
+     "quarter": "2025Q2",
+     "received_qty": 4271,
+     "score": 91.9,
+     "supplier_id": "sup:70530"
+    },
+    "source": "scorecards:sc:70530@2025Q2",
+    "table": "scorecards"
+   },
+   {
+    "citable_fact": {
+     "colour": "green",
+     "otd_confirmed_pct": 96.2,
+     "otd_pct": 92.3,
+     "ppm": 469,
+     "quarter": "2025Q1",
+     "supplier": "sup:70530"
+    },
+    "document": null,
+    "row": {
+     "class": "A",
+     "colour": "green",
+     "complaint_qty": 2,
+     "gr_lines": 26,
+     "id": "sc:70530@2025Q1",
+     "open_8d_overdue": 0,
+     "otd_confirmed_pct": 96.2,
+     "otd_pct": 92.3,
+     "period_end": "2025-03-31",
+     "period_start": "2024-04-01",
+     "ppm": 469,
+     "qn_count": 2,
+     "quarter": "2025Q1",
+     "received_qty": 4266,
+     "score": 93.8,
+     "supplier_id": "sup:70530"
+    },
+    "source": "scorecards:sc:70530@2025Q1",
+    "table": "scorecards"
+   },
+   {
+    "citable_fact": {
+     "colour": "green",
+     "otd_confirmed_pct": 96.2,
+     "otd_pct": 92.3,
+     "ppm": 471,
+     "quarter": "2024Q4",
+     "supplier": "sup:70530"
+    },
+    "document": null,
+    "row": {
+     "class": "A",
+     "colour": "green",
+     "complaint_qty": 2,
+     "gr_lines": 26,
+     "id": "sc:70530@2024Q4",
+     "open_8d_overdue": 0,
+     "otd_confirmed_pct": 96.2,
+     "otd_pct": 92.3,
+     "period_end": "2024-12-31",
+     "period_start": "2024-01-01",
+     "ppm": 471,
+     "qn_count": 2,
+     "quarter": "2024Q4",
+     "received_qty": 4246,
+     "score": 93.8,
+     "supplier_id": "sup:70530"
+    },
+    "source": "scorecards:sc:70530@2024Q4",
+    "table": "scorecards"
+   }
+  ],
+  "opening_offer": {
+   "term_sheet_id": "offer:70530-0",
+   "terms": {
+    "contract_months": 12,
+    "payment_days": 30,
+    "unit_price": 438.21,
+    "volume_per_year": 4580
+   }
+  },
+  "standard_terms": {
+   "chargeback_eur_per_complaint": 0.0,
+   "ppm_commitment": 350
+  }
+ },
+ "case:P04": {
+  "case": {
+   "briefing": "You negotiate for Hollerau Pumpenwerke with W\u00e4lzlager-Zentrum S\u00fcd GmbH. Renewal of the ball bearing 6306 agreement. Need: 20000 pc a year. Category goal: routine: fewer suppliers and less process cost. Score: the lowest total cost C as defined in the rules, valued with this case's rates (need lead time 7 days). Fallback if you walk away: the second-source quote quote:7200004. Must-haves: none. Prepare from the data package.",
+   "buyer": {
+    "alternative": {
+     "kind": "quote",
+     "ref": "quote:7200004",
+     "terms": {
+      "contract_months": 24,
+      "effective_date": "2027-01-01",
+      "incoterm": "DAP",
+      "index_clause": null,
+      "lead_time_days": 10,
+      "payment_days": 30,
+      "ppm_commitment": 0,
+      "tooling_eur": 0,
+      "unit_price": 5.04,
+      "volume_per_year": 20000
+     }
+    },
+    "category_goal": "routine",
+    "cost_per_defect": 95,
+    "current_unit_price": 4.39,
+    "fallback_risk_pct": 5,
+    "fallback_unit_price": 4.7,
+    "freight_eur_per_unit": {
+     "DAP": 0.0,
+     "EXW": 0.02,
+     "FCA": 0.02
+    },
+    "horizon_years": 2,
+    "index_paths": {},
+    "index_risk_pct": 2,
+    "interest_rate": 0.08,
+    "late_cost_per_day": 75,
+    "must_haves": [],
+    "need_lead_time_days": 7,
+    "need_per_year": 20000,
+    "reference_payment_days": 60
+   },
+   "case_id": "case:P04",
+   "fixed_terms": {
+    "effective_date": "2027-01-01",
+    "incoterm": "DAP",
+    "index_clause": null,
+    "lead_time_days": 7,
+    "tooling_eur": 0,
+    "volume_per_year": 20000
+   },
+   "hosted": true,
+   "negotiable": [
+    "unit_price",
+    "payment_days",
+    "contract_months"
+   ],
+   "parts": [
+    "part:360020"
+   ],
+   "refs": [
+    "doc:20260920-70620-P04",
+    "ctr:4600070620",
+    "sc:70620@2026Q3",
+    "quote:7200004",
+    "fc:360020@2026-09"
+   ],
+   "round_limit": 10,
+   "set": "practice",
+   "suppliers": [
+    "sup:70620"
+   ],
+   "term_options": {
+    "contract_months": [
+     12,
+     24,
+     36
+    ],
+    "payment_days": [
+     14,
+     30,
+     45,
+     60,
+     90
+    ]
+   },
+   "title": "Renewal of the ball bearing 6306 agreement",
+   "trigger_doc": "doc:20260920-70620-P04",
+   "type": "renewal"
+  },
+  "evidence": [
+   {
+    "citable_fact": {
+     "days": 60,
+     "supplier": "sup:70620",
+     "valid_from": "2024-01-01",
+     "valid_to": "2026-12-31"
+    },
+    "document": "# Framework agreement 4600070620\n\nBetween Hollerau Pumpenwerke GmbH and W\u00e4lzlager-Zentrum S\u00fcd GmbH.\n\n**\u00a7 2.1** Subject: supply of Deep groove ball bearing 6306-2Z C3, Deep groove ball bearing 6308-2Z C3, Angular contact ball bearing 7309 BEP.\n\n**\u00a7 3.1** Prices as per the price annex, fixed for each calendar year. Changes require written notice of at least 60 days before the end of the calendar year.\n\n**\u00a7 4.1** Payment: 30 days net.\n\n**\u00a7 5.1** Delivery DAP; standard lead time 7 days from order.\n\n**\u00a7 6.1** The quality agreement applies: on-time delivery target 95 %, flat fee of EUR 150 per supplier-caused complaint.\n\n**\u00a7 8.1** Valid from 2024-01-01 to 2026-12-31; extends by 12 months unless terminated with 60 days' notice.\n\nParts: part:360020, part:360021, part:360022\n",
+    "row": {
+     "file": "contracts/4600070620.md",
+     "id": "ctr:4600070620",
+     "incoterm": "DAP",
+     "notice_days": 60,
+     "payment_days": 30,
+     "price_basis": "fixed per year",
+     "supplier_id": "sup:70620",
+     "type": "framework agreement",
+     "valid_from": "2024-01-01",
+     "valid_to": "2026-12-31"
+    },
+    "source": "contracts:ctr:4600070620",
+    "table": "contracts"
+   },
+   {
+    "citable_fact": {
+     "days": 60,
+     "material_share": null,
+     "series": null,
+     "supplier": "sup:70620",
+     "type": "term"
+    },
+    "document": null,
+    "row": {
+     "clause": "8.1",
+     "contract_id": "ctr:4600070620",
+     "days": 60,
+     "deadband_pct": null,
+     "id": "ctr:4600070620#8.1",
+     "material_share": null,
+     "series": null,
+     "text": "Valid from 2024-01-01 to 2026-12-31; extends by 12 months unless terminated with 60 days' notice.",
+     "type": "term"
+    },
+    "source": "contract_clauses:ctr:4600070620#8.1",
+    "table": "contract_clauses"
+   },
+   {
+    "citable_fact": {
+     "days": null,
+     "material_share": null,
+     "series": null,
+     "supplier": "sup:70620",
+     "type": "quality"
+    },
+    "document": null,
+    "row": {
+     "clause": "6.1",
+     "contract_id": "ctr:4600070620",
+     "days": null,
+     "deadband_pct": null,
+     "id": "ctr:4600070620#6.1",
+     "material_share": null,
+     "series": null,
+     "text": "The quality agreement applies: on-time delivery target 95 %, flat fee of EUR 150 per supplier-caused complaint.",
+     "type": "quality"
+    },
+    "source": "contract_clauses:ctr:4600070620#6.1",
+    "table": "contract_clauses"
+   },
+   {
+    "citable_fact": {
+     "days": 7,
+     "material_share": null,
+     "series": null,
+     "supplier": "sup:70620",
+     "type": "delivery"
+    },
+    "document": null,
+    "row": {
+     "clause": "5.1",
+     "contract_id": "ctr:4600070620",
+     "days": 7,
+     "deadband_pct": null,
+     "id": "ctr:4600070620#5.1",
+     "material_share": null,
+     "series": null,
+     "text": "Delivery DAP; standard lead time 7 days from order.",
+     "type": "delivery"
+    },
+    "source": "contract_clauses:ctr:4600070620#5.1",
+    "table": "contract_clauses"
+   },
+   {
+    "citable_fact": {
+     "days": 30,
+     "material_share": null,
+     "series": null,
+     "supplier": "sup:70620",
+     "type": "payment"
+    },
+    "document": null,
+    "row": {
+     "clause": "4.1",
+     "contract_id": "ctr:4600070620",
+     "days": 30,
+     "deadband_pct": null,
+     "id": "ctr:4600070620#4.1",
+     "material_share": null,
+     "series": null,
+     "text": "Payment: 30 days net.",
+     "type": "payment"
+    },
+    "source": "contract_clauses:ctr:4600070620#4.1",
+    "table": "contract_clauses"
+   },
+   {
+    "citable_fact": {
+     "days": 60,
+     "material_share": null,
+     "series": null,
+     "supplier": "sup:70620",
+     "type": "price"
+    },
+    "document": null,
+    "row": {
+     "clause": "3.1",
+     "contract_id": "ctr:4600070620",
+     "days": 60,
+     "deadband_pct": null,
+     "id": "ctr:4600070620#3.1",
+     "material_share": null,
+     "series": null,
+     "text": "Prices as per the price annex, fixed for each calendar year. Changes require written notice of at least 60 days before the end of the calendar year.",
+     "type": "price"
+    },
+    "source": "contract_clauses:ctr:4600070620#3.1",
+    "table": "contract_clauses"
+   },
+   {
+    "citable_fact": {
+     "days": null,
+     "material_share": null,
+     "series": null,
+     "supplier": "sup:70620",
+     "type": "scope"
+    },
+    "document": null,
+    "row": {
+     "clause": "2.1",
+     "contract_id": "ctr:4600070620",
+     "days": null,
+     "deadband_pct": null,
+     "id": "ctr:4600070620#2.1",
+     "material_share": null,
+     "series": null,
+     "text": "Subject: supply of Deep groove ball bearing 6306-2Z C3, Deep groove ball bearing 6308-2Z C3, Angular contact ball bearing 7309 BEP.",
+     "type": "scope"
+    },
+    "source": "contract_clauses:ctr:4600070620#2.1",
+    "table": "contract_clauses"
+   },
+   {
+    "citable_fact": {
+     "asked_pct": null,
+     "asked_price": null,
+     "date": "2026-09-20",
+     "days": null,
+     "effective_date": null,
+     "supplier": "sup:70620",
+     "title": "Renewal of framework agreement 4600070620",
+     "type": "email"
+    },
+    "document": "# Renewal of framework agreement 4600070620\n\nemail - 2026-09-20 - W\u00e4lzlager-Zentrum S\u00fcd GmbH\n\nHello,\n\nour framework agreement ctr:4600070620 for Deep groove ball bearing 6306-2Z C3 (part:360020) expires on 31 December 2026. We would like to agree the terms for the coming period and will send our offer when we meet. Please let us know your expected volumes.\n\nBest regards,\nW\u00e4lzlager-Zentrum S\u00fcd GmbH\n",
+    "row": {
+     "asked_pct": null,
+     "asked_price": null,
+     "author": "W\u00e4lzlager-Zentrum S\u00fcd GmbH",
+     "date": "2026-09-20",
+     "effective_date": null,
+     "file": "correspondence/20260920-70620-P04.md",
+     "id": "doc:20260920-70620-P04",
+     "kind": "email",
+     "notice_days": null,
+     "part_ids": "part:360020",
+     "subject": "Renewal of framework agreement 4600070620",
+     "supplier_id": "sup:70620"
+    },
+    "source": "documents:doc:20260920-70620-P04",
+    "table": "documents"
+   },
+   {
+    "citable_fact": {
+     "asked_pct": null,
+     "asked_price": null,
+     "date": "2026-09-17",
+     "days": null,
+     "effective_date": null,
+     "supplier": "sup:70620",
+     "title": "Account review",
+     "type": "meeting_note"
+    },
+    "document": "# Account review\n\nmeeting note - 2026-09-17 - Hollerau Pumpenwerke, Purchasing\n\nTheir new sales director said Hollerau's volumes are 'not strategic' for W\u00e4lzlager-Zentrum S\u00fcd GmbH any more; replies have become slower since the summer.\n",
+    "row": {
+     "asked_pct": null,
+     "asked_price": null,
+     "author": "Hollerau Pumpenwerke, Purchasing",
+     "date": "2026-09-17",
+     "effective_date": null,
+     "file": "correspondence/20260917-70620-M4.md",
+     "id": "doc:20260917-70620-M4",
+     "kind": "meeting_note",
+     "notice_days": null,
+     "part_ids": "",
+     "subject": "Account review",
+     "supplier_id": "sup:70620"
+    },
+    "source": "documents:doc:20260917-70620-M4",
+    "table": "documents"
+   },
+   {
+    "citable_fact": null,
+    "document": null,
+    "row": {
+     "certifications": "ISO 9001; ISO 14001",
+     "credit_index": 181,
+     "credit_index_12m_ago": 181,
+     "equity_ratio_pct": 34.0,
+     "filed_fy": 2024,
+     "founded": 1975,
+     "group_parent": null,
+     "legal_form": "GmbH",
+     "owner_type": "family",
+     "staff": 120,
+     "supplier_id": "sup:70620",
+     "turnover_band": "25-50 M EUR",
+     "turnover_eur": 46800000,
+     "vda63_grade": "A"
+    },
+    "source": "supplier_intel:d1d0aa69390f7449",
+    "table": "supplier_intel"
+   },
+   {
+    "citable_fact": null,
+    "document": null,
+    "row": {
+     "asked_pct": 5.7,
+     "date": "2025-12-05",
+     "event_id": "EV-2026-70620-360020",
+     "note": "",
+     "part_id": "part:360020",
+     "settled_pct": 2.3,
+     "supplier_id": "sup:70620",
+     "type": "annual renewal"
+    },
+    "source": "negotiation_history:8a8ce11b0df0b5cd",
+    "table": "negotiation_history"
+   },
+   {
+    "citable_fact": {
+     "asked_pct": null,
+     "asked_price": null,
+     "date": "2026-07-06",
+     "days": null,
+     "effective_date": null,
+     "supplier": "sup:70620",
+     "title": "Range changes",
+     "type": "email"
+    },
+    "document": "# Range changes\n\nemail - 2026-07-06 - W\u00e4lzlager-Zentrum S\u00fcd GmbH\n\nWe are reorganising our range around our key accounts. Standard items will be supplied from stock at list conditions; individual agreements will not be extended.\n",
+    "row": {
+     "asked_pct": null,
+     "asked_price": null,
+     "author": "W\u00e4lzlager-Zentrum S\u00fcd GmbH",
+     "date": "2026-07-06",
+     "effective_date": null,
+     "file": "correspondence/20260706-70620-M1.md",
+     "id": "doc:20260706-70620-M1",
+     "kind": "email",
+     "notice_days": null,
+     "part_ids": "",
+     "subject": "Range changes",
+     "supplier_id": "sup:70620"
+    },
+    "source": "documents:doc:20260706-70620-M1",
+    "table": "documents"
+   },
+   {
+    "citable_fact": null,
+    "document": null,
+    "row": {
+     "asked_pct": 3.8,
+     "date": "2024-12-04",
+     "event_id": "EV-2025-70620-360020",
+     "note": "",
+     "part_id": "part:360020",
+     "settled_pct": 0.0,
+     "supplier_id": "sup:70620",
+     "type": "annual renewal"
+    },
+    "source": "negotiation_history:2b63d2728c40a21f",
+    "table": "negotiation_history"
+   },
+   {
+    "citable_fact": {
+     "asked_pct": null,
+     "asked_price": null,
+     "date": "2026-06-27",
+     "days": null,
+     "effective_date": null,
+     "supplier": "sup:70620",
+     "title": "Commercial terms",
+     "type": "meeting_note"
+    },
+    "document": "# Commercial terms\n\nmeeting note - 2026-06-27 - Hollerau Pumpenwerke, Purchasing\n\nW\u00e4lzlager-Zentrum S\u00fcd GmbH stated that standard items are not discounted; only multi-year volume agreements change prices.\n",
+    "row": {
+     "asked_pct": null,
+     "asked_price": null,
+     "author": "Hollerau Pumpenwerke, Purchasing",
+     "date": "2026-06-27",
+     "effective_date": null,
+     "file": "correspondence/20260627-70620-M2.md",
+     "id": "doc:20260627-70620-M2",
+     "kind": "meeting_note",
+     "notice_days": null,
+     "part_ids": "",
+     "subject": "Commercial terms",
+     "supplier_id": "sup:70620"
+    },
+    "source": "documents:doc:20260627-70620-M2",
+    "table": "documents"
+   },
+   {
+    "citable_fact": null,
+    "document": null,
+    "row": {
+     "asked_pct": 5.7,
+     "date": "2023-12-10",
+     "event_id": "EV-2024-70620-360020",
+     "note": "",
+     "part_id": "part:360020",
+     "settled_pct": 4.1,
+     "supplier_id": "sup:70620",
+     "type": "annual renewal"
+    },
+    "source": "negotiation_history:e043b3b3f0b57dd4",
+    "table": "negotiation_history"
+   },
+   {
+    "citable_fact": {
+     "asked_pct": null,
+     "asked_price": null,
+     "date": "2026-06-16",
+     "days": null,
+     "effective_date": null,
+     "supplier": "sup:70620",
+     "title": "Price discussion",
+     "type": "call_note"
+    },
+    "document": "# Price discussion\n\ncall note - 2026-06-16 - Hollerau Pumpenwerke, Purchasing\n\nCall with the owner of W\u00e4lzlager-Zentrum S\u00fcd GmbH: he offered to walk us through their calculation (hourly rates and material) if that helps to settle prices.\n",
+    "row": {
+     "asked_pct": null,
+     "asked_price": null,
+     "author": "Hollerau Pumpenwerke, Purchasing",
+     "date": "2026-06-16",
+     "effective_date": null,
+     "file": "correspondence/20260616-70620-M6.md",
+     "id": "doc:20260616-70620-M6",
+     "kind": "call_note",
+     "notice_days": null,
+     "part_ids": "",
+     "subject": "Price discussion",
+     "supplier_id": "sup:70620"
+    },
+    "source": "documents:doc:20260616-70620-M6",
+    "table": "documents"
+   },
+   {
+    "citable_fact": null,
+    "document": null,
+    "row": {
+     "asked_pct": null,
+     "date": "2022-11-22",
+     "event_id": "EV-2023-70620-360020",
+     "note": "",
+     "part_id": "part:360020",
+     "settled_pct": null,
+     "supplier_id": "sup:70620",
+     "type": "initial price"
+    },
+    "source": "negotiation_history:615da9c2df3c0e46",
+    "table": "negotiation_history"
+   },
+   {
+    "citable_fact": {
+     "asked_pct": null,
+     "asked_price": null,
+     "date": "2026-05-01",
+     "days": null,
+     "effective_date": null,
+     "supplier": "sup:70620",
+     "title": "Customer portfolio",
+     "type": "meeting_note"
+    },
+    "document": "# Customer portfolio\n\nmeeting note - 2026-05-01 - Hollerau Pumpenwerke, Purchasing\n\nThe sales director of W\u00e4lzlager-Zentrum S\u00fcd GmbH said they are reviewing small accounts and will focus on customers with volume.\n",
+    "row": {
+     "asked_pct": null,
+     "asked_price": null,
+     "author": "Hollerau Pumpenwerke, Purchasing",
+     "date": "2026-05-01",
+     "effective_date": null,
+     "file": "correspondence/20260501-70620-M3.md",
+     "id": "doc:20260501-70620-M3",
+     "kind": "meeting_note",
+     "notice_days": null,
+     "part_ids": "",
+     "subject": "Customer portfolio",
+     "supplier_id": "sup:70620"
+    },
+    "source": "documents:doc:20260501-70620-M3",
+    "table": "documents"
+   },
+   {
+    "citable_fact": {
+     "asked_pct": null,
+     "asked_price": null,
+     "date": "2026-04-27",
+     "days": null,
+     "effective_date": null,
+     "supplier": "sup:70620",
+     "title": "Customer portfolio",
+     "type": "meeting_note"
+    },
+    "document": "# Customer portfolio\n\nmeeting note - 2026-04-27 - Hollerau Pumpenwerke, Purchasing\n\nThe sales director of W\u00e4lzlager-Zentrum S\u00fcd GmbH said they are reviewing small accounts and will focus on customers with volume.\n",
+    "row": {
+     "asked_pct": null,
+     "asked_price": null,
+     "author": "Hollerau Pumpenwerke, Purchasing",
+     "date": "2026-04-27",
+     "effective_date": null,
+     "file": "correspondence/20260427-70620-M5.md",
+     "id": "doc:20260427-70620-M5",
+     "kind": "meeting_note",
+     "notice_days": null,
+     "part_ids": "",
+     "subject": "Customer portfolio",
+     "supplier_id": "sup:70620"
+    },
+    "source": "documents:doc:20260427-70620-M5",
+    "table": "documents"
+   },
+   {
+    "citable_fact": {
+     "colour": "green",
+     "otd_confirmed_pct": 86.2,
+     "otd_pct": 85.0,
+     "ppm": 302,
+     "quarter": "2026Q3",
+     "supplier": "sup:70620"
+    },
+    "document": null,
+    "row": {
+     "class": "A",
+     "colour": "green",
+     "complaint_qty": 9,
+     "gr_lines": 80,
+     "id": "sc:70620@2026Q3",
+     "open_8d_overdue": 0,
+     "otd_confirmed_pct": 86.2,
+     "otd_pct": 85.0,
+     "period_end": "2026-09-30",
+     "period_start": "2025-10-01",
+     "ppm": 302,
+     "qn_count": 9,
+     "quarter": "2026Q3",
+     "received_qty": 29816,
+     "score": 91.0,
+     "supplier_id": "sup:70620"
+    },
+    "source": "scorecards:sc:70620@2026Q3",
+    "table": "scorecards"
+   },
+   {
+    "citable_fact": {
+     "colour": "green",
+     "otd_confirmed_pct": 89.5,
+     "otd_pct": 86.8,
+     "ppm": 283,
+     "quarter": "2026Q2",
+     "supplier": "sup:70620"
+    },
+    "document": null,
+    "row": {
+     "class": "A",
+     "colour": "green",
+     "complaint_qty": 8,
+     "gr_lines": 76,
+     "id": "sc:70620@2026Q2",
+     "open_8d_overdue": 0,
+     "otd_confirmed_pct": 89.5,
+     "otd_pct": 86.8,
+     "period_end": "2026-06-30",
+     "period_start": "2025-07-01",
+     "ppm": 283,
+     "qn_count": 8,
+     "quarter": "2026Q2",
+     "received_qty": 28280,
+     "score": 92.0,
+     "supplier_id": "sup:70620"
+    },
+    "source": "scorecards:sc:70620@2026Q2",
+    "table": "scorecards"
+   },
+   {
+    "citable_fact": {
+     "colour": "green",
+     "otd_confirmed_pct": 87.0,
+     "otd_pct": 83.1,
+     "ppm": 345,
+     "quarter": "2026Q1",
+     "supplier": "sup:70620"
+    },
+    "document": null,
+    "row": {
+     "class": "A",
+     "colour": "green",
+     "complaint_qty": 10,
+     "gr_lines": 77,
+     "id": "sc:70620@2026Q1",
+     "open_8d_overdue": 0,
+     "otd_confirmed_pct": 87.0,
+     "otd_pct": 83.1,
+     "period_end": "2026-03-31",
+     "period_start": "2025-04-01",
+     "ppm": 345,
+     "qn_count": 10,
+     "quarter": "2026Q1",
+     "received_qty": 28973,
+     "score": 89.8,
+     "supplier_id": "sup:70620"
+    },
+    "source": "scorecards:sc:70620@2026Q1",
+    "table": "scorecards"
+   },
+   {
+    "citable_fact": {
+     "colour": "green",
+     "otd_confirmed_pct": 89.3,
+     "otd_pct": 86.7,
+     "ppm": 387,
+     "quarter": "2025Q4",
+     "supplier": "sup:70620"
+    },
+    "document": null,
+    "row": {
+     "class": "A",
+     "colour": "green",
+     "complaint_qty": 11,
+     "gr_lines": 75,
+     "id": "sc:70620@2025Q4",
+     "open_8d_overdue": 0,
+     "otd_confirmed_pct": 89.3,
+     "otd_pct": 86.7,
+     "period_end": "2025-12-31",
+     "period_start": "2025-01-01",
+     "ppm": 387,
+     "qn_count": 11,
+     "quarter": "2025Q4",
+     "received_qty": 28421,
+     "score": 91.4,
+     "supplier_id": "sup:70620"
+    },
+    "source": "scorecards:sc:70620@2025Q4",
+    "table": "scorecards"
+   },
+   {
+    "citable_fact": {
+     "colour": "green",
+     "otd_confirmed_pct": 91.7,
+     "otd_pct": 88.9,
+     "ppm": 190,
+     "quarter": "2025Q3",
+     "supplier": "sup:70620"
+    },
+    "document": null,
+    "row": {
+     "class": "A",
+     "colour": "green",
+     "complaint_qty": 5,
+     "gr_lines": 72,
+     "id": "sc:70620@2025Q3",
+     "open_8d_overdue": 0,
+     "otd_confirmed_pct": 91.7,
+     "otd_pct": 88.9,
+     "period_end": "2025-09-30",
+     "period_start": "2024-10-01",
+     "ppm": 190,
+     "qn_count": 5,
+     "quarter": "2025Q3",
+     "received_qty": 26275,
+     "score": 93.5,
+     "supplier_id": "sup:70620"
+    },
+    "source": "scorecards:sc:70620@2025Q3",
+    "table": "scorecards"
+   },
+   {
+    "citable_fact": {
+     "colour": "green",
+     "otd_confirmed_pct": 92.0,
+     "otd_pct": 90.7,
+     "ppm": 178,
+     "quarter": "2025Q2",
+     "supplier": "sup:70620"
+    },
+    "document": null,
+    "row": {
+     "class": "A",
+     "colour": "green",
+     "complaint_qty": 5,
+     "gr_lines": 75,
+     "id": "sc:70620@2025Q2",
+     "open_8d_overdue": 0,
+     "otd_confirmed_pct": 92.0,
+     "otd_pct": 90.7,
+     "period_end": "2025-06-30",
+     "period_start": "2024-07-01",
+     "ppm": 178,
+     "qn_count": 5,
+     "quarter": "2025Q2",
+     "received_qty": 28093,
+     "score": 94.4,
+     "supplier_id": "sup:70620"
+    },
+    "source": "scorecards:sc:70620@2025Q2",
+    "table": "scorecards"
+   },
+   {
+    "citable_fact": {
+     "colour": "green",
+     "otd_confirmed_pct": 94.7,
+     "otd_pct": 94.7,
+     "ppm": 73,
+     "quarter": "2025Q1",
+     "supplier": "sup:70620"
+    },
+    "document": null,
+    "row": {
+     "class": "A",
+     "colour": "green",
+     "complaint_qty": 2,
+     "gr_lines": 75,
+     "id": "sc:70620@2025Q1",
+     "open_8d_overdue": 0,
+     "otd_confirmed_pct": 94.7,
+     "otd_pct": 94.7,
+     "period_end": "2025-03-31",
+     "period_start": "2024-04-01",
+     "ppm": 73,
+     "qn_count": 2,
+     "quarter": "2025Q1",
+     "received_qty": 27300,
+     "score": 97.0,
+     "supplier_id": "sup:70620"
+    },
+    "source": "scorecards:sc:70620@2025Q1",
+    "table": "scorecards"
+   }
+  ],
+  "opening_offer": {
+   "term_sheet_id": "offer:70620-0",
+   "terms": {
+    "contract_months": 12,
+    "payment_days": 30,
+    "unit_price": 4.96
+   }
+  },
+  "standard_terms": {
+   "chargeback_eur_per_complaint": 0.0,
+   "ppm_commitment": 150
+  }
+ },
+ "case:P07": {
+  "case": {
+   "briefing": "You negotiate for Hollerau Pumpenwerke with Schraubenhandel Leitner & Sohn GmbH. Bundle the fastener kit with one distributor. Need: 30000 kits a year. Category goal: routine: fewer suppliers and less process cost. Score: the lowest total cost C as defined in the rules, valued with this case's rates (need lead time 5 days). Fallback if you walk away: today's terms continue unchanged. Must-haves: none. Prepare from the data package.",
+   "buyer": {
+    "alternative": {
+     "kind": "current_contract",
+     "ref": null,
+     "terms": {
+      "contract_months": 24,
+      "effective_date": "2027-01-01",
+      "incoterm": "DAP",
+      "index_clause": null,
+      "lead_time_days": 5,
+      "payment_days": 30,
+      "tooling_eur": 0,
+      "unit_price": 6.29,
+      "volume_per_year": 30000
+     }
+    },
+    "category_goal": "routine",
+    "cost_per_defect": 6,
+    "current_unit_price": 6.29,
+    "fallback_risk_pct": 5,
+    "fallback_unit_price": 6.91,
+    "freight_eur_per_unit": {
+     "DAP": 0.0,
+     "EXW": 0.08,
+     "FCA": 0.07
+    },
+    "horizon_years": 2,
+    "index_paths": {},
+    "index_risk_pct": 2,
+    "interest_rate": 0.08,
+    "late_cost_per_day": 40,
+    "must_haves": [],
+    "need_lead_time_days": 5,
+    "need_per_year": 30000,
+    "reference_payment_days": 60
+   },
+   "case_id": "case:P07",
+   "fixed_terms": {
+    "effective_date": "2027-01-01",
+    "incoterm": "DAP",
+    "index_clause": null,
+    "lead_time_days": 5,
+    "tooling_eur": 0,
+    "volume_per_year": 30000
+   },
+   "hosted": true,
+   "negotiable": [
+    "unit_price",
+    "payment_days",
+    "contract_months"
+   ],
+   "parts": [
+    "part:360010",
+    "part:360011",
+    "part:360012",
+    "part:360030"
+   ],
+   "refs": [
+    "doc:20260909-70610-P07",
+    "ctr:4600070610",
+    "sc:70610@2026Q3"
+   ],
+   "round_limit": 10,
+   "set": "practice",
+   "suppliers": [
+    "sup:70610"
+   ],
+   "term_options": {
+    "contract_months": [
+     12,
+     24,
+     36
+    ],
+    "payment_days": [
+     14,
+     30,
+     45,
+     60,
+     90
+    ]
+   },
+   "title": "Bundle the fastener kit with one distributor",
+   "trigger_doc": "doc:20260909-70610-P07",
+   "type": "bundling"
+  },
+  "evidence": [
+   {
+    "citable_fact": {
+     "days": 90,
+     "supplier": "sup:70610",
+     "valid_from": "2025-07-01",
+     "valid_to": "2027-06-30"
+    },
+    "document": "# Framework agreement 4600070610\n\nBetween Hollerau Pumpenwerke GmbH and Schraubenhandel Leitner & Sohn GmbH.\n\n**\u00a7 2.1** Subject: supply of Hex bolt ISO 4017 M12x40 8.8, zinc, Hex nut ISO 4032 M12 8, zinc, Washer ISO 7089 M12, zinc.\n\n**\u00a7 3.1** Prices as per the price annex, fixed for each calendar year. Changes require written notice of at least 90 days before the end of the calendar year.\n\n**\u00a7 4.1** Payment: 30 days net.\n\n**\u00a7 5.1** Delivery DAP; standard lead time 5 days from order.\n\n**\u00a7 6.1** The quality agreement applies: on-time delivery target 95 %, flat fee of EUR 150 per supplier-caused complaint.\n\n**\u00a7 8.1** Valid from 2025-07-01 to 2027-06-30; extends by 12 months unless terminated with 90 days' notice.\n\nParts: part:360010, part:360012, part:360030\n",
+    "row": {
+     "file": "contracts/4600070610.md",
+     "id": "ctr:4600070610",
+     "incoterm": "DAP",
+     "notice_days": 90,
+     "payment_days": 30,
+     "price_basis": "fixed per year",
+     "supplier_id": "sup:70610",
+     "type": "framework agreement",
+     "valid_from": "2025-07-01",
+     "valid_to": "2027-06-30"
+    },
+    "source": "contracts:ctr:4600070610",
+    "table": "contracts"
+   },
+   {
+    "citable_fact": {
+     "days": 90,
+     "material_share": null,
+     "series": null,
+     "supplier": "sup:70610",
+     "type": "term"
+    },
+    "document": null,
+    "row": {
+     "clause": "8.1",
+     "contract_id": "ctr:4600070610",
+     "days": 90,
+     "deadband_pct": null,
+     "id": "ctr:4600070610#8.1",
+     "material_share": null,
+     "series": null,
+     "text": "Valid from 2025-07-01 to 2027-06-30; extends by 12 months unless terminated with 90 days' notice.",
+     "type": "term"
+    },
+    "source": "contract_clauses:ctr:4600070610#8.1",
+    "table": "contract_clauses"
+   },
+   {
+    "citable_fact": {
+     "days": null,
+     "material_share": null,
+     "series": null,
+     "supplier": "sup:70610",
+     "type": "quality"
+    },
+    "document": null,
+    "row": {
+     "clause": "6.1",
+     "contract_id": "ctr:4600070610",
+     "days": null,
+     "deadband_pct": null,
+     "id": "ctr:4600070610#6.1",
+     "material_share": null,
+     "series": null,
+     "text": "The quality agreement applies: on-time delivery target 95 %, flat fee of EUR 150 per supplier-caused complaint.",
+     "type": "quality"
+    },
+    "source": "contract_clauses:ctr:4600070610#6.1",
+    "table": "contract_clauses"
+   },
+   {
+    "citable_fact": {
+     "days": 5,
+     "material_share": null,
+     "series": null,
+     "supplier": "sup:70610",
+     "type": "delivery"
+    },
+    "document": null,
+    "row": {
+     "clause": "5.1",
+     "contract_id": "ctr:4600070610",
+     "days": 5,
+     "deadband_pct": null,
+     "id": "ctr:4600070610#5.1",
+     "material_share": null,
+     "series": null,
+     "text": "Delivery DAP; standard lead time 5 days from order.",
+     "type": "delivery"
+    },
+    "source": "contract_clauses:ctr:4600070610#5.1",
+    "table": "contract_clauses"
+   },
+   {
+    "citable_fact": {
+     "days": 30,
+     "material_share": null,
+     "series": null,
+     "supplier": "sup:70610",
+     "type": "payment"
+    },
+    "document": null,
+    "row": {
+     "clause": "4.1",
+     "contract_id": "ctr:4600070610",
+     "days": 30,
+     "deadband_pct": null,
+     "id": "ctr:4600070610#4.1",
+     "material_share": null,
+     "series": null,
+     "text": "Payment: 30 days net.",
+     "type": "payment"
+    },
+    "source": "contract_clauses:ctr:4600070610#4.1",
+    "table": "contract_clauses"
+   },
+   {
+    "citable_fact": {
+     "days": 90,
+     "material_share": null,
+     "series": null,
+     "supplier": "sup:70610",
+     "type": "price"
+    },
+    "document": null,
+    "row": {
+     "clause": "3.1",
+     "contract_id": "ctr:4600070610",
+     "days": 90,
+     "deadband_pct": null,
+     "id": "ctr:4600070610#3.1",
+     "material_share": null,
+     "series": null,
+     "text": "Prices as per the price annex, fixed for each calendar year. Changes require written notice of at least 90 days before the end of the calendar year.",
+     "type": "price"
+    },
+    "source": "contract_clauses:ctr:4600070610#3.1",
+    "table": "contract_clauses"
+   },
+   {
+    "citable_fact": {
+     "days": null,
+     "material_share": null,
+     "series": null,
+     "supplier": "sup:70610",
+     "type": "scope"
+    },
+    "document": null,
+    "row": {
+     "clause": "2.1",
+     "contract_id": "ctr:4600070610",
+     "days": null,
+     "deadband_pct": null,
+     "id": "ctr:4600070610#2.1",
+     "material_share": null,
+     "series": null,
+     "text": "Subject: supply of Hex bolt ISO 4017 M12x40 8.8, zinc, Hex nut ISO 4032 M12 8, zinc, Washer ISO 7089 M12, zinc.",
+     "type": "scope"
+    },
+    "source": "contract_clauses:ctr:4600070610#2.1",
+    "table": "contract_clauses"
+   },
+   {
+    "citable_fact": {
+     "asked_pct": null,
+     "asked_price": null,
+     "date": "2026-09-09",
+     "days": null,
+     "effective_date": null,
+     "supplier": "sup:70610",
+     "title": "One supplier for the kit",
+     "type": "memo"
+    },
+    "document": "# One supplier for the kit\n\nmemo - 2026-09-09 - Hollerau Pumpenwerke, Purchasing\n\nKit per unit (about 30000 kits a year):\n- 19 x Hex bolt ISO 4017 M12x40 8.8, zinc (part:360010)\n- 6 x Hex bolt ISO 4017 M16x60 8.8, zinc (part:360011)\n- 21 x Hex nut ISO 4032 M12 8, zinc (part:360012)\n- 23 x Washer ISO 7089 M12, zinc (part:360030)\n\nToday these parts come from several suppliers. We want one supplier for the kit.\n",
+    "row": {
+     "asked_pct": null,
+     "asked_price": null,
+     "author": "Hollerau Pumpenwerke, Purchasing",
+     "date": "2026-09-09",
+     "effective_date": null,
+     "file": "correspondence/20260909-70610-P07.md",
+     "id": "doc:20260909-70610-P07",
+     "kind": "memo",
+     "notice_days": null,
+     "part_ids": "part:360010;part:360011;part:360012;part:360030",
+     "subject": "One supplier for the kit",
+     "supplier_id": "sup:70610"
+    },
+    "source": "documents:doc:20260909-70610-P07",
+    "table": "documents"
+   },
+   {
+    "citable_fact": {
+     "asked_pct": null,
+     "asked_price": null,
+     "date": "2026-05-14",
+     "days": null,
+     "effective_date": null,
+     "supplier": "sup:70610",
+     "title": "Capacity",
+     "type": "call_note"
+    },
+    "document": "# Capacity\n\ncall note - 2026-05-14 - Hollerau Pumpenwerke, Purchasing\n\nCall with sales at Schraubenhandel Leitner & Sohn GmbH: they could take additional parts at short notice; the second shift has been on hold since spring.\n",
+    "row": {
+     "asked_pct": null,
+     "asked_price": null,
+     "author": "Hollerau Pumpenwerke, Purchasing",
+     "date": "2026-05-14",
+     "effective_date": null,
+     "file": "correspondence/20260514-70610-M3.md",
+     "id": "doc:20260514-70610-M3",
+     "kind": "call_note",
+     "notice_days": null,
+     "part_ids": "",
+     "subject": "Capacity",
+     "supplier_id": "sup:70610"
+    },
+    "source": "documents:doc:20260514-70610-M3",
+    "table": "documents"
+   },
+   {
+    "citable_fact": null,
+    "document": null,
+    "row": {
+     "certifications": "ISO 9001; ISO 14001",
+     "credit_index": 179,
+     "credit_index_12m_ago": 179,
+     "equity_ratio_pct": 30.0,
+     "filed_fy": 2025,
+     "founded": 1929,
+     "group_parent": null,
+     "legal_form": "GmbH",
+     "owner_type": "family",
+     "staff": 280,
+     "supplier_id": "sup:70610",
+     "turnover_band": "100-250 M EUR",
+     "turnover_eur": 139000000,
+     "vda63_grade": "A"
+    },
+    "source": "supplier_intel:747b586d4fdef269",
+    "table": "supplier_intel"
+   },
+   {
+    "citable_fact": null,
+    "document": null,
+    "row": {
+     "asked_pct": 3.6,
+     "date": "2025-12-06",
+     "event_id": "EV-2026-70610-360010",
+     "note": "",
+     "part_id": "part:360010",
+     "settled_pct": 0.0,
+     "supplier_id": "sup:70610",
+     "type": "annual renewal"
+    },
+    "source": "negotiation_history:cba442cd272717ec",
+    "table": "negotiation_history"
+   },
+   {
+    "citable_fact": {
+     "asked_pct": null,
+     "asked_price": null,
+     "date": "2026-05-13",
+     "days": null,
+     "effective_date": null,
+     "supplier": "sup:70610",
+     "title": "Annual review",
+     "type": "meeting_note"
+    },
+    "document": "# Annual review\n\nmeeting note - 2026-05-13 - Hollerau Pumpenwerke, Purchasing\n\nAnnual review with Schraubenhandel Leitner & Sohn GmbH. Their key account manager explained that price changes above 2 % need the approval of their pricing committee, which meets every two weeks.\n",
+    "row": {
+     "asked_pct": null,
+     "asked_price": null,
+     "author": "Hollerau Pumpenwerke, Purchasing",
+     "date": "2026-05-13",
+     "effective_date": null,
+     "file": "correspondence/20260513-70610-M1.md",
+     "id": "doc:20260513-70610-M1",
+     "kind": "meeting_note",
+     "notice_days": null,
+     "part_ids": "",
+     "subject": "Annual review",
+     "supplier_id": "sup:70610"
+    },
+    "source": "documents:doc:20260513-70610-M1",
+    "table": "documents"
+   },
+   {
+    "citable_fact": null,
+    "document": null,
+    "row": {
+     "asked_pct": 1.2,
+     "date": "2025-11-24",
+     "event_id": "EV-2026-70610-360030",
+     "note": "",
+     "part_id": "part:360030",
+     "settled_pct": 0.0,
+     "supplier_id": "sup:70610",
+     "type": "annual renewal"
+    },
+    "source": "negotiation_history:2129861d2b3e0f1d",
+    "table": "negotiation_history"
+   },
+   {
+    "citable_fact": {
+     "asked_pct": null,
+     "asked_price": null,
+     "date": "2026-04-01",
+     "days": null,
+     "effective_date": null,
+     "supplier": "sup:70610",
+     "title": "Capacity",
+     "type": "call_note"
+    },
+    "document": "# Capacity\n\ncall note - 2026-04-01 - Hollerau Pumpenwerke, Purchasing\n\nCall with sales at Schraubenhandel Leitner & Sohn GmbH: they could take additional parts at short notice; the second shift has been on hold since spring.\n",
+    "row": {
+     "asked_pct": null,
+     "asked_price": null,
+     "author": "Hollerau Pumpenwerke, Purchasing",
+     "date": "2026-04-01",
+     "effective_date": null,
+     "file": "correspondence/20260401-70610-M2.md",
+     "id": "doc:20260401-70610-M2",
+     "kind": "call_note",
+     "notice_days": null,
+     "part_ids": "",
+     "subject": "Capacity",
+     "supplier_id": "sup:70610"
+    },
+    "source": "documents:doc:20260401-70610-M2",
+    "table": "documents"
+   },
+   {
+    "citable_fact": null,
+    "document": null,
+    "row": {
+     "asked_pct": 1.7,
+     "date": "2025-11-12",
+     "event_id": "EV-2026-70610-360012",
+     "note": "",
+     "part_id": "part:360012",
+     "settled_pct": 0.0,
+     "supplier_id": "sup:70610",
+     "type": "annual renewal"
+    },
+    "source": "negotiation_history:5b3823870a46b7fb",
+    "table": "negotiation_history"
+   },
+   {
+    "citable_fact": {
+     "asked_pct": null,
+     "asked_price": null,
+     "date": "2025-12-24",
+     "days": null,
+     "effective_date": null,
+     "supplier": "sup:70610",
+     "title": "Trade fair invitation",
+     "type": "email"
+    },
+    "document": "# Trade fair invitation\n\nemail - 2025-12-24 - Schraubenhandel Leitner & Sohn GmbH\n\nWe would be pleased to welcome you at our booth at the regional supplier fair in November.\n",
+    "row": {
+     "asked_pct": null,
+     "asked_price": null,
+     "author": "Schraubenhandel Leitner & Sohn GmbH",
+     "date": "2025-12-24",
+     "effective_date": null,
+     "file": "correspondence/20251224-70610-N.md",
+     "id": "doc:20251224-70610-N",
+     "kind": "email",
+     "notice_days": null,
+     "part_ids": "",
+     "subject": "Trade fair invitation",
+     "supplier_id": "sup:70610"
+    },
+    "source": "documents:doc:20251224-70610-N",
+    "table": "documents"
+   },
+   {
+    "citable_fact": null,
+    "document": null,
+    "row": {
+     "asked_pct": 2.4,
+     "date": "2024-12-06",
+     "event_id": "EV-2025-70610-360010",
+     "note": "",
+     "part_id": "part:360010",
+     "settled_pct": 0.0,
+     "supplier_id": "sup:70610",
+     "type": "annual renewal"
+    },
+    "source": "negotiation_history:ca27559021b909e2",
+    "table": "negotiation_history"
+   },
+   {
+    "citable_fact": null,
+    "document": null,
+    "row": {
+     "asked_pct": 2.3,
+     "date": "2024-11-23",
+     "event_id": "EV-2025-70610-360030",
+     "note": "",
+     "part_id": "part:360030",
+     "settled_pct": 0.0,
+     "supplier_id": "sup:70610",
+     "type": "annual renewal"
+    },
+    "source": "negotiation_history:c1e772c1141b1a0f",
+    "table": "negotiation_history"
+   },
+   {
+    "citable_fact": {
+     "colour": "green",
+     "otd_confirmed_pct": 88.6,
+     "otd_pct": 88.6,
+     "ppm": 68,
+     "quarter": "2026Q3",
+     "supplier": "sup:70610"
+    },
+    "document": null,
+    "row": {
+     "class": "A",
+     "colour": "green",
+     "complaint_qty": 50,
+     "gr_lines": 79,
+     "id": "sc:70610@2026Q3",
+     "open_8d_overdue": 0,
+     "otd_confirmed_pct": 88.6,
+     "otd_pct": 88.6,
+     "period_end": "2026-09-30",
+     "period_start": "2025-10-01",
+     "ppm": 68,
+     "qn_count": 19,
+     "quarter": "2026Q3",
+     "received_qty": 733990,
+     "score": 94.0,
+     "supplier_id": "sup:70610"
+    },
+    "source": "scorecards:sc:70610@2026Q3",
+    "table": "scorecards"
+   },
+   {
+    "citable_fact": {
+     "colour": "green",
+     "otd_confirmed_pct": 88.6,
+     "otd_pct": 88.6,
+     "ppm": 85,
+     "quarter": "2026Q2",
+     "supplier": "sup:70610"
+    },
+    "document": null,
+    "row": {
+     "class": "A",
+     "colour": "green",
+     "complaint_qty": 63,
+     "gr_lines": 79,
+     "id": "sc:70610@2026Q2",
+     "open_8d_overdue": 0,
+     "otd_confirmed_pct": 88.6,
+     "otd_pct": 88.6,
+     "period_end": "2026-06-30",
+     "period_start": "2025-07-01",
+     "ppm": 85,
+     "qn_count": 24,
+     "quarter": "2026Q2",
+     "received_qty": 740620,
+     "score": 93.9,
+     "supplier_id": "sup:70610"
+    },
+    "source": "scorecards:sc:70610@2026Q2",
+    "table": "scorecards"
+   },
+   {
+    "citable_fact": {
+     "colour": "green",
+     "otd_confirmed_pct": 88.6,
+     "otd_pct": 88.6,
+     "ppm": 58,
+     "quarter": "2026Q1",
+     "supplier": "sup:70610"
+    },
+    "document": null,
+    "row": {
+     "class": "A",
+     "colour": "green",
+     "complaint_qty": 42,
+     "gr_lines": 79,
+     "id": "sc:70610@2026Q1",
+     "open_8d_overdue": 0,
+     "otd_confirmed_pct": 88.6,
+     "otd_pct": 88.6,
+     "period_end": "2026-03-31",
+     "period_start": "2025-04-01",
+     "ppm": 58,
+     "qn_count": 17,
+     "quarter": "2026Q1",
+     "received_qty": 726330,
+     "score": 94.0,
+     "supplier_id": "sup:70610"
+    },
+    "source": "scorecards:sc:70610@2026Q1",
+    "table": "scorecards"
+   },
+   {
+    "citable_fact": {
+     "colour": "green",
+     "otd_confirmed_pct": 87.5,
+     "otd_pct": 87.5,
+     "ppm": 54,
+     "quarter": "2025Q4",
+     "supplier": "sup:70610"
+    },
+    "document": null,
+    "row": {
+     "class": "A",
+     "colour": "green",
+     "complaint_qty": 40,
+     "gr_lines": 80,
+     "id": "sc:70610@2025Q4",
+     "open_8d_overdue": 0,
+     "otd_confirmed_pct": 87.5,
+     "otd_pct": 87.5,
+     "period_end": "2025-12-31",
+     "period_start": "2025-01-01",
+     "ppm": 54,
+     "qn_count": 15,
+     "quarter": "2025Q4",
+     "received_qty": 736530,
+     "score": 93.5,
+     "supplier_id": "sup:70610"
+    },
+    "source": "scorecards:sc:70610@2025Q4",
+    "table": "scorecards"
+   },
+   {
+    "citable_fact": {
+     "colour": "green",
+     "otd_confirmed_pct": 86.4,
+     "otd_pct": 86.4,
+     "ppm": 61,
+     "quarter": "2025Q3",
+     "supplier": "sup:70610"
+    },
+    "document": null,
+    "row": {
+     "class": "A",
+     "colour": "green",
+     "complaint_qty": 45,
+     "gr_lines": 81,
+     "id": "sc:70610@2025Q3",
+     "open_8d_overdue": 0,
+     "otd_confirmed_pct": 86.4,
+     "otd_pct": 86.4,
+     "period_end": "2025-09-30",
+     "period_start": "2024-10-01",
+     "ppm": 61,
+     "qn_count": 18,
+     "quarter": "2025Q3",
+     "received_qty": 735212,
+     "score": 92.9,
+     "supplier_id": "sup:70610"
+    },
+    "source": "scorecards:sc:70610@2025Q3",
+    "table": "scorecards"
+   },
+   {
+    "citable_fact": {
+     "colour": "green",
+     "otd_confirmed_pct": 86.6,
+     "otd_pct": 86.6,
+     "ppm": 59,
+     "quarter": "2025Q2",
+     "supplier": "sup:70610"
+    },
+    "document": null,
+    "row": {
+     "class": "A",
+     "colour": "green",
+     "complaint_qty": 44,
+     "gr_lines": 82,
+     "id": "sc:70610@2025Q2",
+     "open_8d_overdue": 0,
+     "otd_confirmed_pct": 86.6,
+     "otd_pct": 86.6,
+     "period_end": "2025-06-30",
+     "period_start": "2024-07-01",
+     "ppm": 59,
+     "qn_count": 17,
+     "quarter": "2025Q2",
+     "received_qty": 747582,
+     "score": 93.0,
+     "supplier_id": "sup:70610"
+    },
+    "source": "scorecards:sc:70610@2025Q2",
+    "table": "scorecards"
+   }
+  ],
+  "opening_offer": {
+   "term_sheet_id": "offer:70610-0",
+   "terms": {
+    "contract_months": 12,
+    "payment_days": 30,
+    "unit_price": 5.74
+   }
+  },
+  "standard_terms": {
+   "chargeback_eur_per_complaint": 0.0,
+   "ppm_commitment": 80
+  }
+ },
+ "case:P08": {
+  "case": {
+   "briefing": "You negotiate for Hollerau Pumpenwerke with Edelstahl-Service Donautal GmbH. Alloy surcharge and base price for 1.4404 bar. Need: 94800 kg a year. Category goal: leverage: competition and data should bring the price down. Score: the lowest total cost C as defined in the rules, valued with this case's rates (need lead time 10 days). Fallback if you walk away: the second-source quote quote:7200008. Must-haves: none. Prepare from the data package.",
+   "buyer": {
+    "alternative": {
+     "kind": "quote",
+     "ref": "quote:7200008",
+     "terms": {
+      "contract_months": 24,
+      "effective_date": "2027-01-01",
+      "incoterm": "DAP",
+      "index_clause": null,
+      "lead_time_days": 14,
+      "payment_days": 30,
+      "ppm_commitment": 32,
+      "tooling_eur": 0,
+      "unit_price": 6.06,
+      "volume_per_year": 94800
+     }
+    },
+    "category_goal": "leverage",
+    "cost_per_defect": 0,
+    "current_unit_price": 5.45,
+    "fallback_risk_pct": 3,
+    "fallback_unit_price": 5.72,
+    "freight_eur_per_unit": {
+     "DAP": 0.0,
+     "EXW": 0.06,
+     "FCA": 0.05
+    },
+    "horizon_years": 2,
+    "index_paths": {
+     "AS-14404": 0.06
+    },
+    "index_risk_pct": 1,
+    "interest_rate": 0.08,
+    "late_cost_per_day": 96,
+    "must_haves": [],
+    "need_lead_time_days": 10,
+    "need_per_year": 94800,
+    "reference_payment_days": 60
+   },
+   "case_id": "case:P08",
+   "fixed_terms": {
+    "effective_date": "2027-01-01",
+    "incoterm": "DAP",
+    "lead_time_days": 10,
+    "tooling_eur": 0,
+    "volume_per_year": 94800
+   },
+   "hosted": true,
+   "negotiable": [
+    "unit_price",
+    "index_clause",
+    "payment_days",
+    "contract_months"
+   ],
+   "parts": [
+    "part:370010"
+   ],
+   "refs": [
+    "doc:20260912-70710-P08",
+    "ctr:4600070710",
+    "sc:70710@2026Q3",
+    "quote:7200008"
+   ],
+   "round_limit": 10,
+   "set": "practice",
+   "suppliers": [
+    "sup:70710"
+   ],
+   "term_options": {
+    "contract_months": [
+     12,
+     24,
+     36
+    ],
+    "index_clause": [
+     null,
+     {
+      "base_month": "2026-08",
+      "deadband_pct": 0,
+      "material_share": 0.45,
+      "series": "AS-14404"
+     },
+     {
+      "base_month": "2026-08",
+      "deadband_pct": 3,
+      "material_share": 0.45,
+      "series": "AS-14404"
+     },
+     {
+      "base_month": "2026-08",
+      "deadband_pct": 5,
+      "material_share": 0.45,
+      "series": "AS-14404"
+     }
+    ],
+    "payment_days": [
+     14,
+     30,
+     45,
+     60,
+     90
+    ]
+   },
+   "title": "Alloy surcharge and base price for 1.4404 bar",
+   "trigger_doc": "doc:20260912-70710-P08",
+   "type": "raw_material"
+  },
+  "evidence": [
+   {
+    "citable_fact": {
+     "days": 60,
+     "supplier": "sup:70710",
+     "valid_from": "2024-01-01",
+     "valid_to": "2026-12-31"
+    },
+    "document": "# Framework agreement 4600070710\n\nBetween Hollerau Pumpenwerke GmbH and Edelstahl-Service Donautal GmbH.\n\n**\u00a7 2.1** Subject: supply of Round bar 1.4404 dia 30 mm, peeled.\n\n**\u00a7 3.1** Prices as per the price annex, fixed for each calendar year. Changes require written notice of at least 60 days before the end of the calendar year.\n\n**\u00a7 3.2** The price follows index AS-14404: P = P0 x (1 - 0.45 + 0.45 x I(m-2) / I(base)), base = the index two months before the price year starts, adjusted quarterly on the 1st of January, April, July and October if the change exceeds 0 %.\n\n**\u00a7 4.1** Payment: 30 days net.\n\n**\u00a7 5.1** Delivery DAP; standard lead time 10 days from order.\n\n**\u00a7 6.1** The quality agreement applies: on-time delivery target 95 %, flat fee of EUR 150 per supplier-caused complaint.\n\n**\u00a7 8.1** Valid from 2024-01-01 to 2026-12-31; extends by 12 months unless terminated with 60 days' notice.\n\nParts: part:370010\n",
+    "row": {
+     "file": "contracts/4600070710.md",
+     "id": "ctr:4600070710",
+     "incoterm": "DAP",
+     "notice_days": 60,
+     "payment_days": 30,
+     "price_basis": "index clause",
+     "supplier_id": "sup:70710",
+     "type": "framework agreement",
+     "valid_from": "2024-01-01",
+     "valid_to": "2026-12-31"
+    },
+    "source": "contracts:ctr:4600070710",
+    "table": "contracts"
+   },
+   {
+    "citable_fact": {
+     "days": 60,
+     "material_share": null,
+     "series": null,
+     "supplier": "sup:70710",
+     "type": "term"
+    },
+    "document": null,
+    "row": {
+     "clause": "8.1",
+     "contract_id": "ctr:4600070710",
+     "days": 60,
+     "deadband_pct": null,
+     "id": "ctr:4600070710#8.1",
+     "material_share": null,
+     "series": null,
+     "text": "Valid from 2024-01-01 to 2026-12-31; extends by 12 months unless terminated with 60 days' notice.",
+     "type": "term"
+    },
+    "source": "contract_clauses:ctr:4600070710#8.1",
+    "table": "contract_clauses"
+   },
+   {
+    "citable_fact": {
+     "days": null,
+     "material_share": null,
+     "series": null,
+     "supplier": "sup:70710",
+     "type": "quality"
+    },
+    "document": null,
+    "row": {
+     "clause": "6.1",
+     "contract_id": "ctr:4600070710",
+     "days": null,
+     "deadband_pct": null,
+     "id": "ctr:4600070710#6.1",
+     "material_share": null,
+     "series": null,
+     "text": "The quality agreement applies: on-time delivery target 95 %, flat fee of EUR 150 per supplier-caused complaint.",
+     "type": "quality"
+    },
+    "source": "contract_clauses:ctr:4600070710#6.1",
+    "table": "contract_clauses"
+   },
+   {
+    "citable_fact": {
+     "days": 10,
+     "material_share": null,
+     "series": null,
+     "supplier": "sup:70710",
+     "type": "delivery"
+    },
+    "document": null,
+    "row": {
+     "clause": "5.1",
+     "contract_id": "ctr:4600070710",
+     "days": 10,
+     "deadband_pct": null,
+     "id": "ctr:4600070710#5.1",
+     "material_share": null,
+     "series": null,
+     "text": "Delivery DAP; standard lead time 10 days from order.",
+     "type": "delivery"
+    },
+    "source": "contract_clauses:ctr:4600070710#5.1",
+    "table": "contract_clauses"
+   },
+   {
+    "citable_fact": {
+     "days": 30,
+     "material_share": null,
+     "series": null,
+     "supplier": "sup:70710",
+     "type": "payment"
+    },
+    "document": null,
+    "row": {
+     "clause": "4.1",
+     "contract_id": "ctr:4600070710",
+     "days": 30,
+     "deadband_pct": null,
+     "id": "ctr:4600070710#4.1",
+     "material_share": null,
+     "series": null,
+     "text": "Payment: 30 days net.",
+     "type": "payment"
+    },
+    "source": "contract_clauses:ctr:4600070710#4.1",
+    "table": "contract_clauses"
+   },
+   {
+    "citable_fact": {
+     "days": null,
+     "material_share": 0.45,
+     "series": "AS-14404",
+     "supplier": "sup:70710",
+     "type": "index"
+    },
+    "document": null,
+    "row": {
+     "clause": "3.2",
+     "contract_id": "ctr:4600070710",
+     "days": null,
+     "deadband_pct": 0,
+     "id": "ctr:4600070710#3.2",
+     "material_share": 0.45,
+     "series": "AS-14404",
+     "text": "The price follows index AS-14404: P = P0 x (1 - 0.45 + 0.45 x I(m-2) / I(base)), base = the index two months before the price year starts, adjusted quarterly on the 1st of January, April, July and October if the change exceeds 0 %.",
+     "type": "index"
+    },
+    "source": "contract_clauses:ctr:4600070710#3.2",
+    "table": "contract_clauses"
+   },
+   {
+    "citable_fact": {
+     "days": 60,
+     "material_share": null,
+     "series": null,
+     "supplier": "sup:70710",
+     "type": "price"
+    },
+    "document": null,
+    "row": {
+     "clause": "3.1",
+     "contract_id": "ctr:4600070710",
+     "days": 60,
+     "deadband_pct": null,
+     "id": "ctr:4600070710#3.1",
+     "material_share": null,
+     "series": null,
+     "text": "Prices as per the price annex, fixed for each calendar year. Changes require written notice of at least 60 days before the end of the calendar year.",
+     "type": "price"
+    },
+    "source": "contract_clauses:ctr:4600070710#3.1",
+    "table": "contract_clauses"
+   },
+   {
+    "citable_fact": {
+     "days": null,
+     "material_share": null,
+     "series": null,
+     "supplier": "sup:70710",
+     "type": "scope"
+    },
+    "document": null,
+    "row": {
+     "clause": "2.1",
+     "contract_id": "ctr:4600070710",
+     "days": null,
+     "deadband_pct": null,
+     "id": "ctr:4600070710#2.1",
+     "material_share": null,
+     "series": null,
+     "text": "Subject: supply of Round bar 1.4404 dia 30 mm, peeled.",
+     "type": "scope"
+    },
+    "source": "contract_clauses:ctr:4600070710#2.1",
+    "table": "contract_clauses"
+   },
+   {
+    "citable_fact": {
+     "asked_pct": null,
+     "asked_price": null,
+     "date": "2026-09-12",
+     "days": null,
+     "effective_date": null,
+     "supplier": "sup:70710",
+     "title": "Price basis and surcharge clause for the coming period",
+     "type": "letter"
+    },
+    "document": "# Price basis and surcharge clause for the coming period\n\nletter - 2026-09-12 - Edelstahl-Service Donautal GmbH\n\nDear Sir or Madam,\n\nfor Round bar 1.4404 dia 30 mm, peeled (part:370010) we propose to agree the price basis for the coming period, including a price adjustment clause based on AS-14404. Please let us know your view.\n\nYours faithfully,\nEdelstahl-Service Donautal GmbH\n",
+    "row": {
+     "asked_pct": null,
+     "asked_price": null,
+     "author": "Edelstahl-Service Donautal GmbH",
+     "date": "2026-09-12",
+     "effective_date": null,
+     "file": "correspondence/20260912-70710-P08.md",
+     "id": "doc:20260912-70710-P08",
+     "kind": "letter",
+     "notice_days": null,
+     "part_ids": "part:370010",
+     "subject": "Price basis and surcharge clause for the coming period",
+     "supplier_id": "sup:70710"
+    },
+    "source": "documents:doc:20260912-70710-P08",
+    "table": "documents"
+   },
+   {
+    "citable_fact": {
+     "asked_pct": null,
+     "asked_price": null,
+     "date": "2026-07-06",
+     "days": null,
+     "effective_date": null,
+     "supplier": "sup:70710",
+     "title": "Material costs",
+     "type": "letter"
+    },
+    "document": "# Material costs\n\nletter - 2026-07-06 - Edelstahl-Service Donautal GmbH\n\nDear Sir or Madam,\n\nfor your information: our nickel and alloys requirement is covered at fixed prices until March 2027. Market movements reach our costs only after that.\n\nYours faithfully,\nEdelstahl-Service Donautal GmbH\n",
+    "row": {
+     "asked_pct": null,
+     "asked_price": null,
+     "author": "Edelstahl-Service Donautal GmbH",
+     "date": "2026-07-06",
+     "effective_date": null,
+     "file": "correspondence/20260706-70710-M1.md",
+     "id": "doc:20260706-70710-M1",
+     "kind": "letter",
+     "notice_days": null,
+     "part_ids": "",
+     "subject": "Material costs",
+     "supplier_id": "sup:70710"
+    },
+    "source": "documents:doc:20260706-70710-M1",
+    "table": "documents"
+   },
+   {
+    "citable_fact": null,
+    "document": null,
+    "row": {
+     "certifications": "ISO 9001; ISO 14001",
+     "credit_index": 177,
+     "credit_index_12m_ago": 177,
+     "equity_ratio_pct": 33.9,
+     "filed_fy": 2025,
+     "founded": 1970,
+     "group_parent": null,
+     "legal_form": "GmbH",
+     "owner_type": "group",
+     "staff": 350,
+     "supplier_id": "sup:70710",
+     "turnover_band": "100-250 M EUR",
+     "turnover_eur": 165000000,
+     "vda63_grade": "A"
+    },
+    "source": "supplier_intel:733c668e9418fa23",
+    "table": "supplier_intel"
+   },
+   {
+    "citable_fact": null,
+    "document": null,
+    "row": {
+     "asked_pct": 3.2,
+     "date": "2025-12-05",
+     "event_id": "EV-2026-70710-370010",
+     "note": "",
+     "part_id": "part:370010",
+     "settled_pct": 1.4,
+     "supplier_id": "sup:70710",
+     "type": "annual renewal"
+    },
+    "source": "negotiation_history:6e79bd83f097419a",
+    "table": "negotiation_history"
+   },
+   {
+    "citable_fact": {
+     "asked_pct": null,
+     "asked_price": null,
+     "date": "2026-04-21",
+     "days": null,
+     "effective_date": null,
+     "supplier": "sup:70710",
+     "title": "Price discussion",
+     "type": "call_note"
+    },
+    "document": "# Price discussion\n\ncall note - 2026-04-21 - Hollerau Pumpenwerke, Purchasing\n\nCall with the owner of Edelstahl-Service Donautal GmbH: he offered to walk us through their calculation (hourly rates and material) if that helps to settle prices.\n",
+    "row": {
+     "asked_pct": null,
+     "asked_price": null,
+     "author": "Hollerau Pumpenwerke, Purchasing",
+     "date": "2026-04-21",
+     "effective_date": null,
+     "file": "correspondence/20260421-70710-M2.md",
+     "id": "doc:20260421-70710-M2",
+     "kind": "call_note",
+     "notice_days": null,
+     "part_ids": "",
+     "subject": "Price discussion",
+     "supplier_id": "sup:70710"
+    },
+    "source": "documents:doc:20260421-70710-M2",
+    "table": "documents"
+   },
+   {
+    "citable_fact": null,
+    "document": null,
+    "row": {
+     "asked_pct": 2.0,
+     "date": "2024-12-04",
+     "event_id": "EV-2025-70710-370010",
+     "note": "",
+     "part_id": "part:370010",
+     "settled_pct": -1.5,
+     "supplier_id": "sup:70710",
+     "type": "annual renewal"
+    },
+    "source": "negotiation_history:d61a67fd68174f09",
+    "table": "negotiation_history"
+   },
+   {
+    "citable_fact": {
+     "asked_pct": null,
+     "asked_price": null,
+     "date": "2025-12-25",
+     "days": null,
+     "effective_date": null,
+     "supplier": "sup:70710",
+     "title": "Holiday shutdown",
+     "type": "email"
+    },
+    "document": "# Holiday shutdown\n\nemail - 2025-12-25 - Edelstahl-Service Donautal GmbH\n\nOur plant is closed from 23 December to 6 January. Please place call-offs for January by 10 December.\n",
+    "row": {
+     "asked_pct": null,
+     "asked_price": null,
+     "author": "Edelstahl-Service Donautal GmbH",
+     "date": "2025-12-25",
+     "effective_date": null,
+     "file": "correspondence/20251225-70710-N.md",
+     "id": "doc:20251225-70710-N",
+     "kind": "email",
+     "notice_days": null,
+     "part_ids": "",
+     "subject": "Holiday shutdown",
+     "supplier_id": "sup:70710"
+    },
+    "source": "documents:doc:20251225-70710-N",
+    "table": "documents"
+   },
+   {
+    "citable_fact": null,
+    "document": null,
+    "row": {
+     "asked_pct": -3.1,
+     "date": "2023-11-29",
+     "event_id": "EV-2024-70710-370010",
+     "note": "",
+     "part_id": "part:370010",
+     "settled_pct": -7.1,
+     "supplier_id": "sup:70710",
+     "type": "annual renewal"
+    },
+    "source": "negotiation_history:4a74e4c3f3db3a6c",
+    "table": "negotiation_history"
+   },
+   {
+    "citable_fact": null,
+    "document": null,
+    "row": {
+     "asked_pct": null,
+     "date": "2022-11-27",
+     "event_id": "EV-2023-70710-370010",
+     "note": "",
+     "part_id": "part:370010",
+     "settled_pct": null,
+     "supplier_id": "sup:70710",
+     "type": "initial price"
+    },
+    "source": "negotiation_history:a070135ad52ee6dd",
+    "table": "negotiation_history"
+   },
+   {
+    "citable_fact": {
+     "colour": "green",
+     "otd_confirmed_pct": 92.0,
+     "otd_pct": 88.0,
+     "ppm": 75,
+     "quarter": "2026Q3",
+     "supplier": "sup:70710"
+    },
+    "document": null,
+    "row": {
+     "class": "A",
+     "colour": "green",
+     "complaint_qty": 7,
+     "gr_lines": 25,
+     "id": "sc:70710@2026Q3",
+     "open_8d_overdue": 0,
+     "otd_confirmed_pct": 92.0,
+     "otd_pct": 88.0,
+     "period_end": "2026-09-30",
+     "period_start": "2025-10-01",
+     "ppm": 75,
+     "qn_count": 7,
+     "quarter": "2026Q3",
+     "received_qty": 93000,
+     "score": 93.6,
+     "supplier_id": "sup:70710"
+    },
+    "source": "scorecards:sc:70710@2026Q3",
+    "table": "scorecards"
+   },
+   {
+    "citable_fact": {
+     "colour": "green",
+     "otd_confirmed_pct": 92.3,
+     "otd_pct": 88.5,
+     "ppm": 92,
+     "quarter": "2026Q2",
+     "supplier": "sup:70710"
+    },
+    "document": null,
+    "row": {
+     "class": "A",
+     "colour": "green",
+     "complaint_qty": 9,
+     "gr_lines": 26,
+     "id": "sc:70710@2026Q2",
+     "open_8d_overdue": 0,
+     "otd_confirmed_pct": 92.3,
+     "otd_pct": 88.5,
+     "period_end": "2026-06-30",
+     "period_start": "2025-07-01",
+     "ppm": 92,
+     "qn_count": 9,
+     "quarter": "2026Q2",
+     "received_qty": 98200,
+     "score": 93.8,
+     "supplier_id": "sup:70710"
+    },
+    "source": "scorecards:sc:70710@2026Q2",
+    "table": "scorecards"
+   },
+   {
+    "citable_fact": {
+     "colour": "green",
+     "otd_confirmed_pct": 96.0,
+     "otd_pct": 92.0,
+     "ppm": 43,
+     "quarter": "2026Q1",
+     "supplier": "sup:70710"
+    },
+    "document": null,
+    "row": {
+     "class": "A",
+     "colour": "green",
+     "complaint_qty": 4,
+     "gr_lines": 25,
+     "id": "sc:70710@2026Q1",
+     "open_8d_overdue": 0,
+     "otd_confirmed_pct": 96.0,
+     "otd_pct": 92.0,
+     "period_end": "2026-03-31",
+     "period_start": "2025-04-01",
+     "ppm": 43,
+     "qn_count": 4,
+     "quarter": "2026Q1",
+     "received_qty": 93500,
+     "score": 95.8,
+     "supplier_id": "sup:70710"
+    },
+    "source": "scorecards:sc:70710@2026Q1",
+    "table": "scorecards"
+   },
+   {
+    "citable_fact": {
+     "colour": "green",
+     "otd_confirmed_pct": 92.3,
+     "otd_pct": 88.5,
+     "ppm": 76,
+     "quarter": "2025Q4",
+     "supplier": "sup:70710"
+    },
+    "document": null,
+    "row": {
+     "class": "A",
+     "colour": "green",
+     "complaint_qty": 7,
+     "gr_lines": 26,
+     "id": "sc:70710@2025Q4",
+     "open_8d_overdue": 0,
+     "otd_confirmed_pct": 92.3,
+     "otd_pct": 88.5,
+     "period_end": "2025-12-31",
+     "period_start": "2025-01-01",
+     "ppm": 76,
+     "qn_count": 7,
+     "quarter": "2025Q4",
+     "received_qty": 92000,
+     "score": 93.9,
+     "supplier_id": "sup:70710"
+    },
+    "source": "scorecards:sc:70710@2025Q4",
+    "table": "scorecards"
+   },
+   {
+    "citable_fact": {
+     "colour": "green",
+     "otd_confirmed_pct": 96.0,
+     "otd_pct": 88.0,
+     "ppm": 76,
+     "quarter": "2025Q3",
+     "supplier": "sup:70710"
+    },
+    "document": null,
+    "row": {
+     "class": "A",
+     "colour": "green",
+     "complaint_qty": 7,
+     "gr_lines": 25,
+     "id": "sc:70710@2025Q3",
+     "open_8d_overdue": 0,
+     "otd_confirmed_pct": 96.0,
+     "otd_pct": 88.0,
+     "period_end": "2025-09-30",
+     "period_start": "2024-10-01",
+     "ppm": 76,
+     "qn_count": 7,
+     "quarter": "2025Q3",
+     "received_qty": 92000,
+     "score": 93.6,
+     "supplier_id": "sup:70710"
+    },
+    "source": "scorecards:sc:70710@2025Q3",
+    "table": "scorecards"
+   },
+   {
+    "citable_fact": {
+     "colour": "green",
+     "otd_confirmed_pct": 92.3,
+     "otd_pct": 84.6,
+     "ppm": 75,
+     "quarter": "2025Q2",
+     "supplier": "sup:70710"
+    },
+    "document": null,
+    "row": {
+     "class": "A",
+     "colour": "green",
+     "complaint_qty": 7,
+     "gr_lines": 26,
+     "id": "sc:70710@2025Q2",
+     "open_8d_overdue": 0,
+     "otd_confirmed_pct": 92.3,
+     "otd_pct": 84.6,
+     "period_end": "2025-06-30",
+     "period_start": "2024-07-01",
+     "ppm": 75,
+     "qn_count": 7,
+     "quarter": "2025Q2",
+     "received_qty": 92800,
+     "score": 91.9,
+     "supplier_id": "sup:70710"
+    },
+    "source": "scorecards:sc:70710@2025Q2",
+    "table": "scorecards"
+   },
+   {
+    "citable_fact": {
+     "colour": "green",
+     "otd_confirmed_pct": 85.7,
+     "otd_pct": 82.1,
+     "ppm": 107,
+     "quarter": "2025Q1",
+     "supplier": "sup:70710"
+    },
+    "document": null,
+    "row": {
+     "class": "A",
+     "colour": "green",
+     "complaint_qty": 10,
+     "gr_lines": 28,
+     "id": "sc:70710@2025Q1",
+     "open_8d_overdue": 0,
+     "otd_confirmed_pct": 85.7,
+     "otd_pct": 82.1,
+     "period_end": "2025-03-31",
+     "period_start": "2024-04-01",
+     "ppm": 107,
+     "qn_count": 10,
+     "quarter": "2025Q1",
+     "received_qty": 93500,
+     "score": 90.5,
+     "supplier_id": "sup:70710"
+    },
+    "source": "scorecards:sc:70710@2025Q1",
+    "table": "scorecards"
+   }
+  ],
+  "opening_offer": {
+   "term_sheet_id": "offer:70710-0",
+   "terms": {
+    "contract_months": 12,
+    "index_clause": null,
+    "payment_days": 30,
+    "unit_price": 6.05
+   }
+  },
+  "standard_terms": {
+   "chargeback_eur_per_complaint": 0.0,
+   "ppm_commitment": 50
+  }
+ },
+ "case:P10": {
+  "case": {
+   "briefing": "You negotiate for Hollerau Pumpenwerke with Dichtungswerk Ravensteiner GmbH. Ravensteiner cuts the seal allocation. Need: 23400 pc a year. Category goal: secure supply of a bottleneck part: coverage of the full need and a supplier that stays healthy come first. Score: the lowest total cost C as defined in the rules, valued with this case's rates (need lead time 42 days). There is no fallback supplier: without a deal the demand is bought at the fallback price. Must-haves: volume_per_year >= 22230. Prepare from the data package.",
+   "buyer": {
+    "alternative": {
+     "kind": "none",
+     "ref": null,
+     "terms": {}
+    },
+    "category_goal": "secure_supply",
+    "cost_per_defect": 380,
+    "current_unit_price": 29.89,
+    "fallback_risk_pct": 25,
+    "fallback_unit_price": 37.36,
+    "freight_eur_per_unit": {
+     "DAP": 0.0,
+     "EXW": 0.01,
+     "FCA": 0.01
+    },
+    "horizon_years": 2,
+    "index_paths": {},
+    "index_risk_pct": 3,
+    "interest_rate": 0.08,
+    "late_cost_per_day": 2400,
+    "must_haves": [
+     {
+      "field": "volume_per_year",
+      "op": ">=",
+      "value": 22230
+     }
+    ],
+    "need_lead_time_days": 42,
+    "need_per_year": 23400,
+    "reference_payment_days": 60,
+    "relationship_eur_per_point": 13990,
+    "sustainable_margin_pct": 10
+   },
+   "case_id": "case:P10",
+   "fixed_terms": {
+    "effective_date": "2027-01-01",
+    "incoterm": "DAP",
+    "index_clause": null,
+    "payment_days": 30,
+    "tooling_eur": 0
+   },
+   "hosted": true,
+   "negotiable": [
+    "unit_price",
+    "volume_per_year",
+    "contract_months",
+    "lead_time_days"
+   ],
+   "parts": [
+    "part:340010"
+   ],
+   "refs": [
+    "doc:20260918-70410-P10",
+    "ctr:4600070410",
+    "sc:70410@2026Q3",
+    "fc:340010@2026-09"
+   ],
+   "round_limit": 10,
+   "set": "practice",
+   "suppliers": [
+    "sup:70410"
+   ],
+   "term_options": {
+    "contract_months": [
+     12,
+     24,
+     36
+    ],
+    "lead_time_days": [
+     35,
+     42,
+     56
+    ],
+    "volume_per_year": [
+     16379,
+     19890,
+     23400
+    ]
+   },
+   "title": "Ravensteiner cuts the seal allocation",
+   "trigger_doc": "doc:20260918-70410-P10",
+   "type": "capacity"
+  },
+  "evidence": [
+   {
+    "citable_fact": {
+     "days": 90,
+     "supplier": "sup:70410",
+     "valid_from": "2025-07-01",
+     "valid_to": "2027-06-30"
+    },
+    "document": "# Framework agreement 4600070410\n\nBetween Hollerau Pumpenwerke GmbH and Dichtungswerk Ravensteiner GmbH.\n\n**\u00a7 2.1** Subject: supply of Mechanical seal 24 mm, SiC/carbon, EPDM, Mechanical seal 32 mm, SiC/carbon, EPDM, Casing gasket, aramid fibre.\n\n**\u00a7 3.1** Prices as per the price annex, fixed for each calendar year. Changes require written notice of at least 90 days before the end of the calendar year.\n\n**\u00a7 4.1** Payment: 30 days net.\n\n**\u00a7 5.1** Delivery DAP; standard lead time 42 days from order.\n\n**\u00a7 6.1** The quality agreement applies: on-time delivery target 95 %, flat fee of EUR 150 per supplier-caused complaint.\n\n**\u00a7 8.1** Valid from 2025-07-01 to 2027-06-30; extends by 12 months unless terminated with 90 days' notice.\n\nParts: part:340010, part:340011, part:340030\n",
+    "row": {
+     "file": "contracts/4600070410.md",
+     "id": "ctr:4600070410",
+     "incoterm": "DAP",
+     "notice_days": 90,
+     "payment_days": 30,
+     "price_basis": "fixed per year",
+     "supplier_id": "sup:70410",
+     "type": "framework agreement",
+     "valid_from": "2025-07-01",
+     "valid_to": "2027-06-30"
+    },
+    "source": "contracts:ctr:4600070410",
+    "table": "contracts"
+   },
+   {
+    "citable_fact": {
+     "days": 90,
+     "material_share": null,
+     "series": null,
+     "supplier": "sup:70410",
+     "type": "term"
+    },
+    "document": null,
+    "row": {
+     "clause": "8.1",
+     "contract_id": "ctr:4600070410",
+     "days": 90,
+     "deadband_pct": null,
+     "id": "ctr:4600070410#8.1",
+     "material_share": null,
+     "series": null,
+     "text": "Valid from 2025-07-01 to 2027-06-30; extends by 12 months unless terminated with 90 days' notice.",
+     "type": "term"
+    },
+    "source": "contract_clauses:ctr:4600070410#8.1",
+    "table": "contract_clauses"
+   },
+   {
+    "citable_fact": {
+     "days": null,
+     "material_share": null,
+     "series": null,
+     "supplier": "sup:70410",
+     "type": "quality"
+    },
+    "document": null,
+    "row": {
+     "clause": "6.1",
+     "contract_id": "ctr:4600070410",
+     "days": null,
+     "deadband_pct": null,
+     "id": "ctr:4600070410#6.1",
+     "material_share": null,
+     "series": null,
+     "text": "The quality agreement applies: on-time delivery target 95 %, flat fee of EUR 150 per supplier-caused complaint.",
+     "type": "quality"
+    },
+    "source": "contract_clauses:ctr:4600070410#6.1",
+    "table": "contract_clauses"
+   },
+   {
+    "citable_fact": {
+     "days": 42,
+     "material_share": null,
+     "series": null,
+     "supplier": "sup:70410",
+     "type": "delivery"
+    },
+    "document": null,
+    "row": {
+     "clause": "5.1",
+     "contract_id": "ctr:4600070410",
+     "days": 42,
+     "deadband_pct": null,
+     "id": "ctr:4600070410#5.1",
+     "material_share": null,
+     "series": null,
+     "text": "Delivery DAP; standard lead time 42 days from order.",
+     "type": "delivery"
+    },
+    "source": "contract_clauses:ctr:4600070410#5.1",
+    "table": "contract_clauses"
+   },
+   {
+    "citable_fact": {
+     "days": 30,
+     "material_share": null,
+     "series": null,
+     "supplier": "sup:70410",
+     "type": "payment"
+    },
+    "document": null,
+    "row": {
+     "clause": "4.1",
+     "contract_id": "ctr:4600070410",
+     "days": 30,
+     "deadband_pct": null,
+     "id": "ctr:4600070410#4.1",
+     "material_share": null,
+     "series": null,
+     "text": "Payment: 30 days net.",
+     "type": "payment"
+    },
+    "source": "contract_clauses:ctr:4600070410#4.1",
+    "table": "contract_clauses"
+   },
+   {
+    "citable_fact": {
+     "days": 90,
+     "material_share": null,
+     "series": null,
+     "supplier": "sup:70410",
+     "type": "price"
+    },
+    "document": null,
+    "row": {
+     "clause": "3.1",
+     "contract_id": "ctr:4600070410",
+     "days": 90,
+     "deadband_pct": null,
+     "id": "ctr:4600070410#3.1",
+     "material_share": null,
+     "series": null,
+     "text": "Prices as per the price annex, fixed for each calendar year. Changes require written notice of at least 90 days before the end of the calendar year.",
+     "type": "price"
+    },
+    "source": "contract_clauses:ctr:4600070410#3.1",
+    "table": "contract_clauses"
+   },
+   {
+    "citable_fact": {
+     "days": null,
+     "material_share": null,
+     "series": null,
+     "supplier": "sup:70410",
+     "type": "scope"
+    },
+    "document": null,
+    "row": {
+     "clause": "2.1",
+     "contract_id": "ctr:4600070410",
+     "days": null,
+     "deadband_pct": null,
+     "id": "ctr:4600070410#2.1",
+     "material_share": null,
+     "series": null,
+     "text": "Subject: supply of Mechanical seal 24 mm, SiC/carbon, EPDM, Mechanical seal 32 mm, SiC/carbon, EPDM, Casing gasket, aramid fibre.",
+     "type": "scope"
+    },
+    "source": "contract_clauses:ctr:4600070410#2.1",
+    "table": "contract_clauses"
+   },
+   {
+    "citable_fact": {
+     "asked_pct": null,
+     "asked_price": null,
+     "date": "2026-09-18",
+     "days": null,
+     "effective_date": null,
+     "supplier": "sup:70410",
+     "title": "Capacity situation and delivery dates",
+     "type": "email"
+    },
+    "document": "# Capacity situation and delivery dates\n\nemail - 2026-09-18 - Dichtungswerk Ravensteiner GmbH\n\nHello,\n\ndue to very high capacity utilisation we cannot confirm your full forecast for Mechanical seal 24 mm, SiC/carbon, EPDM (part:340010) for the coming months. Lead times are currently longer than agreed. We will prioritise customers with firm, long-term commitments.\n\nBest regards,\nDichtungswerk Ravensteiner GmbH\n",
+    "row": {
+     "asked_pct": null,
+     "asked_price": null,
+     "author": "Dichtungswerk Ravensteiner GmbH",
+     "date": "2026-09-18",
+     "effective_date": null,
+     "file": "correspondence/20260918-70410-P10.md",
+     "id": "doc:20260918-70410-P10",
+     "kind": "email",
+     "notice_days": null,
+     "part_ids": "part:340010",
+     "subject": "Capacity situation and delivery dates",
+     "supplier_id": "sup:70410"
+    },
+    "source": "documents:doc:20260918-70410-P10",
+    "table": "documents"
+   },
+   {
+    "citable_fact": {
+     "asked_pct": null,
+     "asked_price": null,
+     "date": "2026-03-27",
+     "days": null,
+     "effective_date": null,
+     "supplier": "sup:70410",
+     "title": "New volumes",
+     "type": "email"
+    },
+    "document": "# New volumes\n\nemail - 2026-03-27 - Dichtungswerk Ravensteiner GmbH\n\nOrder intake is very strong. We can confirm additional volumes only against a binding 12-month commitment.\n",
+    "row": {
+     "asked_pct": null,
+     "asked_price": null,
+     "author": "Dichtungswerk Ravensteiner GmbH",
+     "date": "2026-03-27",
+     "effective_date": null,
+     "file": "correspondence/20260327-70410-M2.md",
+     "id": "doc:20260327-70410-M2",
+     "kind": "email",
+     "notice_days": null,
+     "part_ids": "",
+     "subject": "New volumes",
+     "supplier_id": "sup:70410"
+    },
+    "source": "documents:doc:20260327-70410-M2",
+    "table": "documents"
+   },
+   {
+    "citable_fact": null,
+    "document": null,
+    "row": {
+     "certifications": "ISO 9001; ISO 14001",
+     "credit_index": 159,
+     "credit_index_12m_ago": 159,
+     "equity_ratio_pct": 28.8,
+     "filed_fy": 2025,
+     "founded": 1958,
+     "group_parent": "Ravensteiner Holding AG",
+     "legal_form": "GmbH",
+     "owner_type": "group",
+     "staff": 650,
+     "supplier_id": "sup:70410",
+     "turnover_band": "100-250 M EUR",
+     "turnover_eur": 151000000,
+     "vda63_grade": "A"
+    },
+    "source": "supplier_intel:1336748138a1b1aa",
+    "table": "supplier_intel"
+   },
+   {
+    "citable_fact": {
+     "confidence_pct": 5,
+     "part": "part:340010",
+     "price_unit": 1,
+     "unit_cost": 24.31
+    },
+    "document": null,
+    "row": {
+     "confidence_pct": 5,
+     "conversion_eur": 14.64,
+     "cost_base": "DE",
+     "estimate_date": "2026-07-15",
+     "id": "cost:340010",
+     "material_eur": 3.4,
+     "method": "bottom-up estimate of this supplier's plant, no margin included",
+     "overhead_eur": 6.27,
+     "part_id": "part:340010",
+     "price_unit": 1,
+     "supplier_id": "sup:70410",
+     "unit_cost": 24.31
+    },
+    "source": "should_cost:cost:340010",
+    "table": "should_cost"
+   },
+   {
+    "citable_fact": null,
+    "document": null,
+    "row": {
+     "asked_pct": 2.5,
+     "date": "2025-11-23",
+     "event_id": "EV-2026-70410-340010",
+     "note": "",
+     "part_id": "part:340010",
+     "settled_pct": 0.0,
+     "supplier_id": "sup:70410",
+     "type": "annual renewal"
+    },
+    "source": "negotiation_history:02fda50a68b9c69e",
+    "table": "negotiation_history"
+   },
+   {
+    "citable_fact": {
+     "asked_pct": null,
+     "asked_price": null,
+     "date": "2026-03-10",
+     "days": null,
+     "effective_date": null,
+     "supplier": "sup:70410",
+     "title": "Annual review",
+     "type": "meeting_note"
+    },
+    "document": "# Annual review\n\nmeeting note - 2026-03-10 - Hollerau Pumpenwerke, Purchasing\n\nAnnual review with Dichtungswerk Ravensteiner GmbH. Their key account manager explained that price changes above 2 % need the approval of their pricing committee, which meets every two weeks.\n",
+    "row": {
+     "asked_pct": null,
+     "asked_price": null,
+     "author": "Hollerau Pumpenwerke, Purchasing",
+     "date": "2026-03-10",
+     "effective_date": null,
+     "file": "correspondence/20260310-70410-M1.md",
+     "id": "doc:20260310-70410-M1",
+     "kind": "meeting_note",
+     "notice_days": null,
+     "part_ids": "",
+     "subject": "Annual review",
+     "supplier_id": "sup:70410"
+    },
+    "source": "documents:doc:20260310-70410-M1",
+    "table": "documents"
+   },
+   {
+    "citable_fact": null,
+    "document": null,
+    "row": {
+     "asked_pct": 2.0,
+     "date": "2024-11-24",
+     "event_id": "EV-2025-70410-340010",
+     "note": "",
+     "part_id": "part:340010",
+     "settled_pct": 0.0,
+     "supplier_id": "sup:70410",
+     "type": "annual renewal"
+    },
+    "source": "negotiation_history:b43821b6c7817d26",
+    "table": "negotiation_history"
+   },
+   {
+    "citable_fact": {
+     "asked_pct": null,
+     "asked_price": null,
+     "date": "2025-11-08",
+     "days": null,
+     "effective_date": null,
+     "supplier": "sup:70410",
+     "title": "New contact person",
+     "type": "email"
+    },
+    "document": "# New contact person\n\nemail - 2025-11-08 - Dichtungswerk Ravensteiner GmbH\n\nFrom 1 October your contact in sales is our new colleague in inside sales; all other contacts stay the same.\n",
+    "row": {
+     "asked_pct": null,
+     "asked_price": null,
+     "author": "Dichtungswerk Ravensteiner GmbH",
+     "date": "2025-11-08",
+     "effective_date": null,
+     "file": "correspondence/20251108-70410-N.md",
+     "id": "doc:20251108-70410-N",
+     "kind": "email",
+     "notice_days": null,
+     "part_ids": "",
+     "subject": "New contact person",
+     "supplier_id": "sup:70410"
+    },
+    "source": "documents:doc:20251108-70410-N",
+    "table": "documents"
+   },
+   {
+    "citable_fact": null,
+    "document": null,
+    "row": {
+     "asked_pct": 7.0,
+     "date": "2023-12-10",
+     "event_id": "EV-2024-70410-340010",
+     "note": "",
+     "part_id": "part:340010",
+     "settled_pct": 3.3,
+     "supplier_id": "sup:70410",
+     "type": "annual renewal"
+    },
+    "source": "negotiation_history:6ca3278d670ff0fc",
+    "table": "negotiation_history"
+   },
+   {
+    "citable_fact": null,
+    "document": null,
+    "row": {
+     "asked_pct": null,
+     "date": "2022-11-18",
+     "event_id": "EV-2023-70410-340010",
+     "note": "",
+     "part_id": "part:340010",
+     "settled_pct": null,
+     "supplier_id": "sup:70410",
+     "type": "initial price"
+    },
+    "source": "negotiation_history:c7d18a1288000e7c",
+    "table": "negotiation_history"
+   },
+   {
+    "citable_fact": {
+     "colour": "green",
+     "otd_confirmed_pct": 85.9,
+     "otd_pct": 79.5,
+     "ppm": 270,
+     "quarter": "2026Q3",
+     "supplier": "sup:70410"
+    },
+    "document": null,
+    "row": {
+     "class": "A",
+     "colour": "green",
+     "complaint_qty": 14,
+     "gr_lines": 78,
+     "id": "sc:70410@2026Q3",
+     "open_8d_overdue": 0,
+     "otd_confirmed_pct": 85.9,
+     "otd_pct": 79.5,
+     "period_end": "2026-09-30",
+     "period_start": "2025-10-01",
+     "ppm": 270,
+     "qn_count": 14,
+     "quarter": "2026Q3",
+     "received_qty": 51826,
+     "score": 88.4,
+     "supplier_id": "sup:70410"
+    },
+    "source": "scorecards:sc:70410@2026Q3",
+    "table": "scorecards"
+   },
+   {
+    "citable_fact": {
+     "colour": "green",
+     "otd_confirmed_pct": 83.5,
+     "otd_pct": 79.7,
+     "ppm": 366,
+     "quarter": "2026Q2",
+     "supplier": "sup:70410"
+    },
+    "document": null,
+    "row": {
+     "class": "A",
+     "colour": "green",
+     "complaint_qty": 19,
+     "gr_lines": 79,
+     "id": "sc:70410@2026Q2",
+     "open_8d_overdue": 0,
+     "otd_confirmed_pct": 83.5,
+     "otd_pct": 79.7,
+     "period_end": "2026-06-30",
+     "period_start": "2025-07-01",
+     "ppm": 366,
+     "qn_count": 19,
+     "quarter": "2026Q2",
+     "received_qty": 51896,
+     "score": 88.0,
+     "supplier_id": "sup:70410"
+    },
+    "source": "scorecards:sc:70410@2026Q2",
+    "table": "scorecards"
+   },
+   {
+    "citable_fact": {
+     "colour": "green",
+     "otd_confirmed_pct": 84.2,
+     "otd_pct": 81.6,
+     "ppm": 405,
+     "quarter": "2026Q1",
+     "supplier": "sup:70410"
+    },
+    "document": null,
+    "row": {
+     "class": "A",
+     "colour": "green",
+     "complaint_qty": 20,
+     "gr_lines": 76,
+     "id": "sc:70410@2026Q1",
+     "open_8d_overdue": 0,
+     "otd_confirmed_pct": 84.2,
+     "otd_pct": 81.6,
+     "period_end": "2026-03-31",
+     "period_start": "2025-04-01",
+     "ppm": 405,
+     "qn_count": 19,
+     "quarter": "2026Q1",
+     "received_qty": 49330,
+     "score": 88.8,
+     "supplier_id": "sup:70410"
+    },
+    "source": "scorecards:sc:70410@2026Q1",
+    "table": "scorecards"
+   },
+   {
+    "citable_fact": {
+     "colour": "green",
+     "otd_confirmed_pct": 84.4,
+     "otd_pct": 81.8,
+     "ppm": 412,
+     "quarter": "2025Q4",
+     "supplier": "sup:70410"
+    },
+    "document": null,
+    "row": {
+     "class": "A",
+     "colour": "green",
+     "complaint_qty": 21,
+     "gr_lines": 77,
+     "id": "sc:70410@2025Q4",
+     "open_8d_overdue": 0,
+     "otd_confirmed_pct": 84.4,
+     "otd_pct": 81.8,
+     "period_end": "2025-12-31",
+     "period_start": "2025-01-01",
+     "ppm": 412,
+     "qn_count": 20,
+     "quarter": "2025Q4",
+     "received_qty": 51000,
+     "score": 88.8,
+     "supplier_id": "sup:70410"
+    },
+    "source": "scorecards:sc:70410@2025Q4",
+    "table": "scorecards"
+   },
+   {
+    "citable_fact": {
+     "colour": "green",
+     "otd_confirmed_pct": 81.3,
+     "otd_pct": 78.7,
+     "ppm": 476,
+     "quarter": "2025Q3",
+     "supplier": "sup:70410"
+    },
+    "document": null,
+    "row": {
+     "class": "A",
+     "colour": "green",
+     "complaint_qty": 23,
+     "gr_lines": 75,
+     "id": "sc:70410@2025Q3",
+     "open_8d_overdue": 0,
+     "otd_confirmed_pct": 81.3,
+     "otd_pct": 78.7,
+     "period_end": "2025-09-30",
+     "period_start": "2024-10-01",
+     "ppm": 476,
+     "qn_count": 22,
+     "quarter": "2025Q3",
+     "received_qty": 48366,
+     "score": 87.0,
+     "supplier_id": "sup:70410"
+    },
+    "source": "scorecards:sc:70410@2025Q3",
+    "table": "scorecards"
+   },
+   {
+    "citable_fact": {
+     "colour": "green",
+     "otd_confirmed_pct": 81.3,
+     "otd_pct": 78.7,
+     "ppm": 375,
+     "quarter": "2025Q2",
+     "supplier": "sup:70410"
+    },
+    "document": null,
+    "row": {
+     "class": "A",
+     "colour": "green",
+     "complaint_qty": 19,
+     "gr_lines": 75,
+     "id": "sc:70410@2025Q2",
+     "open_8d_overdue": 0,
+     "otd_confirmed_pct": 81.3,
+     "otd_pct": 78.7,
+     "period_end": "2025-06-30",
+     "period_start": "2024-07-01",
+     "ppm": 375,
+     "qn_count": 17,
+     "quarter": "2025Q2",
+     "received_qty": 50726,
+     "score": 87.5,
+     "supplier_id": "sup:70410"
+    },
+    "source": "scorecards:sc:70410@2025Q2",
+    "table": "scorecards"
+   },
+   {
+    "citable_fact": {
+     "colour": "green",
+     "otd_confirmed_pct": 81.6,
+     "otd_pct": 77.6,
+     "ppm": 345,
+     "quarter": "2025Q1",
+     "supplier": "sup:70410"
+    },
+    "document": null,
+    "row": {
+     "class": "A",
+     "colour": "green",
+     "complaint_qty": 18,
+     "gr_lines": 76,
+     "id": "sc:70410@2025Q1",
+     "open_8d_overdue": 0,
+     "otd_confirmed_pct": 81.6,
+     "otd_pct": 77.6,
+     "period_end": "2025-03-31",
+     "period_start": "2024-04-01",
+     "ppm": 345,
+     "qn_count": 16,
+     "quarter": "2025Q1",
+     "received_qty": 52223,
+     "score": 87.1,
+     "supplier_id": "sup:70410"
+    },
+    "source": "scorecards:sc:70410@2025Q1",
+    "table": "scorecards"
+   },
+   {
+    "citable_fact": {
+     "colour": "green",
+     "otd_confirmed_pct": 83.8,
+     "otd_pct": 81.1,
+     "ppm": 317,
+     "quarter": "2024Q4",
+     "supplier": "sup:70410"
+    },
+    "document": null,
+    "row": {
+     "class": "A",
+     "colour": "green",
+     "complaint_qty": 16,
+     "gr_lines": 74,
+     "id": "sc:70410@2024Q4",
+     "open_8d_overdue": 0,
+     "otd_confirmed_pct": 83.8,
+     "otd_pct": 81.1,
+     "period_end": "2024-12-31",
+     "period_start": "2024-01-01",
+     "ppm": 317,
+     "qn_count": 14,
+     "quarter": "2024Q4",
+     "received_qty": 50458,
+     "score": 89.0,
+     "supplier_id": "sup:70410"
+    },
+    "source": "scorecards:sc:70410@2024Q4",
+    "table": "scorecards"
+   },
+   {
+    "citable_fact": {
+     "colour": "green",
+     "otd_confirmed_pct": 87.7,
+     "otd_pct": 84.6,
+     "ppm": 266,
+     "quarter": "2024Q3",
+     "supplier": "sup:70410"
+    },
+    "document": null,
+    "row": {
+     "class": "A",
+     "colour": "green",
+     "complaint_qty": 12,
+     "gr_lines": 65,
+     "id": "sc:70410@2024Q3",
+     "open_8d_overdue": 0,
+     "otd_confirmed_pct": 87.7,
+     "otd_pct": 84.6,
+     "period_end": "2024-09-30",
+     "period_start": "2023-10-01",
+     "ppm": 266,
+     "qn_count": 10,
+     "quarter": "2024Q3",
+     "received_qty": 45112,
+     "score": 91.0,
+     "supplier_id": "sup:70410"
+    },
+    "source": "scorecards:sc:70410@2024Q3",
+    "table": "scorecards"
+   }
+  ],
+  "opening_offer": {
+   "term_sheet_id": "offer:70410-0",
+   "terms": {
+    "contract_months": 12,
+    "lead_time_days": 54,
+    "unit_price": 32.2,
+    "volume_per_year": 19890
+   }
+  },
+  "standard_terms": {
+   "chargeback_eur_per_complaint": 0.0,
+   "ppm_commitment": 300
+  }
+ },
+ "case:P11": {
+  "case": {
+   "briefing": "You negotiate for Hollerau Pumpenwerke with Odlewnia Kalwisz Sp. z o.o.. Kalwisz: bearing brackets in red. Need: 15900 pc a year. Category goal: quality first: defects and late deliveries cost more than a few cents of price. Score: the lowest total cost C as defined in the rules, valued with this case's rates (need lead time 58 days). Fallback if you walk away: the second-source quote quote:7200011. Must-haves: ppm_commitment <= 1500. Prepare from the data package.",
+   "buyer": {
+    "alternative": {
+     "kind": "quote",
+     "ref": "quote:7200011",
+     "terms": {
+      "contract_months": 12,
+      "effective_date": "2027-01-01",
+      "incoterm": "FCA",
+      "index_clause": null,
+      "lead_time_days": 56,
+      "payment_days": 30,
+      "ppm_commitment": 715,
+      "tooling_eur": 7500,
+      "unit_price": 53.56,
+      "volume_per_year": 15900
+     }
+    },
+    "category_goal": "quality_first",
+    "cost_per_defect": 450,
+    "current_unit_price": 45.15,
+    "fallback_risk_pct": 8,
+    "fallback_unit_price": 47.86,
+    "freight_eur_per_unit": {
+     "DAP": 0.0,
+     "EXW": 1.77,
+     "FCA": 1.54
+    },
+    "horizon_years": 1.0,
+    "index_paths": {},
+    "index_risk_pct": 2,
+    "interest_rate": 0.08,
+    "late_cost_per_day": 300,
+    "must_haves": [
+     {
+      "field": "ppm_commitment",
+      "op": "<=",
+      "value": 1500
+     }
+    ],
+    "need_lead_time_days": 58,
+    "need_per_year": 15900,
+    "reference_payment_days": 60
+   },
+   "case_id": "case:P11",
+   "fixed_terms": {
+    "contract_months": 12,
+    "effective_date": "2027-01-01",
+    "incoterm": "FCA",
+    "index_clause": null,
+    "lead_time_days": 56,
+    "payment_days": 60,
+    "tooling_eur": 0,
+    "volume_per_year": 15900
+   },
+   "hosted": true,
+   "negotiable": [
+    "ppm_commitment",
+    "chargeback_eur_per_complaint",
+    "unit_price"
+   ],
+   "parts": [
+    "part:310020"
+   ],
+   "refs": [
+    "doc:20260921-70140-P11",
+    "ctr:4600070140",
+    "sc:70140@2026Q3",
+    "quote:7200011"
+   ],
+   "round_limit": 10,
+   "set": "practice",
+   "suppliers": [
+    "sup:70140"
+   ],
+   "term_options": {
+    "chargeback_eur_per_complaint": [
+     0,
+     150,
+     300,
+     500
+    ],
+    "ppm_commitment": [
+     300,
+     800,
+     1500,
+     2500
+    ]
+   },
+   "title": "Kalwisz: bearing brackets in red",
+   "trigger_doc": "doc:20260921-70140-P11",
+   "type": "quality"
+  },
+  "evidence": [
+   {
+    "citable_fact": {
+     "days": 90,
+     "supplier": "sup:70140",
+     "valid_from": "2025-07-01",
+     "valid_to": "2027-06-30"
+    },
+    "document": "# Framework agreement 4600070140\n\nBetween Hollerau Pumpenwerke GmbH and Odlewnia Kalwisz Sp. z o.o..\n\n**\u00a7 2.1** Subject: supply of Bearing bracket HN, Impeller HN 200.\n\n**\u00a7 3.1** Prices as per the price annex, fixed for each calendar year. Changes require written notice of at least 90 days before the end of the calendar year.\n\n**\u00a7 4.1** Payment: 60 days net.\n\n**\u00a7 5.1** Delivery FCA; standard lead time 56 days from order.\n\n**\u00a7 6.1** The quality agreement applies: on-time delivery target 95 %, flat fee of EUR 150 per supplier-caused complaint.\n\n**\u00a7 8.1** Valid from 2025-07-01 to 2027-06-30; extends by 12 months unless terminated with 90 days' notice.\n\nParts: part:310020, part:310030\n",
+    "row": {
+     "file": "contracts/4600070140.md",
+     "id": "ctr:4600070140",
+     "incoterm": "FCA",
+     "notice_days": 90,
+     "payment_days": 60,
+     "price_basis": "fixed per year",
+     "supplier_id": "sup:70140",
+     "type": "framework agreement",
+     "valid_from": "2025-07-01",
+     "valid_to": "2027-06-30"
+    },
+    "source": "contracts:ctr:4600070140",
+    "table": "contracts"
+   },
+   {
+    "citable_fact": {
+     "days": 90,
+     "material_share": null,
+     "series": null,
+     "supplier": "sup:70140",
+     "type": "term"
+    },
+    "document": null,
+    "row": {
+     "clause": "8.1",
+     "contract_id": "ctr:4600070140",
+     "days": 90,
+     "deadband_pct": null,
+     "id": "ctr:4600070140#8.1",
+     "material_share": null,
+     "series": null,
+     "text": "Valid from 2025-07-01 to 2027-06-30; extends by 12 months unless terminated with 90 days' notice.",
+     "type": "term"
+    },
+    "source": "contract_clauses:ctr:4600070140#8.1",
+    "table": "contract_clauses"
+   },
+   {
+    "citable_fact": {
+     "days": null,
+     "material_share": null,
+     "series": null,
+     "supplier": "sup:70140",
+     "type": "quality"
+    },
+    "document": null,
+    "row": {
+     "clause": "6.1",
+     "contract_id": "ctr:4600070140",
+     "days": null,
+     "deadband_pct": null,
+     "id": "ctr:4600070140#6.1",
+     "material_share": null,
+     "series": null,
+     "text": "The quality agreement applies: on-time delivery target 95 %, flat fee of EUR 150 per supplier-caused complaint.",
+     "type": "quality"
+    },
+    "source": "contract_clauses:ctr:4600070140#6.1",
+    "table": "contract_clauses"
+   },
+   {
+    "citable_fact": {
+     "days": 56,
+     "material_share": null,
+     "series": null,
+     "supplier": "sup:70140",
+     "type": "delivery"
+    },
+    "document": null,
+    "row": {
+     "clause": "5.1",
+     "contract_id": "ctr:4600070140",
+     "days": 56,
+     "deadband_pct": null,
+     "id": "ctr:4600070140#5.1",
+     "material_share": null,
+     "series": null,
+     "text": "Delivery FCA; standard lead time 56 days from order.",
+     "type": "delivery"
+    },
+    "source": "contract_clauses:ctr:4600070140#5.1",
+    "table": "contract_clauses"
+   },
+   {
+    "citable_fact": {
+     "days": 60,
+     "material_share": null,
+     "series": null,
+     "supplier": "sup:70140",
+     "type": "payment"
+    },
+    "document": null,
+    "row": {
+     "clause": "4.1",
+     "contract_id": "ctr:4600070140",
+     "days": 60,
+     "deadband_pct": null,
+     "id": "ctr:4600070140#4.1",
+     "material_share": null,
+     "series": null,
+     "text": "Payment: 60 days net.",
+     "type": "payment"
+    },
+    "source": "contract_clauses:ctr:4600070140#4.1",
+    "table": "contract_clauses"
+   },
+   {
+    "citable_fact": {
+     "days": 90,
+     "material_share": null,
+     "series": null,
+     "supplier": "sup:70140",
+     "type": "price"
+    },
+    "document": null,
+    "row": {
+     "clause": "3.1",
+     "contract_id": "ctr:4600070140",
+     "days": 90,
+     "deadband_pct": null,
+     "id": "ctr:4600070140#3.1",
+     "material_share": null,
+     "series": null,
+     "text": "Prices as per the price annex, fixed for each calendar year. Changes require written notice of at least 90 days before the end of the calendar year.",
+     "type": "price"
+    },
+    "source": "contract_clauses:ctr:4600070140#3.1",
+    "table": "contract_clauses"
+   },
+   {
+    "citable_fact": {
+     "days": null,
+     "material_share": null,
+     "series": null,
+     "supplier": "sup:70140",
+     "type": "scope"
+    },
+    "document": null,
+    "row": {
+     "clause": "2.1",
+     "contract_id": "ctr:4600070140",
+     "days": null,
+     "deadband_pct": null,
+     "id": "ctr:4600070140#2.1",
+     "material_share": null,
+     "series": null,
+     "text": "Subject: supply of Bearing bracket HN, Impeller HN 200.",
+     "type": "scope"
+    },
+    "source": "contract_clauses:ctr:4600070140#2.1",
+    "table": "contract_clauses"
+   },
+   {
+    "citable_fact": {
+     "asked_pct": null,
+     "asked_price": null,
+     "date": "2026-09-21",
+     "days": null,
+     "effective_date": null,
+     "supplier": "sup:70140",
+     "title": "Escalation: delivery and quality performance",
+     "type": "letter"
+    },
+    "document": "# Escalation: delivery and quality performance\n\nletter - 2026-09-21 - Hollerau Pumpenwerke, Supplier Quality\n\nTo Odlewnia Kalwisz Sp. z o.o.\n\nyour rolling 12-month scorecard (sc:70140@2026Q3) is **red**: on-time delivery 63.5 %, 2376 ppm, 0 overdue 8D reports. We expect a binding improvement plan for Bearing bracket HN (part:310020) and will discuss quality commitments and cost recovery.\n\nHollerau Pumpenwerke, Supplier Quality\n",
+    "row": {
+     "asked_pct": null,
+     "asked_price": null,
+     "author": "Hollerau Pumpenwerke, Supplier Quality",
+     "date": "2026-09-21",
+     "effective_date": null,
+     "file": "correspondence/20260921-70140-P11.md",
+     "id": "doc:20260921-70140-P11",
+     "kind": "letter",
+     "notice_days": null,
+     "part_ids": "part:310020",
+     "subject": "Escalation: delivery and quality performance",
+     "supplier_id": "sup:70140"
+    },
+    "source": "documents:doc:20260921-70140-P11",
+    "table": "documents"
+   },
+   {
+    "citable_fact": {
+     "asked_pct": null,
+     "asked_price": null,
+     "date": "2026-07-15",
+     "days": null,
+     "effective_date": null,
+     "supplier": "sup:70140",
+     "title": "Liquidity",
+     "type": "call_note"
+    },
+    "document": "# Liquidity\n\ncall note - 2026-07-15 - Hollerau Pumpenwerke, Purchasing\n\nCall with the managing director of Odlewnia Kalwisz Sp. z o.o.: he asked twice whether we could pay earlier and said the bank is watching every month. 'I cannot sign anything that lowers our margin now.'\n",
+    "row": {
+     "asked_pct": null,
+     "asked_price": null,
+     "author": "Hollerau Pumpenwerke, Purchasing",
+     "date": "2026-07-15",
+     "effective_date": null,
+     "file": "correspondence/20260715-70140-M1.md",
+     "id": "doc:20260715-70140-M1",
+     "kind": "call_note",
+     "notice_days": null,
+     "part_ids": "",
+     "subject": "Liquidity",
+     "supplier_id": "sup:70140"
+    },
+    "source": "documents:doc:20260715-70140-M1",
+    "table": "documents"
+   },
+   {
+    "citable_fact": null,
+    "document": null,
+    "row": {
+     "certifications": "ISO 9001; ISO 14001; ISO 50001",
+     "credit_index": 225,
+     "credit_index_12m_ago": 225,
+     "equity_ratio_pct": 39.1,
+     "filed_fy": 2024,
+     "founded": 1994,
+     "group_parent": null,
+     "legal_form": "Sp. z o.o.",
+     "owner_type": "private",
+     "staff": 210,
+     "supplier_id": "sup:70140",
+     "turnover_band": "5-10 M EUR",
+     "turnover_eur": 9770000,
+     "vda63_grade": "C"
+    },
+    "source": "supplier_intel:6e7990e829f60f4b",
+    "table": "supplier_intel"
+   },
+   {
+    "citable_fact": null,
+    "document": null,
+    "row": {
+     "asked_pct": -1.0,
+     "date": "2025-12-08",
+     "event_id": "EV-2026-70140-310020",
+     "note": "",
+     "part_id": "part:310020",
+     "settled_pct": -2.5,
+     "supplier_id": "sup:70140",
+     "type": "annual renewal"
+    },
+    "source": "negotiation_history:befe4943788a249c",
+    "table": "negotiation_history"
+   },
+   {
+    "citable_fact": {
+     "asked_pct": null,
+     "asked_price": null,
+     "date": "2026-07-10",
+     "days": null,
+     "effective_date": null,
+     "supplier": "sup:70140",
+     "title": "Payment of invoices",
+     "type": "email"
+    },
+    "document": "# Payment of invoices\n\nemail - 2026-07-10 - Odlewnia Kalwisz Sp. z o.o.\n\nCould you pay our invoices within 10 days? In return we would grant a cash discount.\n",
+    "row": {
+     "asked_pct": null,
+     "asked_price": null,
+     "author": "Odlewnia Kalwisz Sp. z o.o.",
+     "date": "2026-07-10",
+     "effective_date": null,
+     "file": "correspondence/20260710-70140-M2.md",
+     "id": "doc:20260710-70140-M2",
+     "kind": "email",
+     "notice_days": null,
+     "part_ids": "",
+     "subject": "Payment of invoices",
+     "supplier_id": "sup:70140"
+    },
+    "source": "documents:doc:20260710-70140-M2",
+    "table": "documents"
+   },
+   {
+    "citable_fact": null,
+    "document": null,
+    "row": {
+     "asked_pct": 1.3,
+     "date": "2024-11-21",
+     "event_id": "EV-2025-70140-310020",
+     "note": "",
+     "part_id": "part:310020",
+     "settled_pct": 0.0,
+     "supplier_id": "sup:70140",
+     "type": "annual renewal"
+    },
+    "source": "negotiation_history:3afa2500ad0e3780",
+    "table": "negotiation_history"
+   },
+   {
+    "citable_fact": {
+     "asked_pct": null,
+     "asked_price": null,
+     "date": "2025-10-26",
+     "days": null,
+     "effective_date": null,
+     "supplier": "sup:70140",
+     "title": "Holiday shutdown",
+     "type": "email"
+    },
+    "document": "# Holiday shutdown\n\nemail - 2025-10-26 - Odlewnia Kalwisz Sp. z o.o.\n\nOur plant is closed from 23 December to 6 January. Please place call-offs for January by 10 December.\n",
+    "row": {
+     "asked_pct": null,
+     "asked_price": null,
+     "author": "Odlewnia Kalwisz Sp. z o.o.",
+     "date": "2025-10-26",
+     "effective_date": null,
+     "file": "correspondence/20251026-70140-N.md",
+     "id": "doc:20251026-70140-N",
+     "kind": "email",
+     "notice_days": null,
+     "part_ids": "",
+     "subject": "Holiday shutdown",
+     "supplier_id": "sup:70140"
+    },
+    "source": "documents:doc:20251026-70140-N",
+    "table": "documents"
+   },
+   {
+    "citable_fact": null,
+    "document": null,
+    "row": {
+     "asked_pct": -3.3,
+     "date": "2023-11-18",
+     "event_id": "EV-2024-70140-310020",
+     "note": "",
+     "part_id": "part:310020",
+     "settled_pct": -5.5,
+     "supplier_id": "sup:70140",
+     "type": "annual renewal"
+    },
+    "source": "negotiation_history:9cf096e513ab4ad1",
+    "table": "negotiation_history"
+   },
+   {
+    "citable_fact": null,
+    "document": null,
+    "row": {
+     "asked_pct": null,
+     "date": "2022-12-06",
+     "event_id": "EV-2023-70140-310020",
+     "note": "",
+     "part_id": "part:310020",
+     "settled_pct": null,
+     "supplier_id": "sup:70140",
+     "type": "initial price"
+    },
+    "source": "negotiation_history:81c578b751ddda65",
+    "table": "negotiation_history"
+   },
+   {
+    "citable_fact": {
+     "colour": "red",
+     "otd_confirmed_pct": 73.1,
+     "otd_pct": 63.5,
+     "ppm": 2376,
+     "quarter": "2026Q3",
+     "supplier": "sup:70140"
+    },
+    "document": null,
+    "row": {
+     "class": "C",
+     "colour": "red",
+     "complaint_qty": 37,
+     "gr_lines": 52,
+     "id": "sc:70140@2026Q3",
+     "open_8d_overdue": 0,
+     "otd_confirmed_pct": 73.1,
+     "otd_pct": 63.5,
+     "period_end": "2026-09-30",
+     "period_start": "2025-10-01",
+     "ppm": 2376,
+     "qn_count": 12,
+     "quarter": "2026Q3",
+     "received_qty": 15570,
+     "score": 69.9,
+     "supplier_id": "sup:70140"
+    },
+    "source": "scorecards:sc:70140@2026Q3",
+    "table": "scorecards"
+   },
+   {
+    "citable_fact": {
+     "colour": "amber",
+     "otd_confirmed_pct": 84.0,
+     "otd_pct": 78.0,
+     "ppm": 2379,
+     "quarter": "2026Q2",
+     "supplier": "sup:70140"
+    },
+    "document": null,
+    "row": {
+     "class": "B",
+     "colour": "amber",
+     "complaint_qty": 37,
+     "gr_lines": 50,
+     "id": "sc:70140@2026Q2",
+     "open_8d_overdue": 0,
+     "otd_confirmed_pct": 84.0,
+     "otd_pct": 78.0,
+     "period_end": "2026-06-30",
+     "period_start": "2025-07-01",
+     "ppm": 2379,
+     "qn_count": 12,
+     "quarter": "2026Q2",
+     "received_qty": 15554,
+     "score": 77.1,
+     "supplier_id": "sup:70140"
+    },
+    "source": "scorecards:sc:70140@2026Q2",
+    "table": "scorecards"
+   },
+   {
+    "citable_fact": {
+     "colour": "red",
+     "otd_confirmed_pct": 80.4,
+     "otd_pct": 74.5,
+     "ppm": 2714,
+     "quarter": "2026Q1",
+     "supplier": "sup:70140"
+    },
+    "document": null,
+    "row": {
+     "class": "C",
+     "colour": "red",
+     "complaint_qty": 42,
+     "gr_lines": 51,
+     "id": "sc:70140@2026Q1",
+     "open_8d_overdue": 1,
+     "otd_confirmed_pct": 80.4,
+     "otd_pct": 74.5,
+     "period_end": "2026-03-31",
+     "period_start": "2025-04-01",
+     "ppm": 2714,
+     "qn_count": 14,
+     "quarter": "2026Q1",
+     "received_qty": 15478,
+     "score": 68.7,
+     "supplier_id": "sup:70140"
+    },
+    "source": "scorecards:sc:70140@2026Q1",
+    "table": "scorecards"
+   },
+   {
+    "citable_fact": {
+     "colour": "amber",
+     "otd_confirmed_pct": 82.7,
+     "otd_pct": 78.8,
+     "ppm": 3079,
+     "quarter": "2025Q4",
+     "supplier": "sup:70140"
+    },
+    "document": null,
+    "row": {
+     "class": "B",
+     "colour": "amber",
+     "complaint_qty": 47,
+     "gr_lines": 52,
+     "id": "sc:70140@2025Q4",
+     "open_8d_overdue": 0,
+     "otd_confirmed_pct": 82.7,
+     "otd_pct": 78.8,
+     "period_end": "2025-12-31",
+     "period_start": "2025-01-01",
+     "ppm": 3079,
+     "qn_count": 15,
+     "quarter": "2025Q4",
+     "received_qty": 15264,
+     "score": 74.0,
+     "supplier_id": "sup:70140"
+    },
+    "source": "scorecards:sc:70140@2025Q4",
+    "table": "scorecards"
+   },
+   {
+    "citable_fact": {
+     "colour": "red",
+     "otd_confirmed_pct": 75.5,
+     "otd_pct": 71.7,
+     "ppm": 3075,
+     "quarter": "2025Q3",
+     "supplier": "sup:70140"
+    },
+    "document": null,
+    "row": {
+     "class": "C",
+     "colour": "red",
+     "complaint_qty": 46,
+     "gr_lines": 53,
+     "id": "sc:70140@2025Q3",
+     "open_8d_overdue": 1,
+     "otd_confirmed_pct": 75.5,
+     "otd_pct": 71.7,
+     "period_end": "2025-09-30",
+     "period_start": "2024-10-01",
+     "ppm": 3075,
+     "qn_count": 14,
+     "quarter": "2025Q3",
+     "received_qty": 14958,
+     "score": 65.5,
+     "supplier_id": "sup:70140"
+    },
+    "source": "scorecards:sc:70140@2025Q3",
+    "table": "scorecards"
+   },
+   {
+    "citable_fact": {
+     "colour": "red",
+     "otd_confirmed_pct": 72.7,
+     "otd_pct": 65.5,
+     "ppm": 3434,
+     "quarter": "2025Q2",
+     "supplier": "sup:70140"
+    },
+    "document": null,
+    "row": {
+     "class": "C",
+     "colour": "red",
+     "complaint_qty": 53,
+     "gr_lines": 55,
+     "id": "sc:70140@2025Q2",
+     "open_8d_overdue": 0,
+     "otd_confirmed_pct": 72.7,
+     "otd_pct": 65.5,
+     "period_end": "2025-06-30",
+     "period_start": "2024-07-01",
+     "ppm": 3434,
+     "qn_count": 14,
+     "quarter": "2025Q2",
+     "received_qty": 15432,
+     "score": 65.6,
+     "supplier_id": "sup:70140"
+    },
+    "source": "scorecards:sc:70140@2025Q2",
+    "table": "scorecards"
+   },
+   {
+    "citable_fact": {
+     "colour": "red",
+     "otd_confirmed_pct": 74.1,
+     "otd_pct": 68.5,
+     "ppm": 3131,
+     "quarter": "2025Q1",
+     "supplier": "sup:70140"
+    },
+    "document": null,
+    "row": {
+     "class": "C",
+     "colour": "red",
+     "complaint_qty": 46,
+     "gr_lines": 54,
+     "id": "sc:70140@2025Q1",
+     "open_8d_overdue": 2,
+     "otd_confirmed_pct": 74.1,
+     "otd_pct": 68.5,
+     "period_end": "2025-03-31",
+     "period_start": "2024-04-01",
+     "ppm": 3131,
+     "qn_count": 13,
+     "quarter": "2025Q1",
+     "received_qty": 14690,
+     "score": 58.6,
+     "supplier_id": "sup:70140"
+    },
+    "source": "scorecards:sc:70140@2025Q1",
+    "table": "scorecards"
+   }
+  ],
+  "opening_offer": {
+   "term_sheet_id": "offer:70140-0",
+   "terms": {
+    "ppm_commitment": 6400,
+    "unit_price": 47.0
+   }
+  },
+  "standard_terms": {
+   "chargeback_eur_per_complaint": 0.0
+  }
+ },
+ "case:P18": {
+  "case": {
+   "briefing": "You negotiate for Hollerau Pumpenwerke with Blankstahl Werdenfels GmbH. Alloy surcharge and base price for 1.4404 bar (Werdenfels). Need: 23700 kg a year. Category goal: leverage: competition and data should bring the price down. Score: the lowest total cost C as defined in the rules, valued with this case's rates (need lead time 14 days). Fallback if you walk away: the second-source quote quote:7200018. Must-haves: none. Prepare from the data package.",
+   "buyer": {
+    "alternative": {
+     "kind": "quote",
+     "ref": "quote:7200018",
+     "terms": {
+      "contract_months": 24,
+      "effective_date": "2027-01-01",
+      "incoterm": "DAP",
+      "index_clause": null,
+      "lead_time_days": 10,
+      "payment_days": 30,
+      "ppm_commitment": 75,
+      "tooling_eur": 0,
+      "unit_price": 6.31,
+      "volume_per_year": 23700
+     }
+    },
+    "category_goal": "leverage",
+    "cost_per_defect": 0,
+    "current_unit_price": 5.84,
+    "fallback_risk_pct": 3,
+    "fallback_unit_price": 6.13,
+    "freight_eur_per_unit": {
+     "DAP": 0.0,
+     "EXW": 0.06,
+     "FCA": 0.05
+    },
+    "horizon_years": 2,
+    "index_paths": {
+     "AS-14404": 0.06
+    },
+    "index_risk_pct": 1,
+    "interest_rate": 0.08,
+    "late_cost_per_day": 96,
+    "must_haves": [],
+    "need_lead_time_days": 14,
+    "need_per_year": 23700,
+    "reference_payment_days": 60
+   },
+   "case_id": "case:P18",
+   "fixed_terms": {
+    "effective_date": "2027-01-01",
+    "incoterm": "DAP",
+    "lead_time_days": 14,
+    "tooling_eur": 0,
+    "volume_per_year": 23700
+   },
+   "hosted": true,
+   "negotiable": [
+    "unit_price",
+    "index_clause",
+    "payment_days",
+    "contract_months"
+   ],
+   "parts": [
+    "part:370010"
+   ],
+   "refs": [
+    "doc:20260922-70740-P18",
+    "ctr:4600070740",
+    "sc:70740@2026Q3",
+    "quote:7200018"
+   ],
+   "round_limit": 10,
+   "set": "practice",
+   "suppliers": [
+    "sup:70740"
+   ],
+   "term_options": {
+    "contract_months": [
+     12,
+     24,
+     36
+    ],
+    "index_clause": [
+     null,
+     {
+      "base_month": "2026-08",
+      "deadband_pct": 0,
+      "material_share": 0.45,
+      "series": "AS-14404"
+     },
+     {
+      "base_month": "2026-08",
+      "deadband_pct": 3,
+      "material_share": 0.45,
+      "series": "AS-14404"
+     },
+     {
+      "base_month": "2026-08",
+      "deadband_pct": 5,
+      "material_share": 0.45,
+      "series": "AS-14404"
+     }
+    ],
+    "payment_days": [
+     14,
+     30,
+     45,
+     60,
+     90
+    ]
+   },
+   "title": "Alloy surcharge and base price for 1.4404 bar (Werdenfels)",
+   "trigger_doc": "doc:20260922-70740-P18",
+   "type": "raw_material"
+  },
+  "evidence": [
+   {
+    "citable_fact": {
+     "days": 60,
+     "supplier": "sup:70740",
+     "valid_from": "2024-01-01",
+     "valid_to": "2026-12-31"
+    },
+    "document": "# Framework agreement 4600070740\n\nBetween Hollerau Pumpenwerke GmbH and Blankstahl Werdenfels GmbH.\n\n**\u00a7 2.1** Subject: supply of Round bar 1.4404 dia 30 mm, peeled, Round bar 1.4021 dia 40 mm, peeled, Round bar C45 dia 50 mm, cold drawn.\n\n**\u00a7 3.1** Prices as per the price annex, fixed for each calendar year. Changes require written notice of at least 60 days before the end of the calendar year.\n\n**\u00a7 3.2** The price follows index PPI-C2431: P = P0 x (1 - 0.8 + 0.8 x I(m-2) / I(base)), base = the index two months before the price year starts, adjusted quarterly on the 1st of January, April, July and October if the change exceeds 3 %.\n\n**\u00a7 4.1** Payment: 30 days net.\n\n**\u00a7 5.1** Delivery DAP; standard lead time 14 days from order.\n\n**\u00a7 6.1** The quality agreement applies: on-time delivery target 95 %, flat fee of EUR 150 per supplier-caused complaint.\n\n**\u00a7 8.1** Valid from 2024-01-01 to 2026-12-31; extends by 12 months unless terminated with 60 days' notice.\n\nParts: part:370010, part:370011, part:370012\n",
+    "row": {
+     "file": "contracts/4600070740.md",
+     "id": "ctr:4600070740",
+     "incoterm": "DAP",
+     "notice_days": 60,
+     "payment_days": 30,
+     "price_basis": "index clause",
+     "supplier_id": "sup:70740",
+     "type": "framework agreement",
+     "valid_from": "2024-01-01",
+     "valid_to": "2026-12-31"
+    },
+    "source": "contracts:ctr:4600070740",
+    "table": "contracts"
+   },
+   {
+    "citable_fact": {
+     "days": 60,
+     "material_share": null,
+     "series": null,
+     "supplier": "sup:70740",
+     "type": "term"
+    },
+    "document": null,
+    "row": {
+     "clause": "8.1",
+     "contract_id": "ctr:4600070740",
+     "days": 60,
+     "deadband_pct": null,
+     "id": "ctr:4600070740#8.1",
+     "material_share": null,
+     "series": null,
+     "text": "Valid from 2024-01-01 to 2026-12-31; extends by 12 months unless terminated with 60 days' notice.",
+     "type": "term"
+    },
+    "source": "contract_clauses:ctr:4600070740#8.1",
+    "table": "contract_clauses"
+   },
+   {
+    "citable_fact": {
+     "days": null,
+     "material_share": null,
+     "series": null,
+     "supplier": "sup:70740",
+     "type": "quality"
+    },
+    "document": null,
+    "row": {
+     "clause": "6.1",
+     "contract_id": "ctr:4600070740",
+     "days": null,
+     "deadband_pct": null,
+     "id": "ctr:4600070740#6.1",
+     "material_share": null,
+     "series": null,
+     "text": "The quality agreement applies: on-time delivery target 95 %, flat fee of EUR 150 per supplier-caused complaint.",
+     "type": "quality"
+    },
+    "source": "contract_clauses:ctr:4600070740#6.1",
+    "table": "contract_clauses"
+   },
+   {
+    "citable_fact": {
+     "days": 14,
+     "material_share": null,
+     "series": null,
+     "supplier": "sup:70740",
+     "type": "delivery"
+    },
+    "document": null,
+    "row": {
+     "clause": "5.1",
+     "contract_id": "ctr:4600070740",
+     "days": 14,
+     "deadband_pct": null,
+     "id": "ctr:4600070740#5.1",
+     "material_share": null,
+     "series": null,
+     "text": "Delivery DAP; standard lead time 14 days from order.",
+     "type": "delivery"
+    },
+    "source": "contract_clauses:ctr:4600070740#5.1",
+    "table": "contract_clauses"
+   },
+   {
+    "citable_fact": {
+     "days": 30,
+     "material_share": null,
+     "series": null,
+     "supplier": "sup:70740",
+     "type": "payment"
+    },
+    "document": null,
+    "row": {
+     "clause": "4.1",
+     "contract_id": "ctr:4600070740",
+     "days": 30,
+     "deadband_pct": null,
+     "id": "ctr:4600070740#4.1",
+     "material_share": null,
+     "series": null,
+     "text": "Payment: 30 days net.",
+     "type": "payment"
+    },
+    "source": "contract_clauses:ctr:4600070740#4.1",
+    "table": "contract_clauses"
+   },
+   {
+    "citable_fact": {
+     "days": null,
+     "material_share": 0.8,
+     "series": "PPI-C2431",
+     "supplier": "sup:70740",
+     "type": "index"
+    },
+    "document": null,
+    "row": {
+     "clause": "3.2",
+     "contract_id": "ctr:4600070740",
+     "days": null,
+     "deadband_pct": 3,
+     "id": "ctr:4600070740#3.2",
+     "material_share": 0.8,
+     "series": "PPI-C2431",
+     "text": "The price follows index PPI-C2431: P = P0 x (1 - 0.8 + 0.8 x I(m-2) / I(base)), base = the index two months before the price year starts, adjusted quarterly on the 1st of January, April, July and October if the change exceeds 3 %.",
+     "type": "index"
+    },
+    "source": "contract_clauses:ctr:4600070740#3.2",
+    "table": "contract_clauses"
+   },
+   {
+    "citable_fact": {
+     "days": 60,
+     "material_share": null,
+     "series": null,
+     "supplier": "sup:70740",
+     "type": "price"
+    },
+    "document": null,
+    "row": {
+     "clause": "3.1",
+     "contract_id": "ctr:4600070740",
+     "days": 60,
+     "deadband_pct": null,
+     "id": "ctr:4600070740#3.1",
+     "material_share": null,
+     "series": null,
+     "text": "Prices as per the price annex, fixed for each calendar year. Changes require written notice of at least 60 days before the end of the calendar year.",
+     "type": "price"
+    },
+    "source": "contract_clauses:ctr:4600070740#3.1",
+    "table": "contract_clauses"
+   },
+   {
+    "citable_fact": {
+     "days": null,
+     "material_share": null,
+     "series": null,
+     "supplier": "sup:70740",
+     "type": "scope"
+    },
+    "document": null,
+    "row": {
+     "clause": "2.1",
+     "contract_id": "ctr:4600070740",
+     "days": null,
+     "deadband_pct": null,
+     "id": "ctr:4600070740#2.1",
+     "material_share": null,
+     "series": null,
+     "text": "Subject: supply of Round bar 1.4404 dia 30 mm, peeled, Round bar 1.4021 dia 40 mm, peeled, Round bar C45 dia 50 mm, cold drawn.",
+     "type": "scope"
+    },
+    "source": "contract_clauses:ctr:4600070740#2.1",
+    "table": "contract_clauses"
+   },
+   {
+    "citable_fact": {
+     "asked_pct": null,
+     "asked_price": null,
+     "date": "2026-09-22",
+     "days": null,
+     "effective_date": null,
+     "supplier": "sup:70740",
+     "title": "Price basis and surcharge clause for the coming period",
+     "type": "letter"
+    },
+    "document": "# Price basis and surcharge clause for the coming period\n\nletter - 2026-09-22 - Blankstahl Werdenfels GmbH\n\nDear Sir or Madam,\n\nfor Round bar 1.4404 dia 30 mm, peeled (part:370010) we propose to agree the price basis for the coming period, including a price adjustment clause based on AS-14404. Please let us know your view.\n\nYours faithfully,\nBlankstahl Werdenfels GmbH\n",
+    "row": {
+     "asked_pct": null,
+     "asked_price": null,
+     "author": "Blankstahl Werdenfels GmbH",
+     "date": "2026-09-22",
+     "effective_date": null,
+     "file": "correspondence/20260922-70740-P18.md",
+     "id": "doc:20260922-70740-P18",
+     "kind": "letter",
+     "notice_days": null,
+     "part_ids": "part:370010",
+     "subject": "Price basis and surcharge clause for the coming period",
+     "supplier_id": "sup:70740"
+    },
+    "source": "documents:doc:20260922-70740-P18",
+    "table": "documents"
+   },
+   {
+    "citable_fact": {
+     "asked_pct": null,
+     "asked_price": null,
+     "date": "2026-09-16",
+     "days": null,
+     "effective_date": null,
+     "supplier": "sup:70740",
+     "title": "Customer portfolio",
+     "type": "meeting_note"
+    },
+    "document": "# Customer portfolio\n\nmeeting note - 2026-09-16 - Hollerau Pumpenwerke, Purchasing\n\nThe sales director of Blankstahl Werdenfels GmbH said they are reviewing small accounts and will focus on customers with volume.\n",
+    "row": {
+     "asked_pct": null,
+     "asked_price": null,
+     "author": "Hollerau Pumpenwerke, Purchasing",
+     "date": "2026-09-16",
+     "effective_date": null,
+     "file": "correspondence/20260916-70740-M5.md",
+     "id": "doc:20260916-70740-M5",
+     "kind": "meeting_note",
+     "notice_days": null,
+     "part_ids": "",
+     "subject": "Customer portfolio",
+     "supplier_id": "sup:70740"
+    },
+    "source": "documents:doc:20260916-70740-M5",
+    "table": "documents"
+   },
+   {
+    "citable_fact": null,
+    "document": null,
+    "row": {
+     "certifications": "ISO 9001; ISO 14001",
+     "credit_index": 148,
+     "credit_index_12m_ago": 148,
+     "equity_ratio_pct": 39.3,
+     "filed_fy": 2025,
+     "founded": 1961,
+     "group_parent": null,
+     "legal_form": "GmbH",
+     "owner_type": "family",
+     "staff": 200,
+     "supplier_id": "sup:70740",
+     "turnover_band": "50-100 M EUR",
+     "turnover_eur": 98200000,
+     "vda63_grade": "A"
+    },
+    "source": "supplier_intel:68b275d73b9da33a",
+    "table": "supplier_intel"
+   },
+   {
+    "citable_fact": null,
+    "document": null,
+    "row": {
+     "asked_pct": -0.6,
+     "date": "2025-11-15",
+     "event_id": "EV-2026-70740-370010",
+     "note": "",
+     "part_id": "part:370010",
+     "settled_pct": -4.2,
+     "supplier_id": "sup:70740",
+     "type": "annual renewal"
+    },
+    "source": "negotiation_history:da569e3018cfff88",
+    "table": "negotiation_history"
+   },
+   {
+    "citable_fact": {
+     "asked_pct": null,
+     "asked_price": null,
+     "date": "2026-09-04",
+     "days": null,
+     "effective_date": null,
+     "supplier": "sup:70740",
+     "title": "Price discussion",
+     "type": "call_note"
+    },
+    "document": "# Price discussion\n\ncall note - 2026-09-04 - Hollerau Pumpenwerke, Purchasing\n\nCall with the owner of Blankstahl Werdenfels GmbH: he offered to walk us through their calculation (hourly rates and material) if that helps to settle prices.\n",
+    "row": {
+     "asked_pct": null,
+     "asked_price": null,
+     "author": "Hollerau Pumpenwerke, Purchasing",
+     "date": "2026-09-04",
+     "effective_date": null,
+     "file": "correspondence/20260904-70740-M1.md",
+     "id": "doc:20260904-70740-M1",
+     "kind": "call_note",
+     "notice_days": null,
+     "part_ids": "",
+     "subject": "Price discussion",
+     "supplier_id": "sup:70740"
+    },
+    "source": "documents:doc:20260904-70740-M1",
+    "table": "documents"
+   },
+   {
+    "citable_fact": null,
+    "document": null,
+    "row": {
+     "asked_pct": -2.6,
+     "date": "2024-11-17",
+     "event_id": "EV-2025-70740-370010",
+     "note": "",
+     "part_id": "part:370010",
+     "settled_pct": -4.5,
+     "supplier_id": "sup:70740",
+     "type": "annual renewal"
+    },
+    "source": "negotiation_history:213a836f0ef643b8",
+    "table": "negotiation_history"
+   },
+   {
+    "citable_fact": {
+     "asked_pct": null,
+     "asked_price": null,
+     "date": "2026-08-13",
+     "days": null,
+     "effective_date": null,
+     "supplier": "sup:70740",
+     "title": "Customer portfolio",
+     "type": "meeting_note"
+    },
+    "document": "# Customer portfolio\n\nmeeting note - 2026-08-13 - Hollerau Pumpenwerke, Purchasing\n\nThe sales director of Blankstahl Werdenfels GmbH said they are reviewing small accounts and will focus on customers with volume.\n",
+    "row": {
+     "asked_pct": null,
+     "asked_price": null,
+     "author": "Hollerau Pumpenwerke, Purchasing",
+     "date": "2026-08-13",
+     "effective_date": null,
+     "file": "correspondence/20260813-70740-M2.md",
+     "id": "doc:20260813-70740-M2",
+     "kind": "meeting_note",
+     "notice_days": null,
+     "part_ids": "",
+     "subject": "Customer portfolio",
+     "supplier_id": "sup:70740"
+    },
+    "source": "documents:doc:20260813-70740-M2",
+    "table": "documents"
+   },
+   {
+    "citable_fact": null,
+    "document": null,
+    "row": {
+     "asked_pct": -2.4,
+     "date": "2023-12-02",
+     "event_id": "EV-2024-70740-370010",
+     "note": "",
+     "part_id": "part:370010",
+     "settled_pct": -5.7,
+     "supplier_id": "sup:70740",
+     "type": "annual renewal"
+    },
+    "source": "negotiation_history:c9acb2ac0c9e2e65",
+    "table": "negotiation_history"
+   },
+   {
+    "citable_fact": {
+     "asked_pct": null,
+     "asked_price": null,
+     "date": "2026-08-12",
+     "days": null,
+     "effective_date": null,
+     "supplier": "sup:70740",
+     "title": "Annual review",
+     "type": "meeting_note"
+    },
+    "document": "# Annual review\n\nmeeting note - 2026-08-12 - Hollerau Pumpenwerke, Purchasing\n\nAnnual review with Blankstahl Werdenfels GmbH. Their key account manager explained that price changes above 2 % need the approval of their pricing committee, which meets every two weeks.\n",
+    "row": {
+     "asked_pct": null,
+     "asked_price": null,
+     "author": "Hollerau Pumpenwerke, Purchasing",
+     "date": "2026-08-12",
+     "effective_date": null,
+     "file": "correspondence/20260812-70740-M3.md",
+     "id": "doc:20260812-70740-M3",
+     "kind": "meeting_note",
+     "notice_days": null,
+     "part_ids": "",
+     "subject": "Annual review",
+     "supplier_id": "sup:70740"
+    },
+    "source": "documents:doc:20260812-70740-M3",
+    "table": "documents"
+   },
+   {
+    "citable_fact": null,
+    "document": null,
+    "row": {
+     "asked_pct": null,
+     "date": "2022-11-21",
+     "event_id": "EV-2023-70740-370010",
+     "note": "",
+     "part_id": "part:370010",
+     "settled_pct": null,
+     "supplier_id": "sup:70740",
+     "type": "initial price"
+    },
+    "source": "negotiation_history:043c43a3a070f498",
+    "table": "negotiation_history"
+   },
+   {
+    "citable_fact": {
+     "asked_pct": null,
+     "asked_price": null,
+     "date": "2026-06-01",
+     "days": null,
+     "effective_date": null,
+     "supplier": "sup:70740",
+     "title": "Customer portfolio",
+     "type": "meeting_note"
+    },
+    "document": "# Customer portfolio\n\nmeeting note - 2026-06-01 - Hollerau Pumpenwerke, Purchasing\n\nThe sales director of Blankstahl Werdenfels GmbH said they are reviewing small accounts and will focus on customers with volume.\n",
+    "row": {
+     "asked_pct": null,
+     "asked_price": null,
+     "author": "Hollerau Pumpenwerke, Purchasing",
+     "date": "2026-06-01",
+     "effective_date": null,
+     "file": "correspondence/20260601-70740-M4.md",
+     "id": "doc:20260601-70740-M4",
+     "kind": "meeting_note",
+     "notice_days": null,
+     "part_ids": "",
+     "subject": "Customer portfolio",
+     "supplier_id": "sup:70740"
+    },
+    "source": "documents:doc:20260601-70740-M4",
+    "table": "documents"
+   },
+   {
+    "citable_fact": {
+     "colour": "green",
+     "otd_confirmed_pct": 83.5,
+     "otd_pct": 81.0,
+     "ppm": 32,
+     "quarter": "2026Q3",
+     "supplier": "sup:70740"
+    },
+    "document": null,
+    "row": {
+     "class": "A",
+     "colour": "green",
+     "complaint_qty": 5,
+     "gr_lines": 79,
+     "id": "sc:70740@2026Q3",
+     "open_8d_overdue": 0,
+     "otd_confirmed_pct": 83.5,
+     "otd_pct": 81.0,
+     "period_end": "2026-09-30",
+     "period_start": "2025-10-01",
+     "ppm": 32,
+     "qn_count": 5,
+     "quarter": "2026Q3",
+     "received_qty": 155740,
+     "score": 90.3,
+     "supplier_id": "sup:70740"
+    },
+    "source": "scorecards:sc:70740@2026Q3",
+    "table": "scorecards"
+   },
+   {
+    "citable_fact": {
+     "colour": "green",
+     "otd_confirmed_pct": 85.0,
+     "otd_pct": 82.5,
+     "ppm": 38,
+     "quarter": "2026Q2",
+     "supplier": "sup:70740"
+    },
+    "document": null,
+    "row": {
+     "class": "A",
+     "colour": "green",
+     "complaint_qty": 6,
+     "gr_lines": 80,
+     "id": "sc:70740@2026Q2",
+     "open_8d_overdue": 0,
+     "otd_confirmed_pct": 85.0,
+     "otd_pct": 82.5,
+     "period_end": "2026-06-30",
+     "period_start": "2025-07-01",
+     "ppm": 38,
+     "qn_count": 6,
+     "quarter": "2026Q2",
+     "received_qty": 156654,
+     "score": 91.1,
+     "supplier_id": "sup:70740"
+    },
+    "source": "scorecards:sc:70740@2026Q2",
+    "table": "scorecards"
+   },
+   {
+    "citable_fact": {
+     "colour": "green",
+     "otd_confirmed_pct": 86.2,
+     "otd_pct": 83.8,
+     "ppm": 26,
+     "quarter": "2026Q1",
+     "supplier": "sup:70740"
+    },
+    "document": null,
+    "row": {
+     "class": "A",
+     "colour": "green",
+     "complaint_qty": 4,
+     "gr_lines": 80,
+     "id": "sc:70740@2026Q1",
+     "open_8d_overdue": 0,
+     "otd_confirmed_pct": 86.2,
+     "otd_pct": 83.8,
+     "period_end": "2026-03-31",
+     "period_start": "2025-04-01",
+     "ppm": 26,
+     "qn_count": 4,
+     "quarter": "2026Q1",
+     "received_qty": 154754,
+     "score": 91.7,
+     "supplier_id": "sup:70740"
+    },
+    "source": "scorecards:sc:70740@2026Q1",
+    "table": "scorecards"
+   },
+   {
+    "citable_fact": {
+     "colour": "green",
+     "otd_confirmed_pct": 85.2,
+     "otd_pct": 82.7,
+     "ppm": 58,
+     "quarter": "2025Q4",
+     "supplier": "sup:70740"
+    },
+    "document": null,
+    "row": {
+     "class": "A",
+     "colour": "green",
+     "complaint_qty": 9,
+     "gr_lines": 81,
+     "id": "sc:70740@2025Q4",
+     "open_8d_overdue": 0,
+     "otd_confirmed_pct": 85.2,
+     "otd_pct": 82.7,
+     "period_end": "2025-12-31",
+     "period_start": "2025-01-01",
+     "ppm": 58,
+     "qn_count": 9,
+     "quarter": "2025Q4",
+     "received_qty": 154734,
+     "score": 91.1,
+     "supplier_id": "sup:70740"
+    },
+    "source": "scorecards:sc:70740@2025Q4",
+    "table": "scorecards"
+   },
+   {
+    "citable_fact": {
+     "colour": "green",
+     "otd_confirmed_pct": 86.1,
+     "otd_pct": 81.0,
+     "ppm": 71,
+     "quarter": "2025Q3",
+     "supplier": "sup:70740"
+    },
+    "document": null,
+    "row": {
+     "class": "A",
+     "colour": "green",
+     "complaint_qty": 11,
+     "gr_lines": 79,
+     "id": "sc:70740@2025Q3",
+     "open_8d_overdue": 0,
+     "otd_confirmed_pct": 86.1,
+     "otd_pct": 81.0,
+     "period_end": "2025-09-30",
+     "period_start": "2024-10-01",
+     "ppm": 71,
+     "qn_count": 11,
+     "quarter": "2025Q3",
+     "received_qty": 155349,
+     "score": 90.2,
+     "supplier_id": "sup:70740"
+    },
+    "source": "scorecards:sc:70740@2025Q3",
+    "table": "scorecards"
+   },
+   {
+    "citable_fact": {
+     "colour": "green",
+     "otd_confirmed_pct": 88.5,
+     "otd_pct": 82.1,
+     "ppm": 83,
+     "quarter": "2025Q2",
+     "supplier": "sup:70740"
+    },
+    "document": null,
+    "row": {
+     "class": "A",
+     "colour": "green",
+     "complaint_qty": 13,
+     "gr_lines": 78,
+     "id": "sc:70740@2025Q2",
+     "open_8d_overdue": 0,
+     "otd_confirmed_pct": 88.5,
+     "otd_pct": 82.1,
+     "period_end": "2025-06-30",
+     "period_start": "2024-07-01",
+     "ppm": 83,
+     "qn_count": 13,
+     "quarter": "2025Q2",
+     "received_qty": 157542,
+     "score": 90.6,
+     "supplier_id": "sup:70740"
+    },
+    "source": "scorecards:sc:70740@2025Q2",
+    "table": "scorecards"
+   }
+  ],
+  "opening_offer": {
+   "term_sheet_id": "offer:70740-0",
+   "terms": {
+    "contract_months": 12,
+    "index_clause": null,
+    "payment_days": 30,
+    "unit_price": 6.1
+   }
+  },
+  "standard_terms": {
+   "chargeback_eur_per_complaint": 0.0,
+   "ppm_commitment": 70
+  }
+ }
+}

@@ -1,0 +1,431 @@
+diff --color -ruN -x __pycache__ -x *.pyc codex_base/nighthunter/live.py codex_work/nighthunter/live.py
+--- a/nighthunter/live.py	2026-10-11 10:01:00
++++ b/nighthunter/live.py	2026-10-11 10:35:49
+@@ -71,6 +71,9 @@
+ PRICES = {"gpt-5.6-luna": (0.20, 1.20), "gpt-6-sol": (2.00, 10.00), "gpt-6-astra": (10.00, 50.00)}
+ RUN_LIMIT_MAX = 2.0   # explicit per-run override ceiling (--run-limit-usd); default run limit stays 0.75
+ TOTAL_LIMIT_USD = 7 # cumulative ledger cap; owner raised it from 5 to 7 on 2026-10-10 (luna final reserve)
++# Codex task 3 (default OFF, untested live): say "Payment terms are fixed at 60 days net in this
++# agreement." when the supplier asks to change a term the case fixes (LiveAgent.fixed_term_answer).
++FIXED_TERM_ANSWER = False
+
+
+ class BudgetedModel:
+@@ -526,6 +529,47 @@
+                     f"{m} months ({round(volume * m / 12)} units in total){full}."]
+         return [f"{lead}: each option commits to {volume} units per year{full}."]
+
++    # Supplier asks to change a term that this case fixes (saved P11 traces: "we really need faster
++    # payment" in 133 replies of 33 sessions; payment is fixed at 60 days, our prose never said so).
++    FIXED_TERM_REQUEST = {
++        "payment_days": re.compile(
++            r"(?:faster|earlier|shorter|quicker|sooner|prompter|accelerated) payment|"
++            r"payment (?:terms? )?(?:faster|earlier|shorter|sooner)|pay (?:us )?(?:faster|earlier|sooner|quicker)|"
++            r"shorten(?:ing)? (?:the )?(?:payment|zahlungsziel)|prepay|advance payment|skonto|early[- ]payment", re.I),
++        "contract_months": re.compile(r"(?:longer|shorter) (?:contract|agreement)|extend(?:ing|ed)? the "
++                                      r"(?:contract|agreement)|multi-year (?:contract|agreement)", re.I),
++        "lead_time_days": re.compile(r"(?:longer|more|extended|relaxed) lead ?time|extend(?:ing)? the lead ?time|"
++                                     r"more time (?:for|to) deliver", re.I),
++        "effective_date": re.compile(r"(?:earlier|sooner|later) (?:effective|start) date|"
++                                     r"(?:bring|move) (?:the )?(?:effective|start) date", re.I),
++        "incoterm": re.compile(r"(?:change|switch) (?:the )?(?:incoterm|delivery terms)|ex works instead", re.I),
++    }
++
++    @classmethod
++    def fixed_term_answer(cls, case, events):
++        """Code-rendered statement that a requested term is fixed in this case - never a promise to move
++        it - only when the supplier's latest e-mail asks to change a term the case fixes."""
++        if not FIXED_TERM_ANSWER:
++            return []
++        latest_body = next((e.get("body") or "" for e in reversed(events) if e.get("from") != "buyer"), "")
++        fixed = case.get("fixed_terms") or {}
++        out = []
++        for field, pattern in cls.FIXED_TERM_REQUEST.items():
++            value = fixed.get(field)
++            if field in case.get("negotiable", []) or value is None or not pattern.search(latest_body):
++                continue
++            if field == "payment_days":
++                out.append(f"Payment terms are fixed at {value} days net in this agreement.")
++            elif field == "contract_months":
++                out.append(f"The contract length is fixed at {value} months in this agreement.")
++            elif field == "lead_time_days":
++                out.append(f"The lead time is fixed at {value} days in this agreement.")
++            elif field == "effective_date":
++                out.append(f"The effective date is fixed at {value} in this agreement.")
++            elif field == "incoterm":
++                out.append(f"The delivery terms are fixed at {value} in this agreement.")
++        return out
++
+     ASK_BREAKDOWN = False  # S13: P18 asked, no XLSX and no reaction (58.7 as always); P08 path fixed, untested
+
+     @classmethod
+@@ -643,6 +687,9 @@
+                         # Figures, claims and terms stay code-rendered; model framing is filtered.
+                         answer = self.volume_answer(case, events, terms)
+                         record["volume_answer"] = bool(answer)
++                        fixed_answer = self.fixed_term_answer(case, events)
++                        record["fixed_term_answer"] = bool(fixed_answer)
++                        answer += fixed_answer
+                         body, prose_diag = compose(
+                             case, events, terms, answer + [cards[k]["text"] for k in validation["selected_claims"]],
+                             choice, REQUESTS[intent], allow_escalation=intent == "approval",
+diff --color -ruN -x __pycache__ -x *.pyc codex_base/nighthunter/packages.py codex_work/nighthunter/packages.py
+--- a/nighthunter/packages.py	2026-10-11 00:01:12
++++ b/nighthunter/packages.py	2026-10-11 10:34:10
+@@ -67,6 +67,16 @@
+ RETREAT_NOT_CONCESSION = False  # S9: P08 47.3 twice (S5 67.9); the bot raised its price after our smaller step
+ GOAL_MAX_CUT = {"stabilise": 0.06, "quality_first": 0.08, "routine": 0.10,
+                 "secure_supply": 0.10, "leverage": 0.22}
++# Codex rank 3 (default OFF, untested live): among mixes equal in price, seller value and our cost
++# that differ only in lead time, offer the slowest lead time within our need instead of the first
++# enumerated (P05 28 = 35 days, P10 35 = 42 days at equal cost; suppliers price overtime for speed).
++# Opening menus; later rounds keep the preference only if the opening used it (no lead-time flip).
++NEED_ALIGNED_LEAD = False
++# Codex rank 5 (default OFF, untested live): if the supplier quoted a compliant relaxed-quality mix
++# earlier in this session and dropped it from its latest reply, re-offer that quality mix once at the
++# same cost target, despite the per-field ratchet. P11: 2/2 such menus won the next step, 0/8 without.
++RETAINED_QUALITY_TRADE = False
++QUALITY_FIELDS = ("ppm_commitment", "chargeback_eur_per_complaint")
+
+
+ def health_estimate(case, standard, profile):
+@@ -241,6 +251,87 @@
+     return sum(a.get(f) != b.get(f) for f in fields)
+
+
++def aligned_lead(case, standard):
++    """Slowest allowed lead time within the buyer's need, if a faster allowed option exists."""
++    need = case["buyer"].get("need_lead_time_days")
++    if "lead_time_days" not in case["negotiable"] or not isinstance(need, (int, float)):
++        return None
++    fields, values = _options(case, standard)
++    allowed = [v for v in values[fields.index("lead_time_days")] if isinstance(v, (int, float))]
++    within = [v for v in allowed if v <= need]
++    if not within or min(allowed) >= max(within):
++        return None
++    return max(within)
++
++
++def prefer_need_lead(case, candidates):
++    """Reorder build() candidates (..., value, terms) so that, within each group identical except for
++    lead time (same price, seller value and our cost), the slowest lead time within need comes first."""
++    need = case["buyer"].get("need_lead_time_days")
++
++    def key(c):
++        rest = tuple(sorted((f, str(v)) for f, v in c[-1].items() if f != "lead_time_days"))
++        return rest, round(c[3], 4), c[1]
++
++    groups = {}
++    for c in candidates:
++        groups.setdefault(key(c), []).append(c)
++    out, done = [], set()
++    for c in candidates:
++        k = key(c)
++        if k in done:
++            continue
++        done.add(k)
++        members = groups[k]
++        within = [m for m in members if isinstance(m[-1].get("lead_time_days"), (int, float))
++                  and m[-1]["lead_time_days"] <= need]
++        top = max(within, key=lambda m: m[-1]["lead_time_days"]) if within else members[0]
++        out += [top] + [m for m in members if m is not top]
++    return out
++
++
++def retained_quality_mix(case, standard, events, standing, supplier=None):
++    """Quality fields of a compliant, relaxed-quality mix the supplier quoted earlier in this session
++    but dropped from its latest reply, or None. Relaxed: costlier to us than the standing quality at the
++    standing price. Never a higher chargeback than standing. Offered in one buyer message only."""
++    quality = [f for f in QUALITY_FIELDS if f in case["negotiable"]]
++    if "ppm_commitment" not in quality:
++        return None
++    replies = [i for i, e in enumerate(events) if e.get("from") != "buyer" and e.get("term_sheets")]
++    if len(replies) < 2:
++        return None
++
++    def mixes(event):
++        out = []
++        for sheet in event.get("term_sheets") or []:
++            terms = complete(case, standard, sheet.get("terms", {}))
++            if terms.get("unit_price") and must_haves_ok(case, terms, standard):
++                out.append(terms)
++        return out
++
++    def key(terms):
++        return tuple(terms.get(f) for f in quality)
++
++    latest = {key(t) for t in mixes(events[replies[-1]])}
++    base = _cost(case, standard, standing, supplier)
++    for i in reversed(replies[:-1]):
++        for terms in mixes(events[i]):
++            mix = {f: terms.get(f) for f in quality}
++            if key(mix) in latest:
++                continue
++            if (mix.get("chargeback_eur_per_complaint") or 0) > (standing.get("chargeback_eur_per_complaint") or 0):
++                continue
++            if _cost(case, standard, {**standing, **mix}, supplier) <= base + 0.01:
++                continue  # not relaxed: the ratchet already allows it
++            # One counter: none of our messages since the supplier first dropped this mix contained it.
++            dropped = next(j for j in replies if j > i and key(mix) not in {key(t) for t in mixes(events[j])})
++            if any(key(complete(case, standard, s.get("terms", s))) == key(mix)
++                   for e in events[dropped + 1:] if e.get("from") == "buyer" for s in e.get("term_sheets") or []):
++                return None
++            return mix
++    return None
++
++
+ def plan_packages(case, standard, events, profile=None, supplier=None, *,
+                   max_cut=None, max_concession=0.85, planned_rounds=None, reciprocity=0.5):
+     """Up to three equal-cost packages for the next buyer message, with diagnostics.
+@@ -294,7 +385,20 @@
+         base = _cost(case, standard, standing, supplier)
+         return all(_cost(case, standard, {**standing, f: comp[f]}, supplier) <= base + 0.01 for f in granted)
+
++    valid = comps
+     comps = [c for c in comps if held(c)] or comps
++    # Kept out of comps so that the anchor, schedule and target are unchanged; build() adds them.
++    retained, retained_mix = [], None
++    if RETAINED_QUALITY_TRADE and sent:
++        retained_mix = retained_quality_mix(case, standard, events, standing, supplier)
++    if retained_mix:
++        base = _cost(case, standard, standing, supplier)
++        others = [f for f in granted if f not in retained_mix]
++        retained = [c for c in valid if c not in comps and all(c.get(f) == v for f, v in retained_mix.items())
++                    and all(_cost(case, standard, {**standing, f: c[f]}, supplier) <= base + 0.01 for f in others)]
++    lead_pref = aligned_lead(case, standard) if NEED_ALIGNED_LEAD else None
++    if lead_pref is not None and sent and not any(p.get("lead_time_days") == lead_pref for p in sent[0]):
++        lead_pref = None  # the opening did not use it: do not switch lead times mid-negotiation
+     comps.sort(key=rank)
+     best = comps[0]
+
+@@ -383,7 +487,7 @@
+         cash signal) decides which options are most likely accepted. Ranking mixes by our cost at the
+         SUPPLIER's price instead swapped 36-month for 12-month asks mid-negotiation (S1 review)."""
+         candidates = []
+-        for comp in comps:
++        for comp in comps + retained:
+             price = price_for_cost(case, standard, comp, goal, supplier, high=2 * ref)
+             if price is None and supplier:
+                 # Health-limited mix just short of the target (S4 vs S2 P02: an index option missed by
+@@ -412,21 +516,34 @@
+                                round(_cost(case, standard, {**comp, "unit_price": ref}, supplier), 2),
+                                -(comp.get("contract_months") or 0), value, terms))
+         candidates.sort(key=lambda c: c[:3])
++        if lead_pref is not None:
++            candidates = prefer_need_lead(case, candidates)
+         if candidates and OUR_TERMS_OPTION:
+             # Always include the mix best for US at the supplier's price ("your price, our terms"):
+             # suppliers often give non-price terms away cheaply (L18). S2 P01 never offered April +
+             # 90 days, the package nearest the case optimum, because cash-pressure ranking hid it.
+             ours = min(candidates, key=lambda c: (c[1], c[2]))
+             candidates = [ours] + [c for c in candidates if c is not ours]
+-        out, seen = [], set()
+-        for _, _, _, value, terms in candidates:
++        def is_retained(terms):
++            return bool(retained_mix) and all(terms.get(f) == v for f, v in retained_mix.items())
++
++        picked, seen = [], set()
++        for c in candidates:
+             # Options with the same price and the same value to the seller are duplicates to it (D02:
+             # three options differing only in lead time; 24 vs 36 months beyond the horizon). Keep the
+             # first (best ranked) so the menu shows genuinely different trades.
+-            key = (terms["unit_price"], round(value, 4))
+-            if key in seen:
++            key = (c[-1]["unit_price"], round(c[3], 4))
++            if key in seen or (is_retained(c[-1]) and any(is_retained(p[-1]) for p in picked)):
+                 continue
+             seen.add(key)
++            picked.append(c)
++        if retained_mix and not any(is_retained(p[-1]) for p in picked[:3]):
++            # One retained relaxed-quality counter, in the last slot after the stricter options.
++            extra = next((p for p in picked if is_retained(p[-1])), None)
++            if extra is not None:
++                picked = [p for p in picked if p is not extra][:2] + [extra]
++        out = []
++        for _, _, _, value, terms in picked:
+             cost = _cost(case, standard, terms, supplier)
+             ask = 1 - value / supplier_value(case, standing, seller)
+             out.append({"terms": terms, "estimated_total_cost": cost,
+diff --color -ruN -x __pycache__ -x *.pyc codex_base/tests/test_codex_flags.py codex_work/tests/test_codex_flags.py
+--- a/tests/test_codex_flags.py	1970-01-01 01:00:00
++++ b/tests/test_codex_flags.py	2026-10-11 10:36:34
+@@ -0,0 +1,168 @@
++"""Opt-in Codex flags (all OFF by default): need-aligned lead time, retained quality trade, fixed-term answer."""
++
++import json
++
++from arena_kit.cost import total_cost
++
++import nighthunter.live as live
++import nighthunter.packages as pk
++from nighthunter.context import ROOT
++from nighthunter.live import LiveAgent
++from nighthunter.validation import validate_sheets
++
++FIXTURES = json.loads((ROOT / "tests/fixtures/hosted_practice_cases.json").read_text())
++RFQ = json.loads((ROOT / "tests/fixtures/rfq_p05.json").read_text())
++
++
++def opening(sheet):
++    return [{"from": "sales", "status": "open", "term_sheets": [sheet]}]
++
++
++def menus(case, std, events, monkeypatch, flag, value):
++    out = {}
++    for on in (False, True):
++        monkeypatch.setattr(pk, flag, on)
++        out[on] = pk.plan_packages(case, std, events)
++    monkeypatch.setattr(pk, flag, value)
++    return out
++
++
++def test_flags_default_off():
++    assert pk.NEED_ALIGNED_LEAD is False and pk.RETAINED_QUALITY_TRADE is False
++    assert live.FIXED_TERM_ANSWER is False
++
++
++def test_need_aligned_lead_p05_offers_35_days_at_equal_cost(monkeypatch):
++    case = RFQ["case"]
++    for sid, bidder in RFQ["bidders"].items():
++        std, events = bidder["standard_terms"], opening(bidder["opening_offer"])
++        plans = menus(case, std, events, monkeypatch, "NEED_ALIGNED_LEAD", False)
++        off, on = plans[False]["packages"], plans[True]["packages"]
++        assert plans[False]["target_cost"] == plans[True]["target_cost"]
++        assert {p["terms"]["lead_time_days"] for p in off} == {28}, sid
++        assert {p["terms"]["lead_time_days"] for p in on} == {35}, sid
++        validate_sheets(case, [p["terms"] for p in on], std)
++        # Same prices and the same cost to us; only the (free to us) lead time changes.
++        for a, b in zip(off, on, strict=True):
++            assert a["terms"]["unit_price"] == b["terms"]["unit_price"]
++            assert abs(total_cost(case, a["terms"], std) - total_cost(case, b["terms"], std)) < 0.01
++
++
++def test_need_aligned_lead_p10_keeps_priced_56_day_trade(monkeypatch):
++    fx = FIXTURES["case:P10"]
++    plans = menus(fx["case"], fx["standard_terms"], opening(fx["opening_offer"]), monkeypatch,
++                  "NEED_ALIGNED_LEAD", False)
++    off = [p["terms"]["lead_time_days"] for p in plans[False]["packages"]]
++    on = [p["terms"]["lead_time_days"] for p in plans[True]["packages"]]
++    assert 35 in off and 42 not in off
++    assert 42 in on and 35 not in on and 56 in on  # need is 42; the discounted 56-day option stays
++    assert [p["terms"]["unit_price"] for p in plans[False]["packages"]] == \
++        [p["terms"]["unit_price"] for p in plans[True]["packages"]]
++
++
++def test_need_aligned_lead_changes_nothing_without_a_free_lead_tie(monkeypatch):
++    for case_id, fx in FIXTURES.items():
++        if case_id == "case:P10":
++            continue
++        plans = menus(fx["case"], fx["standard_terms"], opening(fx["opening_offer"]), monkeypatch,
++                      "NEED_ALIGNED_LEAD", False)
++        assert plans[False]["packages"] == plans[True]["packages"], case_id
++
++
++def test_need_aligned_lead_is_sticky_only_when_the_opening_used_it(monkeypatch):
++    case = RFQ["case"]
++    bidder = RFQ["bidders"]["sup:70250"]
++    std = bidder["standard_terms"]
++    monkeypatch.setattr(pk, "NEED_ALIGNED_LEAD", True)
++    events = opening(bidder["opening_offer"])
++    first = pk.plan_packages(case, std, events)
++    events += [{"from": "buyer", "term_sheets": [{"terms": p["terms"]} for p in first["packages"]]},
++               {"from": "sales", "status": "open",
++                "term_sheets": [{"term_sheet_id": "offer:x-2", "terms": {"unit_price": 37.0}}]}]
++    second = pk.plan_packages(case, std, events)
++    assert {p["terms"]["lead_time_days"] for p in second["packages"]} == {35}
++    # An opening sent without the flag (28 days) is not switched to 35 later.
++    monkeypatch.setattr(pk, "NEED_ALIGNED_LEAD", False)
++    plain = opening(bidder["opening_offer"])
++    sent = pk.plan_packages(case, std, plain)
++    plain += [{"from": "buyer", "term_sheets": [{"terms": p["terms"]} for p in sent["packages"]]},
++              {"from": "sales", "status": "open",
++               "term_sheets": [{"term_sheet_id": "offer:x-2", "terms": {"unit_price": 37.0}}]}]
++    monkeypatch.setattr(pk, "NEED_ALIGNED_LEAD", True)
++    assert {p["terms"]["lead_time_days"] for p in pk.plan_packages(case, std, plain)["packages"]} == {28}
++
++
++def p11_history():
++    """P11-like: the supplier quotes 800 ppm as an alternative in r1, then drops it in r2."""
++    fx = FIXTURES["case:P11"]
++    case, std = fx["case"], fx["standard_terms"]
++    events = opening(fx["opening_offer"])
++    events.append({"from": "buyer", "term_sheets": [
++        {"terms": p["terms"]} for p in pk.plan_packages(case, std, events)["packages"]]})
++    events.append({"from": "sales", "status": "open", "term_sheets": [
++        {"term_sheet_id": "offer:x-1", "terms": {"unit_price": 46.5, "ppm_commitment": 300,
++                                                 "chargeback_eur_per_complaint": 0.0}},
++        {"term_sheet_id": "offer:x-1-a", "terms": {"unit_price": 46.0, "ppm_commitment": 800,
++                                                   "chargeback_eur_per_complaint": 0.0}}]})
++    events.append({"from": "buyer", "term_sheets": [
++        {"terms": p["terms"]} for p in pk.plan_packages(case, std, events)["packages"]]})
++    events.append({"from": "sales", "status": "open", "term_sheets": [
++        {"term_sheet_id": "offer:x-2", "terms": {"unit_price": 45.5, "ppm_commitment": 300,
++                                                 "chargeback_eur_per_complaint": 0.0}}]})
++    return case, std, events
++
++
++def test_retained_quality_trade_reoffers_dropped_mix_once_at_equal_cost(monkeypatch):
++    case, std, events = p11_history()
++    plans = menus(case, std, events, monkeypatch, "RETAINED_QUALITY_TRADE", False)
++    off, on = plans[False], plans[True]
++    assert off["target_cost"] == on["target_cost"]
++    assert all(p["terms"]["ppm_commitment"] == 300 for p in off["packages"])
++    retained = [p for p in on["packages"] if p["terms"]["ppm_commitment"] == 800]
++    assert len(retained) == 1 and on["packages"][-1] is retained[0]
++    terms = retained[0]["terms"]
++    assert terms["chargeback_eur_per_complaint"] == 0  # never a higher chargeback than standing
++    assert terms["unit_price"] < 45.5  # a real counter below the standing price, not a stale quote
++    assert total_cost(case, terms, std) <= on["target_cost"] + 0.01
++    assert on["packages"][0] == off["packages"][0]  # the stricter-quality lead option stays
++    validate_sheets(case, [p["terms"] for p in on["packages"]], std)
++    # Price monotone on that mix: never below what we asked for 800 ppm / 0 earlier.
++    earlier = [s["terms"]["unit_price"] for e in events if e["from"] == "buyer" for s in e["term_sheets"]
++               if s["terms"]["ppm_commitment"] == 800 and s["terms"]["chargeback_eur_per_complaint"] == 0]
++    assert all(terms["unit_price"] >= p for p in earlier)
++
++    # One counter only: after we re-offered it and the supplier still quotes 300 ppm, it is not repeated.
++    monkeypatch.setattr(pk, "RETAINED_QUALITY_TRADE", True)
++    events += [{"from": "buyer", "term_sheets": [{"terms": p["terms"]} for p in on["packages"]]},
++               {"from": "sales", "status": "open", "term_sheets": [
++                   {"term_sheet_id": "offer:x-3", "terms": {"unit_price": 45.4, "ppm_commitment": 300,
++                                                            "chargeback_eur_per_complaint": 0.0}}]}]
++    assert all(p["terms"]["ppm_commitment"] == 300 for p in pk.plan_packages(case, std, events)["packages"])
++
++
++def test_retained_quality_trade_inert_without_a_dropped_quote(monkeypatch):
++    for case_id, fx in FIXTURES.items():
++        plans = menus(fx["case"], fx["standard_terms"], opening(fx["opening_offer"]), monkeypatch,
++                      "RETAINED_QUALITY_TRADE", False)
++        assert plans[False]["packages"] == plans[True]["packages"], case_id
++
++
++def asked(body):
++    return [{"from": "sales", "status": "open", "term_sheets": [], "body": "Hello"},
++            {"from": "buyer", "term_sheets": []},
++            {"from": "sales", "status": "open", "term_sheets": [], "body": body}]
++
++
++def test_fixed_term_answer_only_on_request_for_a_fixed_field(monkeypatch):
++    p11 = FIXTURES["case:P11"]["case"]
++    p03 = FIXTURES["case:P03"]["case"]  # payment negotiable there
++    request = "We can't go any lower, especially since you won't help us out with faster payment."
++    assert LiveAgent.fixed_term_answer(p11, asked(request)) == []  # flag off
++    monkeypatch.setattr(live, "FIXED_TERM_ANSWER", True)
++    assert LiveAgent.fixed_term_answer(p11, asked(request)) == [
++        "Payment terms are fixed at 60 days net in this agreement."]
++    assert LiveAgent.fixed_term_answer(p03, asked(request)) == []
++    assert LiveAgent.fixed_term_answer(p11, asked("Our price is EUR 46.00 for 300 ppm.")) == []
++    # P05 trace: "can't finance longer terms" is about payment, not the fixed contract length.
++    rfq = RFQ["case"]
++    assert LiveAgent.fixed_term_answer(rfq, asked("cash is tight and I can't finance longer terms")) == []
+diff --color -ruN -x __pycache__ -x *.pyc codex_base/scripts/rfq_live.py codex_work/scripts/rfq_live.py
+--- a/scripts/rfq_live.py	2026-10-11 10:01:00
++++ b/scripts/rfq_live.py	2026-10-11 10:35:40
+@@ -181,6 +181,7 @@
+             # answered). State the binding RFQ volume in the first message and whenever asked.
+             first = not any(e.get("from") == "buyer" for e in self.threads[sid])
+             volume = LiveAgent.volume_answer(self.case, self.threads[sid], terms, proactive=first)
++            volume += LiveAgent.fixed_term_answer(self.case, self.threads[sid])
+             body, diag = compose(self.case, self.threads[sid], terms,
+                                  volume + ([rival["sentence"]] if rival else []),
+                                  choice, REQUEST, near_limit=self.moves_left(sid) <= 7)

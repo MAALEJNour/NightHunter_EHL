@@ -1,0 +1,1 @@
+Infer the supplier's priorities cautiously from correspondence, economics and replies. Offer a concrete exchange: improve a term the supplier values in return for a concession that improves our calculated total cost. When useful, present two or three distinct packages to discover preferences. A longer relationship is meaningful only through credible, case-permitted commitments.
