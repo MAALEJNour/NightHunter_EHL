@@ -1,11 +1,31 @@
 # Discovery and implementation plan
 
-**Latest status (10 October 2026, late):** milestones, measured results and next steps now live in
+**Latest status (11 October 2026):** milestones, measured results and next steps now live in
 [MILESTONES.md](MILESTONES.md) (S1–S6, M3 RFQ, M4 final runner) and [LESSONS.md](LESSONS.md); the
 full current picture for a new teammate is in [HANDOFF_FOR_TEAMMATE.md](HANDOFF_FOR_TEAMMATE.md).
 Best measured configuration: `--policy packages --adaptation expert_prose`, `gpt-5.6-luna`, S5 mean
 75.1 on nine single-supplier cases; RFQ P05 92.4 / 79.2. The sections below are the original
 discovery plan and the Batch A3 record.
+
+Final-launch hardening (11 October): `scripts/start_final.sh` now fails closed, verifies a clean
+`main` commit matches its recorded upstream, loads the frozen environment without syncing packages,
+checks Sunday data and the persistent ledger, and calls the team identity endpoint directly (the
+upstream `arena me` command catches HTTP failures without returning a failing exit code). It rejects
+a duplicate final-runner PID, simultaneous launcher attempt and any concurrent process holding the
+model-ledger lock, starts the runner under `nohup` + `caffeinate`, and waits for its final-case polling
+marker before reporting success.
+`--check` performs the read-only identity
+check without starting a negotiation or model call. The general practice/live cumulative cap remains
+$7; the owner separately approved a $15 cumulative cap for the final only. The ledger remains intact
+at $5.893528 accounted, and each final launch is separately capped at $2.
+Codex usage credits do not establish API-key billing balance. This launcher patch is local and still
+needs review, commit/push and ehl.gg submission before it can pass its clean-pushed-source gate. No
+hosted identity check or paid call was made while developing it.
+Local verification for the patch: **214 project tests passed**, touched-file Ruff passed, and the zsh
+launcher parsed. Direct offline preflight loaded the Sunday package and confirmed Python 3.12 plus
+$9.106472 of ledger headroom. The current checkout correctly fails the clean-source gate while the
+patch is uncommitted. The read-only identity check and launch gate remain to be run on the submitted,
+clean checkout; no hosted identity request or paid model call was made during this work.
 
 Original status: local naive baseline implemented and exercised, 10 October 2026. All advanced architecture and milestones below are proposed unless explicitly marked verified. Upstream commit: `1b5516bb95ef28e37f69aa446dc62168864bca53`.
 

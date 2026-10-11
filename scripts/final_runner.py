@@ -31,13 +31,15 @@ CLOSE_MARGIN_S = 120  # RFQ: stop negotiating this long before the cap. FAQ (11 
                       # minute under the final's load and a reply after the cap is lost; our cases need 60-230 s of 480.
 SINGLE_EXTRA_S = 30   # single-supplier: the kit closes at cap - max(90 s, slowest round + 15 s); give it 30 s more
 MAX_PARALLEL = 10     # arena limit: at most 10 open sessions per key
+FINAL_RUN_LIMIT_USD = 2.0  # keep a hard per-launch ceiling inside the cumulative ledger cap
+FINAL_TOTAL_LIMIT_USD = 15.0  # owner-approved final-only cumulative cap (11 Oct); practice stays at $7
 
 
 class SharedModel(BudgetedModel):
     """BudgetedModel for many concurrent cases: reservations under a lock, HTTP calls in parallel."""
 
     def __init__(self, ledger, model=None, limit_usd=2.0):
-        super().__init__(ledger, model=model)
+        super().__init__(ledger, model=model, total_limit_usd=FINAL_TOTAL_LIMIT_USD)
         self.run_limit, self.max_calls, self.mutex = limit_usd, 2000, threading.Lock()
 
     def complete(self, system, user, max_output=None):
@@ -159,6 +161,8 @@ class Runner:
 
     def final(self, waves=5, poll=5.0):
         started, closed, caps = {}, set(), {}
+        print("Final runner ready: polling final cases; a pre-wave 403 is expected.", flush=True)
+        waiting_logged = False
         with ThreadPoolExecutor(max_workers=MAX_PARALLEL) as pool:
             while len(closed) < waves or not all(f.done() for f in started.values()):
                 try:
@@ -166,7 +170,12 @@ class Runner:
                 except ArenaError as e:
                     if e.status != 403:  # 403: no wave has started yet
                         raise
+                    if not waiting_logged:
+                        print("Final cases are not available yet (403); waiting for the next wave.", flush=True)
+                    waiting_logged = True
                     cases = []
+                if cases:
+                    waiting_logged = False
                 for case in cases:
                     if not case.get("open"):
                         closed.add(case.get("wave"))
@@ -188,13 +197,16 @@ def main():
     parser.add_argument("--cap", type=float, default=480, help="rehearsal cap in seconds (wave cap = 480)")
     parser.add_argument("--local", action="store_true", help="local arena-sim, no model, no .env")
     parser.add_argument("--llm-model", help="override LLM_MODEL (priced models only)")
-    parser.add_argument("--limit-usd", type=float, default=2.0, help="model spend cap for this runner")
+    parser.add_argument("--limit-usd", type=float, default=FINAL_RUN_LIMIT_USD,
+                        help=f"model spend cap for this launch (maximum {FINAL_RUN_LIMIT_USD:.2f} USD)")
     # Practice-only variant search (never used for --final: the final runs the proven defaults).
     parser.add_argument("--anchor-scale", type=float, default=1.0, help="practice only: scale the opening ask")
     parser.add_argument("--effort", choices=["low", "medium"], default="low", help="practice only: model effort")
     parser.add_argument("--flag", action="append", default=[],
                         help="practice only: turn on a module flag, e.g. packages.NEED_ALIGNED_LEAD")
     args = parser.parse_args()
+    if not 0 < args.limit_usd <= FINAL_RUN_LIMIT_USD:
+        raise SystemExit(f"--limit-usd must be > 0 and <= {FINAL_RUN_LIMIT_USD:.2f}")
     if args.final and (args.anchor_scale != 1.0 or args.effort != "low" or args.flag):
         raise SystemExit("variant flags are for practice rehearsals only")
     import importlib

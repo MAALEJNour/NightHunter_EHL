@@ -1,5 +1,10 @@
 # NightHunter project handoff
 
+> **Historical snapshot:** the repository state, budget, Sunday release and commands below describe
+> an earlier 10 October handoff. For current launch instructions and the 11 October budget, use the
+> [README](../README.md) and [Live Final runbook](LIVE_FINAL_RUNBOOK.md). The reviewed launcher changes
+> must be committed/pushed and submitted on ehl.gg before its clean-source preflight will pass.
+
 Snapshot: 10 October 2026, late evening, after batches S5/S6 and the final-runner rehearsal. This is a
 factual handoff for a teammate (or the teammate's LLM) working in the `NightHunter_EHL` repository. It
 is not a request to open Arena sessions. Do not copy credentials from the root `.env` into prompts,

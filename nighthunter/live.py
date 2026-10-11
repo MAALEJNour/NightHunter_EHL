@@ -70,7 +70,7 @@ def sourced_profile(profile):
 # developers.openai.com/api/docs/pricing. Add a model only after checking.
 PRICES = {"gpt-5.6-luna": (0.20, 1.20), "gpt-6-sol": (2.00, 10.00), "gpt-6-astra": (10.00, 50.00)}
 RUN_LIMIT_MAX = 2.0   # explicit per-run override ceiling (--run-limit-usd); default run limit stays 0.75
-TOTAL_LIMIT_USD = 7 # cumulative ledger cap; owner raised it from 5 to 7 on 2026-10-10 (luna final reserve)
+TOTAL_LIMIT_USD = 7  # cumulative practice/live cap; owner raised it from 5 to 7 on 2026-10-10
 # Codex task 3 (default OFF, untested live): say "Payment terms are fixed at 60 days net in this
 # agreement." when the supplier asks to change a term the case fixes (LiveAgent.fixed_term_answer).
 FIXED_TERM_ANSWER = True  # live P11 11 Oct: sentence sent, 79.4 (= best; recent default runs 71.0)

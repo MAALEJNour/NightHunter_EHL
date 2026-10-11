@@ -1,53 +1,97 @@
 # Live Final runbook: NightHunter
 
-Everything is run from the repository root on this laptop: `cd ~/NightHunter_EHL`.
+Run everything from the root of the submitted `NightHunter_EHL` checkout. The final uses the exact
+code and slides submitted on ehl.gg; do not edit after the freeze.
 
-## Before 11:55
+## Budget and credentials
 
-1. **Machine:** plugged in, sleep disabled (the launcher also runs `caffeinate`), stable network. Close
-   other heavy programs.
-2. **Key works:**
-   `uv run --project vendor/negotiation-arena-kit/starter-kit arena me` shows team NightHunter.
-3. **Sunday release present:** `ls data/release-sunday/facts.json`. If it's missing, run
-   `uv run --project vendor/negotiation-arena-kit/starter-kit arena data --out data`.
-4. **LLM budget:** the code caps total spend at `TOTAL_LIMIT_USD = 7` in `nighthunter/live.py`. The final needs
-   about $1. Check the spend so far:
-   `python3 -c "import json;print(sum(r['accounted_usd'] for r in json.load(open('artifacts/llm-budget.json'))))"`.
-   Keep at least $1.20 of the approved $7 cap available for the final, so prior spend should be at most $5.80.
-   Last checked 11 October: the ledger was $5.893528, leaving $1.106472—about $0.09 below that reserve.
-   Recheck before launch. Do not raise the $7 cap without the budget owner's approval; if remaining funds
-   are insufficient, do not start the final until its budget is resolved.
-5. **Stop every practice loop by 11:55.** Practice sessions count against our 10 open sessions and can block
-   wave 1. Check that nothing is running: `pgrep -fl final_runner`. Only ONE agent may use the team key
-   (your teammate must not run).
-6. **Freeze on ehl.gg at 12:00:** repo link + commit hash + short description + slides
-   (`docs/slides/NightHunter_pitch.pptx`).
+The general practice/live cap remains **$7**. On 11 October, the owner authorized a separate
+**$15 cumulative cap for the Live Final only**. The shared ledger currently contains **$5.893528** of
+accounted/reserved spend, leaving **$9.106472** under the final cap. Each final launch is separately
+limited to **$2.00** and refuses to start unless at least **$2.00** remains. It never resets or rewrites
+old ledger entries.
 
-## Start (before 12:00)
+This ledger measures this repository's model calls, not the provider's invoice. The runner sends
+requests to `api.openai.com` using `LLM_API_KEY`; Codex/ChatGPT usage credits do not automatically pay
+for those API calls. Check the API billing balance for that key separately before launch. OpenAI
+describes Codex credits as distinct from API credits in its [credit FAQ](https://help.openai.com/en/articles/12642688)
+and documents separate [ChatGPT and API billing](https://help.openai.com/en/articles/9039756).
+
+Keep the root `.env` private and ignored. It must contain the arena URL/key, `LLM_PROVIDER=openai`,
+`LLM_MODEL=gpt-5.6-luna`, `LLM_BASE_URL=https://api.openai.com/v1`, and the OpenAI API key. The
+preflight prints whether values are present; it never prints their contents. It confirms the active
+NightHunter team with the read-only `GET /v1/me` endpoint. This catches failures that `arena me` can
+hide because the upstream command may exit successfully after an HTTP error.
+
+## Prepare and check
+
+Do setup and any upstream kit update well before final day. The project keeps its upstream kit pinned;
+review a new kit revision deliberately rather than pulling it during launch preparation.
+
+The announcement's `arena-sim serve --final-rehearsal` flag is not present in the kit revision pinned
+here, and this checkout has no `data/package` directory. That exact local command will fail against
+this snapshot. The separately announced `arena run --set final` command defaults to the kit's naive
+agent; it does not run NightHunter. Do not update the pinned vendor tree during the freeze window.
+
+```bash
+uv sync --project vendor/negotiation-arena-kit/starter-kit --python 3.12 --frozen --all-extras
+```
+
+Before launch, submit the reviewed code and slides on ehl.gg, then run this safe check from the repo
+root:
+
+```bash
+./scripts/start_final.sh --check
+```
+
+The check validates the clean `main` worktree and local upstream commit, secret presence without
+revealing values, expected arena/model endpoints, reviewed model name, pinned data and Sunday release,
+ledger headroom, active team identity, Python/runner syntax, a duplicate final-runner PID and the
+model-ledger lock. The runner's lock also prevents a second model process from spending concurrently.
+It uses no model call, starts no negotiation and does not consume a practice session. It prints the
+full commit hash; compare that exact hash with the submission on ehl.gg.
+
+If any check fails, the launcher stops before starting the final runner. Commit and push the approved
+changes, correct the reported configuration issue, or stop and resolve the budget/key problem. Do not
+work around a failed source, identity, or budget check on final day.
+
+## Start: one command
+
+Stop practice loops by 11:55. Submit and verify the exact code/slides freeze, then start the runner
+before 12:00 so it is already waiting when wave 1 begins. Leave it running:
 
 ```bash
 ./scripts/start_final.sh
 ```
 
-This prints the log file name (`artifacts/final_live_<time>.log`) and the runner's process ID. The runner:
-- waits while the final list answers 403 (before wave 1);
-- plays every case of each wave in parallel (at most 10);
-- stops RFQ negotiations 120 seconds before the 8-minute cap; single-supplier cases switch to a safe close
-  90 seconds before the cap, or earlier if their slowest round needs more time;
-- resumes running sessions after a crash;
-- never reads the leaderboard, the screen, the event feed or results.
+The launcher repeats the full preflight and starts the runner only if every check passes. It uses the
+already-synced Python 3.12 environment with frozen dependencies and no package sync, stays alive after
+the terminal closes (`nohup`), keeps the Mac awake (`caffeinate`), writes a timestamped log under
+`artifacts/`, and waits for the runner to log that it entered final-case polling before printing
+success. It refuses duplicate runner copies. A stale PID file from a process that has exited is
+cleared automatically. An atomic launcher lock also prevents two simultaneous starts. If the process
+lives but never reaches the ready marker, the launcher reports the log path and keeps its PID guard in
+place; inspect it before retrying.
 
-## During the final: hands off
+The runner waits on 403 until wave 1, plays each case once, uses at most 10 simultaneous sessions,
+honors each case's `seconds_left`, and keeps the existing recovery path for already-running sessions.
+It closes RFQs 120 seconds before the eight-minute cap and single-supplier negotiations at least 90
+seconds before the cap (earlier when a slow round requires it). Its per-launch model cap is $2.00;
+the cumulative ledger is hard-capped at $15.
 
-- Watch only:
-  - `python3 scripts/progress.py` (per-case status);
-  - `tail -f artifacts/final_live_*.log`.
-- If the runner crashes, restart it with `./scripts/start_final.sh`. It picks up its running sessions (a 409
-  names the running session). That is allowed; picking cases or writing messages by hand is not.
-- Do not edit code after 12:00 (freeze; the top 10 are checked for pushes).
+## During and after the final
 
-## After the last wave
+Hands off after the freeze. You may watch local progress and logs:
 
-- The runner exits after the fifth wave has closed. Results: `artifacts/final_runs/<time>/summary.json`.
-- Replays and supplier reasons appear on arena.tacto.ai/results after the final. Pick one negotiation for the
-  pitch (suggested: a price-increase case where the notice-period citation earned "a fair point").
+```bash
+python3 scripts/progress.py
+tail -f artifacts/final_live_*.log
+```
+
+If the runner crashes, inspect the latest log, then run `./scripts/start_final.sh` again. It refuses a
+still-running copy and the runner recovers an existing session rather than opening a replacement. Do
+not run practice loops or a second agent on the shared team key. Do not read the leaderboard, event
+feed or results during the final, and do not change the submitted code or slides after freeze.
+
+The runner exits when all five waves close. Local summaries are saved under
+`artifacts/final_runs/<timestamp>/summary.json`; official scoring remains on the arena.

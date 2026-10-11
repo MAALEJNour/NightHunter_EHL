@@ -52,15 +52,16 @@ concession schedule, supplier-health estimate); the model writes only filtered f
 Batch **S5** averaged **75.1** over the nine single-supplier practice cases (original agent 46.7);
 the P05 RFQ runner scored **92.4** and 79.2. `gpt-6-sol` (S6) was never better at ≈ 9× cost, so
 luna stays the default. The Live Final runner (`scripts/final_runner.py`) passed local and hosted
-sandbox rehearsals (D01 82.4 / D02 71.9 in parallel under the 8-minute cap). The 11 October full final-runner rehearsal closed 10/10 cases with no runner errors; its scores remain rehearsal results, not guarantees. 198 tests pass.
+sandbox rehearsals (D01 82.4 / D02 71.9 in parallel under the 8-minute cap). The 11 October full final-runner rehearsal closed 10/10 cases with no runner errors; its scores remain rehearsal results, not guarantees. The fail-closed launch guard and full local suite pass (214 tests).
 
 - Latest: [overnight report](docs/OVERNIGHT_REPORT.md). The [Live Final runbook](docs/LIVE_FINAL_RUNBOOK.md) covers launch, budget checks and recovery.
 - Start here: [teammate handoff](docs/HANDOFF_FOR_TEAMMATE.md), [milestones and results](docs/MILESTONES.md),
   [lessons with evidence](docs/LESSONS.md).
-- LLM ledger: $5.893528 of the code-enforced $7 cap (last checked 11 October; see the runbook for remaining headroom). Practice quota is shared with the teammate.
-- Pending before the final: submit this commit and slides on ehl.gg, confirm final budget
-  authorization, and keep the final machine ready. The Sunday release is present and the 10-case
+- LLM ledger: $5.893528 accounted. Practice/live remains capped at $7; the owner approved a separate $15 cumulative cap for the final only, leaving $9.106472 under that cap. The final runner also has a $2 maximum per launch. These code limits are separate from the actual OpenAI API billing balance. Practice quota is shared with the teammate.
+- Pending before the final: commit and push the reviewed launcher changes, submit the exact commit and slides on ehl.gg, and run `./scripts/start_final.sh --check`. The Sunday release is present and the 10-case
   final-runner rehearsal completed on 11 October (10/10 deals, zero errors/timeouts; slowest case 223 s).
+
+For a no-session preflight, run `./scripts/start_final.sh --check`. To start the autonomous final runner after freeze, run `./scripts/start_final.sh`; it verifies the active NightHunter key, clean pushed source, data and budget before launching. Codex usage credits are not API credits for the runner's `LLM_API_KEY`; check the API billing balance separately.
 
 The paragraphs below are the earlier (Codex-era, Batch A–A3) history; the CLI defaults
 (`--policy current`, `--adaptation current`) remain the control.
